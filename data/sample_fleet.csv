@@ -1,0 +1,16 @@
+unit,fuel,capacity_mw,heat_rate,vom
+wind_aggregate,wind,2500,0,0
+solar_aggregate,solar,800,0,0
+hydro_aggregate,hydro,300,0,0
+nuclear_A,nuclear,1100,10.4,2.5
+nuclear_B,nuclear,1200,10.4,2.5
+nuclear_C,nuclear,850,10.4,2.5
+coal_A,coal,3000,10.2,4.5
+coal_B,coal,1400,10.6,4.5
+coal_C,coal,800,11.2,5.0
+gas_cc_A,gas,1200,6.6,2.0
+gas_cc_B,gas,1100,6.9,2.0
+gas_cc_C,gas,750,7.3,2.5
+gas_ct_A,gas,600,10.5,4.0
+gas_ct_B,gas,450,11.5,4.5
+oil_peaker,oil,200,13.0,6.0
