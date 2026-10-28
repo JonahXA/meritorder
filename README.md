@@ -7,7 +7,7 @@ Research project applying CMSE 382 (Optimization Methods in Data Science, MSU): 
 ## Status
 
 - [x] Phase 1: single-region dispatch LP, KKT derivation, four solvers including a from-scratch simplex ([docs/phase1.md](docs/phase1.md))
-- [ ] Phase 2: quadratic costs, projected gradient and dual ascent
+- [x] Phase 2: quadratic costs, projected gradient, dual ascent, dual Newton, convergence vs conditioning ([docs/phase2.md](docs/phase2.md))
 - [ ] Phase 3: two regions with a transmission limit, congestion prices
 - [ ] Phase 4: hourly validation against MISO Michigan Hub LMPs
 - [ ] Phase 5: scenarios (gas prices, retirements, carbon price)
@@ -20,6 +20,7 @@ Research project applying CMSE 382 (Optimization Methods in Data Science, MSU): 
     export EIA_API_KEY=...                        # free key from eia.gov
     python scripts/fetch_eia.py --year 2024       # builds data/mi_fleet.csv
     python scripts/run_phase1.py data/mi_fleet.csv
+    python scripts/run_phase2.py data/mi_fleet.csv
 
 ## Layout
 

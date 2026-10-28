@@ -1,7 +1,7 @@
 """Build a real Michigan fleet from the EIA API (v2).
 
 Needs a free key: https://www.eia.gov/opendata/register.php
-    export EIA_API_KEY=...
+    export EIA_API_KEY=...   (or EIA_API_KEY=... in .env)
     python scripts/fetch_eia.py --year 2024
 
 Writes data/mi_fleet.csv in the same schema as data/sample_fleet.csv.
@@ -56,11 +56,24 @@ def cached(name, fn):
     return df
 
 
+def api_key():
+    """EIA_API_KEY from the environment, else from .env in the repo root."""
+    if os.environ.get("EIA_API_KEY"):
+        return os.environ["EIA_API_KEY"]
+    env = ROOT / ".env"
+    if env.exists():
+        for line in env.read_text().splitlines():
+            k, _, v = line.partition("=")
+            if k.strip() == "EIA_API_KEY" and v.strip():
+                return v.strip().strip("'\"")
+    raise SystemExit("Set EIA_API_KEY or put EIA_API_KEY=... in .env")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--year", type=int, default=2024)
     args = ap.parse_args()
-    key = os.environ["EIA_API_KEY"]
+    key = api_key()
 
     cap = cached(f"capacity_{args.year}", lambda: get_all(
         "electricity/operating-generator-capacity",
