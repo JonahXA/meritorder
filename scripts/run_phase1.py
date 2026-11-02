@@ -23,7 +23,9 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "results"
 OUT.mkdir(exist_ok=True)
 
-fleet_path = sys.argv[1] if len(sys.argv) > 1 else ROOT / "data/sample_fleet.csv"
+fleet_path = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "data/sample_fleet.csv"
+# Sample fleet keeps the plain names; other fleets get a tag, e.g. phase1_mi_fleet_*
+TAG = "" if fleet_path.stem == "sample_fleet" else f"_{fleet_path.stem}"
 df = load_fleet(fleet_path)
 c, cap = df["marginal_cost"].values, df["capacity_mw"].values
 total = cap.sum()
@@ -46,7 +48,7 @@ for d in np.linspace(0.02, 0.98, 49) * total:
             "degenerate": bool(np.isclose(d, breakpoints, atol=1e-6).any()),
         })
 res = pd.DataFrame(rows)
-res.to_csv(OUT / "phase1_agreement.csv", index=False)
+res.to_csv(OUT / f"phase1{TAG}_agreement.csv", index=False)
 
 nd = res[~res.degenerate]
 summary = nd.groupby("solver").agg(
@@ -77,7 +79,7 @@ ax.set_ylabel("Price ($/MWh)")
 ax.set_title("Phase 1: price equals the marginal unit's cost")
 ax.legend()
 fig.tight_layout()
-fig.savefig(OUT / "phase1_supply_curve.png", dpi=150)
+fig.savefig(OUT / f"phase1{TAG}_supply_curve.png", dpi=150)
 
 # Dual function at a mid demand level
 d0 = 0.6 * total
@@ -92,5 +94,5 @@ ax.set_xlabel("lambda ($/MWh)")
 ax.set_ylabel("q(lambda)")
 ax.set_title(f"Dual function at d = {d0:,.0f} MW: max equals primal cost (strong duality)")
 fig.tight_layout()
-fig.savefig(OUT / "phase1_dual_function.png", dpi=150)
+fig.savefig(OUT / f"phase1{TAG}_dual_function.png", dpi=150)
 print(f"\nSaved figures and CSV to {OUT}")

@@ -26,7 +26,9 @@ OUT = ROOT / "results"
 OUT.mkdir(exist_ok=True)
 SPREAD, FLOOR = 0.10, 1.0
 
-fleet_path = sys.argv[1] if len(sys.argv) > 1 else ROOT / "data/sample_fleet.csv"
+fleet_path = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "data/sample_fleet.csv"
+# Sample fleet keeps the plain names; other fleets get a tag, e.g. phase1_mi_fleet_*
+TAG = "" if fleet_path.stem == "sample_fleet" else f"_{fleet_path.stem}"
 df = load_fleet(fleet_path)
 c, cap = df["marginal_cost"].values, df["capacity_mw"].values
 a, b = qp.quadratic_coeffs(c, cap, SPREAD, FLOOR)
@@ -36,9 +38,12 @@ print(f"Fleet: {len(df)} units, {total:,.0f} MW. "
       f"kappa = max b / min b = {b.max() / b.min():,.0f}")
 
 # 1. Agreement and KKT across demand
+# Projected gradient needs ~kappa iterations per digit; cap it so badly
+# conditioned fleets finish, and record whether it converged.
+PG_MAX = 20_000
 rows = []
 for d in np.linspace(0.02, 0.98, 49) * total:
-    out = qp.solve_all(a, b, cap, d)
+    out = qp.solve_all(a, b, cap, d, {"projected_gradient": {"max_iter": PG_MAX}})
     ref = out["scipy"]
     free = ((ref["g"] > 0) & (ref["g"] < cap)).sum()
     for name, r in out.items():
@@ -50,17 +55,19 @@ for d in np.linspace(0.02, 0.98, 49) * total:
             "max_g_err_mw": float(np.max(np.abs(r["g"] - ref["g"]))),
             "kkt_ok": kkt_ok(rep, tol=1e-4), "duality_gap": rep["duality_gap"],
             "iters": r["iters"], "ms": 1000 * r["seconds"],
+            "converged": not (name == "projected_gradient" and r["iters"] >= PG_MAX),
             # no unit strictly between its bounds: price is an interval again
             "no_free_unit": free == 0,
         })
 res = pd.DataFrame(rows)
-res.to_csv(OUT / "phase2_agreement.csv", index=False)
+res.to_csv(OUT / f"phase2{TAG}_agreement.csv", index=False)
 ok = res[~res.no_free_unit]
 print(ok.groupby("solver").agg(
     max_cost_err=("cost_err_vs_scipy", "max"),
     max_price_err=("price_err_vs_scipy", "max"),
     max_g_err_mw=("max_g_err_mw", "max"),
     all_kkt_ok=("kkt_ok", "all"),
+    all_converged=("converged", "all"),
     max_abs_gap=("duality_gap", lambda s: s.abs().max()),
     median_iters=("iters", "median"),
     mean_ms=("ms", "mean"),
@@ -80,56 +87,87 @@ ax.set_ylabel("Price ($/MWh)")
 ax.set_title("Quadratic costs turn flat steps into ramps")
 ax.legend()
 fig.tight_layout()
-fig.savefig(OUT / "phase2_price_curve.png", dpi=150)
+fig.savefig(OUT / f"phase2{TAG}_price_curve.png", dpi=150)
 
-# 3. Convergence vs conditioning on synthetic instances
-rng = np.random.default_rng(382)
-n = 30
-a0 = rng.uniform(0, 80, n)
-cap0 = rng.uniform(100, 800, n)
-d0 = 0.55 * cap0.sum()
-kappas = [1, 10, 100, 1000]
-fig, axes = plt.subplots(1, 2, figsize=(11, 4.5), sharey=True)
-conv = []
-for j, kappa in enumerate(kappas):
-    b0 = 0.02 * np.exp(rng.uniform(0, np.log(kappa), n)) if kappa > 1 else np.full(n, 0.02)
-    b0[0], b0[-1] = 0.02, 0.02 * kappa
-    g_star, _, lam_star, _ = qp.dual_newton(a0, b0, cap0, d0)
-    for ax, name in zip(axes, ["projected_gradient", "dual_ascent"]):
+# 3. Convergence vs conditioning
+if TAG:
+    # Real fleet: projected gradient vs dual ascent at one demand level
+    d0 = 0.4 * total
+    g_star = qp.dual_newton(a, b, cap, d0)[0]
+    fig, ax = plt.subplots(figsize=(8, 4.5))
+    conv = []
+    for name, color in [("projected_gradient", "C3"), ("dual_ascent", "C0")]:
         errs = []
-        qp.QP_SOLVERS[name](a0, b0, cap0, d0, tol=1e-13, max_iter=20_000,
+        qp.QP_SOLVERS[name](a, b, cap, d0, tol=1e-12, max_iter=PG_MAX,
                             callback=lambda g, lam: errs.append(np.linalg.norm(g - g_star)))
-        # stop at the projection's accuracy floor (~1e-10 MW)
-        errs = np.array(errs)
-        below = np.flatnonzero(errs < 1e-10)
-        errs = np.maximum(errs[:below[0] + 1] if len(below) else errs, 1e-10)
-        k = np.arange(1, len(errs) + 1)
-        ax.semilogy(k, errs, color=f"C{j}", label=f"kappa = {kappa}")
-        if name == "projected_gradient":
-            theory = 1 - b0.min() / b0.max()
-            ax.semilogy(k, errs[0] * theory ** (k - 1), color=f"C{j}", ls="--", lw=0.8)
-        else:
-            free = (g_star > 0) & (g_star < cap0)
-            theory = 1 - np.sum(1 / b0[free]) / np.sum(1 / b0)
-        # observed rate: geometric mean of error ratios over the clean middle stretch
-        mask = (errs > 1e-9) & (errs < errs[0] * 1e-1)
-        obs = np.exp(np.mean(np.diff(np.log(errs[mask])))) if mask.sum() > 2 else np.nan
-        conv.append({"method": name, "kappa": kappa, "iters": len(errs),
-                     "observed_rate": obs, "theory_rate": theory})
-for ax, title in zip(axes, ["Projected gradient, step 1/L (dashed: (1 - 1/kappa)^k bound)",
-                            "Dual ascent, step 1 / sum(1/b_i)"]):
-    ax.set_title(title, fontsize=10)
+        errs = np.maximum(np.array(errs), 1e-10)
+        ax.loglog(np.arange(1, len(errs) + 1), errs, color=color, label=name)
+        conv.append({"method": name, "iters": len(errs), "first_err_mw": errs[0],
+                     "final_err_mw": errs[-1]})
+    kappa = b.max() / b.min()
+    k = np.arange(1, PG_MAX + 1)
+    ax.loglog(k, conv[0]["first_err_mw"] * (1 - 1 / kappa) ** (k - 1),
+              color="C3", ls="--", lw=0.8, label=f"(1 - 1/kappa)^k, kappa = {kappa:,.0f}")
     ax.set_xlabel("iteration")
-    ax.set_xscale("log")
-    ax.set_ylim(1e-10, None)
+    ax.set_ylabel("||g_k - g*|| (MW)")
+    ax.set_title(f"{fleet_path.stem}: projected gradient stalls, dual ascent does not", fontsize=10)
     ax.legend()
-axes[0].set_ylabel("||g_k - g*|| (MW)")
-fig.tight_layout()
-fig.savefig(OUT / "phase2_convergence.png", dpi=150)
-conv = pd.DataFrame(conv)
-conv.to_csv(OUT / "phase2_convergence.csv", index=False)
-print("\nLinear rates (dual ascent theory = 1 - sum_free(1/b) / sum_all(1/b), local):")
-print(conv.to_string(index=False))
+    fig.tight_layout()
+    fig.savefig(OUT / f"phase2{TAG}_conditioning.png", dpi=150)
+    conv = pd.DataFrame(conv)
+    conv.to_csv(OUT / f"phase2{TAG}_conditioning.csv", index=False)
+    print(f"\nAt d = {d0:,.0f} MW, kappa = {kappa:,.0f}:")
+    print(conv.to_string(index=False))
+else:
+    # Synthetic instances with controlled kappa
+    rng = np.random.default_rng(382)
+    n = 30
+    a0 = rng.uniform(0, 80, n)
+    cap0 = rng.uniform(100, 800, n)
+    d0 = 0.55 * cap0.sum()
+    kappas = [1, 10, 100, 1000]
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4.5), sharey=True)
+    conv = []
+    for j, kappa in enumerate(kappas):
+        b0 = 0.02 * np.exp(rng.uniform(0, np.log(kappa), n)) if kappa > 1 else np.full(n, 0.02)
+        b0[0], b0[-1] = 0.02, 0.02 * kappa
+        g_star, _, lam_star, _ = qp.dual_newton(a0, b0, cap0, d0)
+        for ax, name in zip(axes, ["projected_gradient", "dual_ascent"]):
+            errs = []
+            qp.QP_SOLVERS[name](a0, b0, cap0, d0, tol=1e-13, max_iter=20_000,
+                                callback=lambda g, lam: errs.append(np.linalg.norm(g - g_star)))
+            # stop at the projection's accuracy floor (~1e-10 MW)
+            errs = np.array(errs)
+            below = np.flatnonzero(errs < 1e-10)
+            errs = np.maximum(errs[:below[0] + 1] if len(below) else errs, 1e-10)
+            k = np.arange(1, len(errs) + 1)
+            ax.semilogy(k, errs, color=f"C{j}", label=f"kappa = {kappa}")
+            if name == "projected_gradient":
+                theory = 1 - b0.min() / b0.max()
+                ax.semilogy(k, errs[0] * theory ** (k - 1), color=f"C{j}", ls="--", lw=0.8)
+            else:
+                free = (g_star > 0) & (g_star < cap0)
+                theory = 1 - np.sum(1 / b0[free]) / np.sum(1 / b0)
+            # observed rate: geometric mean of error ratios over the clean middle stretch
+            mask = (errs > 1e-9) & (errs < errs[0] * 1e-1)
+            obs = np.exp(np.mean(np.diff(np.log(errs[mask])))) if mask.sum() > 2 else np.nan
+            conv.append({"method": name, "kappa": kappa, "iters": len(errs),
+                         "observed_rate": obs, "theory_rate": theory})
+    for ax, title in zip(axes, ["Projected gradient, step 1/L (dashed: (1 - 1/kappa)^k bound)",
+                                "Dual ascent, step 1 / sum(1/b_i)"]):
+        ax.set_title(title, fontsize=10)
+        ax.set_xlabel("iteration")
+        ax.set_xscale("log")
+        ax.set_ylim(1e-10, None)
+        ax.legend()
+    axes[0].set_ylabel("||g_k - g*|| (MW)")
+    fig.tight_layout()
+    fig.savefig(OUT / f"phase2{TAG}_convergence.png", dpi=150)
+    conv = pd.DataFrame(conv)
+    conv.to_csv(OUT / f"phase2{TAG}_convergence.csv", index=False)
+    print("\nLinear rates (dual ascent theory = 1 - sum_free(1/b) / sum_all(1/b), local):")
+    print(conv.to_string(index=False))
+
 
 # 4. Newton vs bisection on the dual
 fig, ax = plt.subplots(figsize=(7, 4.5))
@@ -147,7 +185,7 @@ ax.set_ylabel("|lambda_k - lambda*| ($/MWh)")
 ax.set_title("Dual is piecewise quadratic: Newton finishes in a few steps")
 ax.legend()
 fig.tight_layout()
-fig.savefig(OUT / "phase2_newton.png", dpi=150)
+fig.savefig(OUT / f"phase2{TAG}_newton.png", dpi=150)
 newton = res[res.solver == "dual_newton"].iters
 bis = res[res.solver == "dual_bisection"].iters
 print(f"\nIterations across 49 demand levels: Newton median {newton.median():.0f} "

@@ -10,6 +10,7 @@ callback(g, lam) called once per iteration (used for convergence plots).
 """
 import time
 import numpy as np
+from scipy import sparse
 from scipy.optimize import Bounds, LinearConstraint, minimize
 
 
@@ -180,7 +181,7 @@ def scipy_qp(a, b, cap, d, callback=None):
     n = len(a)
     x0 = cap * d / cap.sum()
     res = minimize(lambda g: cost(a, b, g), x0, method="trust-constr",
-                   jac=lambda g: a + b * g, hess=lambda g: np.diag(b),
+                   jac=lambda g: a + b * g, hess=lambda g: sparse.diags(b),
                    constraints=[LinearConstraint(np.ones((1, n)), d, d)],
                    bounds=Bounds(np.zeros(n), cap),
                    options={"gtol": 1e-12, "xtol": 1e-14, "maxiter": 5000})
@@ -206,11 +207,13 @@ QP_SOLVERS = {
 }
 
 
-def solve_all(a, b, cap, d):
+def solve_all(a, b, cap, d, options=None):
+    """Run every solver. options maps solver name -> extra kwargs (e.g. max_iter)."""
+    options = options or {}
     out = {}
     for name, fn in QP_SOLVERS.items():
         t0 = time.perf_counter()
-        g, f, lam, k = fn(a, b, cap, d)
+        g, f, lam, k = fn(a, b, cap, d, **options.get(name, {}))
         out[name] = {"g": g, "cost": f, "lam": lam, "iters": k,
                      "seconds": time.perf_counter() - t0}
     return out
