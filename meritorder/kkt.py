@@ -54,3 +54,41 @@ def qp_kkt_report(a, b, cap, d, g, lam, tol=1e-6):
         "dual_obj": dual_obj,
         "duality_gap": primal_obj - dual_obj,
     }
+
+
+def two_region_kkt_report(cM, capM, dM, cR, capR, dR, F, gM, gR, f, lamM, lamR, tol=1e-6):
+    """KKT and strong duality for the two-region LP (Phase 3).
+
+    Units: same conditions as Phase 1, each against its own region's price.
+    Line: lam_M - lam_R = nu_hi - nu_lo with nu_hi (F - f) = 0, nu_lo (F + f) = 0.
+    Dual: q = q_M(lam_M) + q_R(lam_R) - F |lam_M - lam_R|.
+    """
+    from .dispatch import dual_function
+    cM, capM, cR, capR, gM, gR = (np.asarray(v, float) for v in (cM, capM, cR, capR, gM, gR))
+    c, cap, g = np.r_[cM, cR], np.r_[capM, capR], np.r_[gM, gR]
+    lam = np.r_[np.full(len(cM), lamM), np.full(len(cR), lamR)]
+    mu_hi = np.maximum(0.0, lam - c)
+    mu_lo = np.maximum(0.0, c - lam)
+    cong = lamM - lamR
+    if abs(cong) < tol:     # rounding, not congestion (matters when F = inf)
+        cong = 0.0
+    nu_hi, nu_lo = max(0.0, cong), max(0.0, -cong)
+    slack_hi = nu_hi * (F - f) if nu_hi else 0.0
+    slack_lo = nu_lo * (F + f) if nu_lo else 0.0
+    line_term = F * abs(cong) if cong else 0.0
+    primal_obj = float(c @ g)
+    dual_obj = float(dual_function(lamM, cM, capM, dM) + dual_function(lamR, cR, capR, dR)
+                     - line_term)
+    scale = max(1.0, dM + dR)
+    return {
+        "primal_feasible": abs(gM.sum() + f - dM) < tol * scale
+                           and abs(gR.sum() - f - dR) < tol * scale
+                           and abs(f) <= F + tol * scale
+                           and (g > -tol).all() and (g < cap + tol).all(),
+        "stationarity": float(np.max(np.abs(c - lam - mu_lo + mu_hi))),
+        "comp_slack_upper": float(max(np.max(mu_hi * (cap - g)), slack_hi)),
+        "comp_slack_lower": float(max(np.max(mu_lo * g), slack_lo)),
+        "primal_obj": primal_obj,
+        "dual_obj": dual_obj,
+        "duality_gap": primal_obj - dual_obj,
+    }
