@@ -108,6 +108,28 @@ Two findings:
 
 Newton on the dual converges in 3 to 11 steps at every demand level (median 7), against 44 for bisection (results/phase2_newton.png). Each Newton step solves the current linear piece of q' exactly, so it terminates once it lands on the right piece instead of converging asymptotically.
 
+## Real Michigan fleet (2024)
+
+`python scripts/run_phase2.py data/mi_fleet.csv`, outputs tagged `phase2_mi_fleet_*`. 285 units, 29,148 MW, same b_i rule.
+
+| | median iterations | mean time | KKT ok at all 49 levels |
+|---|---|---|---|
+| dual_newton | 9 | 0.09 ms | yes |
+| dual_bisection | 44 | 0.16 ms | yes |
+| dual_ascent | 195 | 1.6 ms | yes |
+| scipy trust-constr | 182 | 14.7 s | yes |
+| projected_gradient | 20,000 (cap hit) | 2.8 s | **no** |
+
+**Projected gradient fails on the real fleet.** kappa = max b / min b = 35,594. The b_i rule divides each unit's cost rise by its capacity, so a 0.3 MW solar site gets b = 3.3 and Monroe (3,066 MW) gets b = 0.00085. The step 1/L is set by the steepest tiny unit, and the bound (1 - 1/kappa)^k needs about 800,000 iterations per 10 digits. After the 20,000 cap it's still 39 MW off at d = 11,659 MW, with price off by up to $0.11/MWh (results/phase2_mi_fleet_conditioning.png). Dual ascent at the same demand converges to 1e-8 MW in 593 iterations. Its rate depends on 1/b, which the big flexible units dominate, so tiny steep units barely matter to it.
+
+The fix is preconditioning, and it's instructive. Scale the gradient step by the Hessian diag(b) and project in the b-weighted norm:
+
+    g <- argmin { sum_i (b_i/2)(g_i - v_i)^2 : sum g = d, 0 <= g <= cap },   v = g - grad f(g) / b = -a / b
+
+By the same KKT argument as the projection above, the solution is g_i = clip((t - a_i) / b_i, 0, cap_i) with t chosen so sum g = d. That's exactly g_i(lambda) from the dual with lambda = t. So Newton-scaled projected gradient converges in one step, and that one step *is* the dual bisection problem. For separable problems like this, the dual methods are what you get when you precondition the primal method perfectly.
+
+The price curve (results/phase2_mi_fleet_price_curve.png) shows the same pattern as the sample fleet. Ramps replace steps through the gas CC and coal block, where cost ranges overlap. Jumps remain at the renewables to waste ($0 to $5), waste to nuclear, nuclear to gas CC ($10.8 to $21), and gas to oil peaker ($50 to $132) boundaries.
+
 ## Next
 
 Phase 3: two regions with a transmission limit. The dual on the line constraint is the congestion price.

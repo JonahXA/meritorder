@@ -18,7 +18,7 @@ Research project applying CMSE 382 (Optimization Methods in Data Science, MSU): 
     python -m pytest -q
     python scripts/run_phase1.py                  # sample fleet
     export EIA_API_KEY=...                        # free key from eia.gov
-    python scripts/fetch_eia.py --year 2024       # builds data/mi_fleet.csv
+    python scripts/fetch_eia.py --year 2024       # builds data/mi_fleet.csv (see docs/data.md)
     python scripts/run_phase1.py data/mi_fleet.csv
     python scripts/run_phase2.py data/mi_fleet.csv
 

@@ -17,7 +17,7 @@ Can a cost-minimizing dispatch model built only from public plant data reproduce
 ## Phases
 
 1. DONE. Single-region dispatch LP. Four solvers in meritorder/dispatch.py: merit_order (KKT closed form), dual_bisection (maximize concave dual q(lambda)), simplex (own two-phase tableau, Bland's rule, duals via B^T y = c_B, in meritorder/simplex.py), highs (scipy reference). KKT + duality checks in meritorder/kkt.py. Derivation in docs/phase1.md.
-2. DONE (on sample fleet). Quadratic costs a_i g + (b_i/2) g^2 in meritorder/qp.py: projected_gradient (projection by bisection on scalar t, lambda = -L t at the fixed point), dual_ascent, dual_bisection, dual_newton (safeguarded), scipy (trust-constr + active-set crossover, since trust-constr alone sits ~1e-4 MW off bounds). b_i = max(10% c_i, $1) / cap_i, documented as an assumption to calibrate in Phase 4. KKT in kkt.py:qp_kkt_report. Derivation and findings in docs/phase2.md, runner scripts/run_phase2.py.
+2. DONE (sample and real fleet). Quadratic costs a_i g + (b_i/2) g^2 in meritorder/qp.py: projected_gradient (projection by bisection on scalar t, lambda = -L t at the fixed point), dual_ascent, dual_bisection, dual_newton (safeguarded), scipy (trust-constr + active-set crossover, since trust-constr alone sits ~1e-4 MW off bounds). b_i = max(10% c_i, $1) / cap_i, documented as an assumption to calibrate in Phase 4. KKT in kkt.py:qp_kkt_report. Derivation and findings in docs/phase2.md, runner scripts/run_phase2.py.
 3. Two regions (Michigan vs rest of MISO) with a transmission limit. Dual on the line constraint = congestion price. Compare to the congestion component of MISO LMPs.
 4. Hourly validation over a full year (8,760 solves) against actual Michigan Hub LMPs: correlation, MAE, error breakdown by hour/season/load. Expect underprediction at peaks (no startup costs, ramp limits, unit commitment). Treat that gap as a finding.
 5. Scenarios using duals: gas price shock, coal retirement, carbon price.
@@ -25,7 +25,7 @@ Can a cost-minimizing dispatch model built only from public plant data reproduce
 ## Data
 
 - data/sample_fleet.csv: MADE UP illustrative fleet for tests. Never present its numbers as real results.
-- scripts/fetch_eia.py: builds data/mi_fleet.csv from EIA API v2 (EIA-860 capacity, EIA-923 heat rates). Needs EIA_API_KEY in env or in .env (gitignored). UNTESTED (written in a sandbox with no network access to EIA). Verify route and field names against the EIA API browser on first run and fix as needed.
+- scripts/fetch_eia.py: builds data/mi_fleet.csv from EIA API v2 (EIA-860M capacity, OP + SB status; EIA-923 electricity-only heat rates per plant/fuel/tech class). Key from EIA_API_KEY env or .env (gitignored). Tested and working for 2024: 285 units, 29,148 MW, reconciles with the EIA state profile by fuel (results/fleet_check.csv). Decisions documented in docs/data.md: pumped storage (Ludington 2,180 MW) excluded, Palisades out of service in 2024, waste/byproduct fuels as must-run at $0 fuel, heat-rate outliers outside [0.8, 1.5]x typical replaced by tech defaults (11% of thermal MW).
 - MISO data (load, LMPs incl. energy/congestion/loss components) not pulled yet; needed for Phase 3 and 4.
 - data/raw/ is gitignored cache.
 
@@ -35,6 +35,7 @@ Can a cost-minimizing dispatch model built only from public plant data reproduce
 - Degeneracy: when demand lands exactly on a cumulative capacity breakpoint, the price is not unique (any lambda between adjacent unit costs satisfies KKT). On the sample fleet at 15,600 MW, simplex returns 35.50 and HiGHS 39.00. Both correct. run_phase1.py flags these points; a test covers it. Relevant later when comparing to MISO prices.
 
 - Phase 2: QP prices are continuous only where units' cost ranges overlap. Between fuels with a cost gap (renewables to nuclear, nuclear to gas CC, coal to gas CT) the price still jumps. Dual Newton median 7 iterations vs 44 for bisection, ~700x faster than scipy trust-constr. Projected gradient beats its (1 - 1/kappa)^k bound because only free units matter locally. Dual ascent's local rate 1 - sum_free(1/b)/sum_all(1/b) matches observed to 4 digits; it depends on which units are marginal, not on kappa.
+- Real fleet (2024): Phase 1 solvers agree to 4e-10. Merit order middle is flat: gas CC and coal interleave at $21 to $29 over 13.6 GW, so model prices will be insensitive to load; CC/coal breakeven gas price ~$3.30/MMBtu. Phase 2: kappa = 35,594 (tiny solar sites have huge b_i), projected gradient does not converge in 20,000 iterations; dual methods fine. Hessian-preconditioned PG is exactly the dual method (docs/phase2.md).
 
 ## Commands
 
@@ -54,5 +55,5 @@ Can a cost-minimizing dispatch model built only from public plant data reproduce
 
 ## Immediate todo
 
-1. Run fetch_eia.py with Jonah's key (.env), fix any API field issues, rerun Phase 1 and 2 on data/mi_fleet.csv, sanity check capacity by fuel against known Michigan totals.
-2. Start Phase 3: pull MISO data, two-region model.
+1. Phase 3: pull MISO data (Michigan Hub LMPs with energy/congestion/loss components, load), build two-region model (Michigan vs rest of MISO) with a transmission limit.
+2. Before Phase 4: hourly wind/solar output (fleet uses nameplate), monthly delivered fuel prices from EIA-923, and consider Ludington pumped storage.

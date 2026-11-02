@@ -1,0 +1,3 @@
+method,iters,first_err_mw,final_err_mw
+projected_gradient,20000,2734.3804585912135,39.17492829038816
+dual_ascent,593,2946.6209428825223,8.41650113747975e-09
