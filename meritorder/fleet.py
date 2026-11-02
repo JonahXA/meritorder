@@ -9,6 +9,7 @@ DEFAULT_FUEL_PRICES = {  # $/MMBtu, override with real EIA prices
     "wind": 0.0,
     "solar": 0.0,
     "hydro": 0.0,
+    "waste": 0.0,  # byproduct / biomass, must-run price takers
 }
 
 
