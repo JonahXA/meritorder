@@ -8,7 +8,7 @@ Research project applying CMSE 382 (Optimization Methods in Data Science, MSU): 
 
 - [x] Phase 1: single-region dispatch LP, KKT derivation, four solvers including a from-scratch simplex ([docs/phase1.md](docs/phase1.md))
 - [x] Phase 2: quadratic costs, projected gradient, dual ascent, dual Newton, convergence vs conditioning ([docs/phase2.md](docs/phase2.md))
-- [ ] Phase 3: two regions with a transmission limit, congestion prices
+- [x] Phase 3: Michigan vs rest of MISO with a transmission limit, hourly over 2024, vs MISO congestion ([docs/phase3.md](docs/phase3.md))
 - [ ] Phase 4: hourly validation against MISO Michigan Hub LMPs
 - [ ] Phase 5: scenarios (gas prices, retirements, carbon price)
 
@@ -21,6 +21,9 @@ Research project applying CMSE 382 (Optimization Methods in Data Science, MSU): 
     python scripts/fetch_eia.py --year 2024       # builds data/mi_fleet.csv (see docs/data.md)
     python scripts/run_phase1.py data/mi_fleet.csv
     python scripts/run_phase2.py data/mi_fleet.csv
+    python scripts/fetch_eia.py --region MISO      # data/miso_fleet.csv
+    python scripts/fetch_miso.py --year 2024      # hub LMPs, zone load, wind/solar
+    python scripts/run_phase3.py
 
 ## Layout
 
