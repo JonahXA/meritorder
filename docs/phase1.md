@@ -57,6 +57,29 @@ If d lands exactly on a cumulative capacity breakpoint, no unit is marginal and 
 
 All four agree on cost to ~1e-11 and on price at every non-degenerate demand level; every solution passes the KKT and zero duality gap check in meritorder/kkt.py.
 
+## Real Michigan fleet (2024)
+
+data/mi_fleet.csv: 285 units, 29,148 MW, built from EIA-860M and EIA-923 (see docs/data.md). Run: `python scripts/run_phase1.py data/mi_fleet.csv`. Outputs are tagged `phase1_mi_fleet_*` in results/.
+
+All four solvers agree on cost to 4e-10 and exactly on price at all 49 demand levels, and every solution passes KKT with zero duality gap. Simplex is the slow one (78 ms per solve on 570 variables) but still correct. None of the 49 grid points landed on a capacity breakpoint.
+
+The supply stack (results/phase1_mi_fleet_supply_curve.png), at default fuel prices (gas $3.00, coal $2.10/MMBtu):
+
+| Block | Cumulative MW | Marginal cost ($/MWh) |
+|---|---|---|
+| hydro, wind, solar (nameplate) | 0 to 5,165 | 0 |
+| waste and byproduct fuels | to 5,905 | 5 |
+| nuclear (Cook, Fermi) | to 9,223 | 9.8 |
+| gas combined cycle and coal, interleaved | to 22,844 | 21 to 29 |
+| gas steam and gas turbines | to 28,760 | 34 to 48 |
+| oil peakers | to 29,148 | 132 to 255 |
+
+What stands out:
+
+- **The middle of the stack is nearly flat.** 13.6 GW of combined cycle and coal sit within $8/MWh of each other. Any demand in that range gives a price between $21 and $29. Real LMPs vary a lot more than that, so expect the model to underpredict price variation in Phase 4 unless something else (imports, outages, renewables output, startup costs) moves the marginal unit.
+- **Gas vs coal ordering depends on the gas price.** The average Michigan CC (7.2 MMBtu/MWh, $3 VOM) breaks even with the average coal unit (10.6 MMBtu/MWh at $2.10, $4.50 VOM) at a gas price of about $3.30/MMBtu. Below that, gas undercuts coal; above it, coal runs first. That's a natural Phase 5 scenario.
+- **Wind and solar at nameplate overstate free supply.** 4.9 GW of wind and solar at zero cost assumes they're all producing. Their average output is closer to a third of that, so in practice the stack shifts left and prices rise. Phase 4 needs hourly renewable output.
+
 ## Next
 
-Phase 2 replaces c_i g_i with a_i g_i + (b_i/2) g_i^2. The marginal unit condition becomes lambda = a_i + b_i g_i, prices become continuous in demand, and the problem becomes a strictly convex QP solved by projected gradient and dual ascent.
+Phase 2 replaces c_i g_i with a_i g_i + (b_i/2) g_i^2. The marginal unit condition becomes lambda = a_i + b_i g_i, prices become continuous in demand where units' cost ranges overlap (see docs/phase2.md), and the problem becomes a strictly convex QP solved by projected gradient and dual ascent.
