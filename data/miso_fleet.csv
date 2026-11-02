@@ -1,0 +1,2345 @@
+unit,fuel,capacity_mw,heat_rate,vom,tech,state,ba,plantid,hr_source
+Cayuga ST,coal,995.0,10.088555226481445,4.5,ST,IN,MISO,1001,eia923
+Cayuga GT,gas,84.0,11.0,3.0,GT,IN,MISO,1001,default
+Cayuga IC,oil,10.0,15.225806451612904,6.0,IC,IN,MISO,1001,eia923
+Covanta Hennepin Energy ST,waste,33.7,0.0,5.0,ST,MN,MISO,10013,zero_fuel
+Edwardsport CC,coal,555.0,11.541129587086044,4.5,CC,IN,MISO,1004,eia923
+Markland HY,hydro,53.699999999999996,0.0,0.0,HY,IN,MISO,1005,zero_fuel
+Fourche Creek Wastewater IC,gas,1.3,9.0,3.0,IC,AR,MISO,10050,default
+Noblesville CC,gas,264.0,8.231325054899758,3.0,CC,IN,MISO,1007,eia923
+F B Culley ST,coal,360.0,11.224402532574521,4.5,ST,IN,MISO,1012,eia923
+CF Industries Yazoo City Complex GT,gas,20.0,11.0,3.0,GT,MS,MISO,10195,default
+Mosaic Phosphates Uncle Sam ST,gas,26.0,10.5,3.0,ST,LA,MISO,10198,default
+Escanaba Mill ST,waste,100.0,0.0,5.0,ST,MI,MISO,10208,zero_fuel
+Biron Mill ST,coal,20.0,11.843501156741695,4.5,ST,WI,MISO,10234,eia923
+Biron Mill ST,gas,20.0,11.843499179718822,3.0,ST,WI,MISO,10234,eia923
+ArcelorMittal Burns Harbor ST,waste,174.7,0.0,5.0,ST,IN,MISO,10245,zero_fuel
+Louisiana Sugar Refining ST,gas,5.3,10.5,3.0,ST,LA,MISO,10301,default
+Geismar GT,gas,72.9,11.0,3.0,GT,LA,MISO,10319,default
+Geismar ST,gas,7.2,10.5,3.0,ST,LA,MISO,10319,default
+T B Simon Power Plant GT,gas,12.6,11.0,3.0,GT,MI,MISO,10328,default
+T B Simon Power Plant IC,gas,28.200000000000003,9.0,3.0,IC,MI,MISO,10328,default
+T B Simon Power Plant ST,gas,84.8,10.5,3.0,ST,MI,MISO,10328,default
+Consumer Operations LLC ST,gas,41.0,10.5,3.0,ST,WI,MISO,10360,default
+Peru (IN) IC,oil,1.8,10.833333333333334,6.0,IC,IN,MISO,1037,eia923
+Indiana Harbor West ST,gas,52.0,10.5,3.0,ST,IN,MISO,10397,default
+Anheuser-Busch St Louis ST,gas,22.0,10.5,3.0,ST,MO,MISO,10430,default
+LAC Courte Oreilles Hydroelect HY,hydro,3.2,0.0,0.0,HY,WI,MISO,10453,zero_fuel
+Expander Turbine OT,waste,18.8,0.0,5.0,OT,IN,MISO,10475,zero_fuel
+Boise Cascade International Falls ST,waste,40.0,0.0,5.0,ST,MN,MISO,10486,zero_fuel
+International Falls Power HY,hydro,14.200000000000001,0.0,0.0,HY,MN,MISO,10487,zero_fuel
+DeRidder Mill ST,waste,61.5,0.0,5.0,ST,LA,MISO,10488,zero_fuel
+Dayton Hydro HY,hydro,3.6,0.0,0.0,HY,IL,MISO,10520,zero_fuel
+Grand River IC,waste,3.2,0.0,5.0,IC,MI,MISO,10532,zero_fuel
+Port Arthur Texas Refinery GT,gas,30.3,11.0,3.0,GT,TX,MISO,10568,default
+Agrilectric Power Partners Ltd ST,waste,11.1,0.0,5.0,ST,LA,MISO,10593,zero_fuel
+Georgia-Pacific Crossett LLC ST,gas,28.0,10.5,3.0,ST,AR,MISO,10606,default
+Georgia-Pacific Monticello Paper ST,waste,81.5,0.0,5.0,ST,MS,MISO,10610,zero_fuel
+Pine Bluff Mill ST,waste,60.9,0.0,5.0,ST,AR,MISO,10627,zero_fuel
+Iowa Hydro LLC HY,hydro,1.2,0.0,0.0,HY,IA,MISO,1067,zero_fuel
+Marshalltown GT,gas,154.6,14.233908213232782,3.0,GT,IA,MISO,1068,eia923
+Rapids Energy Center ST,gas,22.6,10.5,3.0,ST,MN,MISO,10686,default
+Rapids Energy Center HY,hydro,0.8,0.0,0.0,HY,MN,MISO,10686,zero_fuel
+ExxonMobil Baton Rouge Turbine Generator GT,gas,66.3,11.0,3.0,GT,LA,MISO,10690,default
+St Francisville Mill ST,waste,16.0,0.0,5.0,ST,LA,MISO,10697,zero_fuel
+Prairie Creek ST,coal,29.900000000000002,10.672849014588978,4.5,ST,IA,MISO,1073,eia923
+Prairie Creek ST,gas,126.4,10.5,3.0,ST,IA,MISO,1073,default
+Midland Cogeneration Venture CC,gas,1859.4,7.646795134083022,3.0,CC,MI,MISO,10745,eia923
+Midland Cogeneration Venture IC,oil,5.2,10.5,6.0,IC,MI,MISO,10745,default
+Sabine River Operations CC,gas,502.0,7.6,3.0,CC,TX,MISO,10789,default
+Coralville GT GT,gas,63.4,11.0,3.0,GT,IA,MISO,1079,default
+Ada Cogeneration LP CC,gas,30.0,7.81671701760358,3.0,CC,MI,MISO,10819,eia923
+Walter Scott Jr Energy Center ST,coal,1511.6999999999998,10.110162751183807,4.5,ST,IA,MISO,1082,eia923
+Grayling Generating Station ST,waste,38.6,0.0,5.0,ST,MI,MISO,10822,zero_fuel
+River Hills GT,gas,112.8,11.0,3.0,GT,IA,MISO,1084,default
+Cargill Corn Milling Division ST,gas,36.7,10.5,3.0,ST,IA,MISO,10855,default
+Archer Daniels Midland Clinton ST,coal,180.0,10.6,4.5,ST,IA,MISO,10860,default
+Archer Daniels Midland Des Moines ST,gas,7.9,14.777777777777779,3.0,ST,IA,MISO,10861,eia923
+Archer Daniels Midland Mankato ST,gas,6.2,10.5,3.0,ST,MN,MISO,10863,default
+Archer Daniels Midland Cedar Rapids ST,coal,260.0,10.6,4.5,ST,IA,MISO,10864,default
+Archer Daniels Midland Cedar Rapids GT,gas,35.0,11.0,3.0,GT,IA,MISO,10864,default
+Archer Daniels Midland Decatur ST,coal,335.0,10.6,4.5,ST,IL,MISO,10865,default
+Archer Daniels Midland Peoria GT,gas,15.0,11.0,3.0,GT,IL,MISO,10866,default
+Primient Decatur Plant Cogen ST,gas,62.0,10.5,3.0,ST,IL,MISO,10867,default
+George Neal North ST,coal,510.0,11.700654731209573,4.5,ST,IA,MISO,1091,eia923
+Merl Parr GT,gas,32.400000000000006,15.87037037037037,3.0,GT,IA,MISO,1097,eia923
+Burlington (IA) GT,gas,34.9,11.0,3.0,GT,IA,MISO,1104,default
+Burlington (IA) ST,gas,142.6,10.5,3.0,ST,IA,MISO,1104,default
+Keokuk HY,hydro,150.0,0.0,0.0,HY,IA,MISO,1109,zero_fuel
+Ames Electric Services Power Plant ST,gas,108.7,12.461711785177148,3.0,ST,IA,MISO,1122,eia923
+Anita IC,oil,2.7,9.153846153846153,6.0,IC,IA,MISO,1123,eia923
+Atlantic GT,gas,9.8,14.345454545454546,3.0,GT,IA,MISO,1124,eia923
+Bancroft IC,oil,4.1,13.166666666666666,6.0,IC,IA,MISO,1125,eia923
+Bellevue IC,oil,8.7,10.59016393442623,6.0,IC,IA,MISO,1126,eia923
+Brooklyn IC,oil,2.0,10.11111111111111,6.0,IC,IA,MISO,1128,eia923
+Cascade IC,oil,6.8,9.853615905615031,6.0,IC,IA,MISO,1129,eia923
+Gas Turbine (IA) GT,gas,40.3,11.0,3.0,GT,IA,MISO,1130,default
+Streeter Station ST,gas,55.6,10.5,3.0,ST,IA,MISO,1131,default
+Coggon IC,oil,1.8,12.125,6.0,IC,IA,MISO,1132,eia923
+Corning IC,oil,6.8,13.647058823529411,6.0,IC,IA,MISO,1134,eia923
+Dayton (IA) IC,oil,1.8,14.0,6.0,IC,IA,MISO,1135,eia923
+Forest City Light Plant IC,oil,21.2,10.293333333333333,6.0,IC,IA,MISO,1138,eia923
+Gowrie IC,oil,2.2,10.2,6.0,IC,IA,MISO,1141,eia923
+Graettinger IC,oil,3.1,14.491525423728813,6.0,IC,IA,MISO,1142,eia923
+Grand Junction IC,oil,1.7,10.5,6.0,IC,IA,MISO,1143,eia923
+Grundy Center City Light Plant IC,oil,8.7,10.5,6.0,IC,IA,MISO,1145,default
+Harlan IC,oil,3.2,14.5,6.0,IC,IA,MISO,1146,eia923
+Indianola GT,oil,42.2,13.0,6.0,GT,IA,MISO,1150,default
+Lake Park IC,oil,4.0,12.804347826086957,6.0,IC,IA,MISO,1153,eia923
+Lake Mills IC,oil,17.7,10.5,6.0,IC,IA,MISO,1154,default
+Lamoni Municipal Utilities IC,oil,10.0,11.290697674418604,6.0,IC,IA,MISO,1155,eia923
+La Porte IC,oil,5.4,11.033333333333333,6.0,IC,IA,MISO,1156,eia923
+Lenox IC,oil,5.8,13.64102564102564,6.0,IC,IA,MISO,1158,eia923
+Maquoketa 1 IC,gas,16.9,9.0,3.0,IC,IA,MISO,1162,default
+Maquoketa 1 IC,oil,5.1,10.5,6.0,IC,IA,MISO,1162,default
+McGregor IC,oil,1.5,11.142857142857142,6.0,IC,IA,MISO,1163,eia923
+Montezuma IC,gas,4.1,11.304549675023214,3.0,IC,IA,MISO,1165,eia923
+Montezuma IC,oil,5.5,11.301369863013699,6.0,IC,IA,MISO,1165,eia923
+Muscatine Plant #1 ST,coal,248.9,11.048634622973575,4.5,ST,IA,MISO,1167,eia923
+Ogden IC,oil,4.0,14.2,6.0,IC,IA,MISO,1169,eia923
+Osage (IA) IC,gas,9.1,9.0,3.0,IC,IA,MISO,1172,default
+Osage (IA) IC,oil,7.2,10.5,6.0,IC,IA,MISO,1172,default
+Osage (IA) PV,solar,0.8,0.0,0.0,PV,IA,MISO,1172,zero_fuel
+Osage (IA) WT,wind,0.5,0.0,0.0,WT,IA,MISO,1172,zero_fuel
+Ottumwa City of HY,hydro,2.2,0.0,0.0,HY,IA,MISO,1173,zero_fuel
+Preston (IA) IC,gas,1.8,9.0,3.0,IC,IA,MISO,1176,default
+Preston (IA) IC,oil,2.0,10.5,6.0,IC,IA,MISO,1176,default
+Primghar IC,oil,2.0,10.5,6.0,IC,IA,MISO,1177,default
+Rockford IC,oil,2.9000000000000004,8.5,6.0,IC,IA,MISO,1180,eia923
+Sibley One IC,oil,4.8,11.362717347351396,6.0,IC,IA,MISO,1184,eia923
+Spencer Gas Turbine GT,oil,17.0,13.0,6.0,GT,IA,MISO,1186,default
+State Center IC,gas,2.5,10.946745562130177,3.0,IC,IA,MISO,1187,eia923
+State Center IC,oil,3.8,10.821517931609675,6.0,IC,IA,MISO,1187,eia923
+Story City IC,gas,2.0,11.881188118811881,3.0,IC,IA,MISO,1188,eia923
+Story City IC,oil,11.5,11.88722669735328,6.0,IC,IA,MISO,1188,eia923
+Stuart (IA) IC,oil,2.7,10.5,6.0,IC,IA,MISO,1190,default
+Sumner IC,oil,5.4,10.342857142857143,6.0,IC,IA,MISO,1191,eia923
+Traer Main IC,oil,3.2,10.5,6.0,IC,IA,MISO,1192,default
+Villisca Municipal Power Plant IC,oil,4.0,14.285714285714286,6.0,IC,IA,MISO,1193,eia923
+Vinton IC,gas,16.1,9.0,3.0,IC,IA,MISO,1194,default
+Vinton IC,oil,0.6,10.5,6.0,IC,IA,MISO,1194,default
+Webster City GT,oil,20.7,13.642091219054207,6.0,GT,IA,MISO,1198,eia923
+West Bend IC,oil,6.4,10.5,6.0,IC,IA,MISO,1199,default
+West Liberty GT,oil,10.0,13.210526315789474,6.0,GT,IA,MISO,1200,eia923
+West Liberty IC,oil,4.800000000000001,10.5,6.0,IC,IA,MISO,1200,default
+Wilton IC,oil,9.200000000000001,12.555555555555555,6.0,IC,IA,MISO,1202,eia923
+Winterset IC,gas,7.6000000000000005,9.0,3.0,IC,IA,MISO,1203,default
+Winterset IC,oil,10.0,10.5,6.0,IC,IA,MISO,1203,default
+Summit Lake GT,gas,56.599999999999994,11.0,3.0,GT,IA,MISO,1206,default
+Summit Lake IC,gas,55.199999999999996,8.553166033559657,3.0,IC,IA,MISO,1206,eia923
+Robert A Reid GT,gas,58.0,11.0,3.0,GT,KY,MISO,1383,default
+Louisiana 1 GT,gas,254.4,11.0,3.0,GT,LA,MISO,1391,default
+Louisiana 1 ST,waste,128.0,0.0,5.0,ST,LA,MISO,1391,zero_fuel
+Louisiana 2 ST,gas,138.0,10.5,3.0,ST,LA,MISO,1392,default
+R S Nelson ST,coal,703.9,11.835393081710636,4.5,ST,LA,MISO,1393,eia923
+R S Nelson ST,gas,424.7,10.5,3.0,ST,LA,MISO,1393,default
+Coughlin Power Station CC,gas,733.6,7.694968423906552,3.0,CC,LA,MISO,1396,eia923
+Teche GT,gas,33.9,11.0,3.0,GT,LA,MISO,1400,default
+Little Gypsy ST,gas,899.3,11.437599673626822,3.0,ST,LA,MISO,1402,eia923
+Nine Mile Point CC,gas,896.0,6.904842119141738,3.0,CC,LA,MISO,1403,eia923
+Nine Mile Point ST,gas,1479.5,10.341255548062128,3.0,ST,LA,MISO,1403,eia923
+Sterlington GT,gas,45.5,11.0,3.0,GT,LA,MISO,1404,default
+New Roads IC,oil,7.0,10.5,6.0,IC,LA,MISO,1453,default
+Big Cajun 1 GT,gas,194.3,13.092521202775636,3.0,GT,LA,MISO,1464,eia923
+Big Cajun 1 ST,gas,172.8,12.72581381855889,3.0,ST,LA,MISO,1464,eia923
+Carpenter HY,hydro,60.400000000000006,0.0,0.0,HY,AR,MISO,166,zero_fuel
+Alcona HY,hydro,2.8,0.0,0.0,HY,MI,MISO,1693,zero_fuel
+Allegan Dam HY,hydro,1.2,0.0,0.0,HY,MI,MISO,1694,zero_fuel
+C W Tippy HY,hydro,6.0,0.0,0.0,HY,MI,MISO,1698,zero_fuel
+Lake Catherine ST,gas,522.0,10.907823765020026,3.0,ST,AR,MISO,170,eia923
+Cooke HY,hydro,7.1,0.0,0.0,HY,MI,MISO,1700,zero_fuel
+Croton HY,hydro,3.3000000000000003,0.0,0.0,HY,MI,MISO,1701,zero_fuel
+Dan E Karn ST,gas,1199.8,10.5,3.0,ST,MI,MISO,1702,default
+Five Channels HY,hydro,6.300000000000001,0.0,0.0,HY,MI,MISO,1704,zero_fuel
+Foote HY,hydro,3.0,0.0,0.0,HY,MI,MISO,1705,zero_fuel
+Hardy HY,hydro,33.599999999999994,0.0,0.0,HY,MI,MISO,1707,zero_fuel
+Hodenpyl HY,hydro,4.2,0.0,0.0,HY,MI,MISO,1708,zero_fuel
+J H Campbell ST,coal,1330.5,10.162159040279622,4.5,ST,MI,MISO,1710,eia923
+Loud HY,hydro,4.9,0.0,0.0,HY,MI,MISO,1712,zero_fuel
+Mio HY,hydro,1.4,0.0,0.0,HY,MI,MISO,1714,zero_fuel
+Rogers HY,hydro,2.4,0.0,0.0,HY,MI,MISO,1716,zero_fuel
+Osceola (AR) IC,oil,1.6,10.5,6.0,IC,AR,MISO,172,default
+Webber HY,hydro,1.0,0.0,0.0,HY,MI,MISO,1722,zero_fuel
+Colfax IC,oil,14.0,10.5,6.0,IC,MI,MISO,1725,default
+Delray GT,gas,127.0,11.476102435427602,3.0,GT,MI,MISO,1728,eia923
+Fermi ST,nuclear,1141.0,10.447628317861597,2.5,ST,MI,MISO,1729,eia923
+Fermi GT,oil,51.0,13.0,6.0,GT,MI,MISO,1729,default
+Hancock GT,gas,93.0,14.432573858061703,3.0,GT,MI,MISO,1730,eia923
+Monroe (MI) ST,coal,3066.0,10.605530166587855,4.5,ST,MI,MISO,1733,eia923
+Monroe (MI) IC,oil,14.0,10.5,6.0,IC,MI,MISO,1733,default
+Northeast (MI) GT,gas,62.0,11.0,3.0,GT,MI,MISO,1734,default
+Northeast (MI) GT,oil,39.0,16.62119575505841,6.0,GT,MI,MISO,1734,eia923
+Oliver IC,oil,14.0,10.5,6.0,IC,MI,MISO,1735,default
+Placid 12 IC,oil,14.0,10.5,6.0,IC,MI,MISO,1737,default
+Putnam (MI) IC,oil,14.0,10.5,6.0,IC,MI,MISO,1739,default
+Remmel HY,hydro,11.4,0.0,0.0,HY,AR,MISO,174,zero_fuel
+St Clair GT,gas,19.0,11.0,3.0,GT,MI,MISO,1743,default
+Superior GT,oil,52.0,13.0,6.0,GT,MI,MISO,1744,default
+Wilmot IC,oil,14.0,10.5,6.0,IC,MI,MISO,1746,default
+Manistique IC,oil,4.8,10.5,6.0,IC,MI,MISO,1750,default
+Edison Sault HY,hydro,29.200000000000003,0.0,0.0,HY,MI,MISO,1751,zero_fuel
+Saxon Falls HY,hydro,1.0,0.0,0.0,HY,WI,MISO,1756,zero_fuel
+Superior Falls HY,hydro,1.0,0.0,0.0,HY,MI,MISO,1757,zero_fuel
+John H Warden ST,waste,17.7,0.0,5.0,ST,MI,MISO,1772,zero_fuel
+Prickett HY,hydro,0.8,0.0,0.0,HY,MI,MISO,1773,zero_fuel
+Victoria Dam HY,hydro,11.8,0.0,0.0,HY,MI,MISO,1774,zero_fuel
+Brule HY,hydro,3.3,0.0,0.0,HY,WI,MISO,1775,zero_fuel
+Chalk Hill HY,hydro,7.800000000000001,0.0,0.0,HY,MI,MISO,1776,zero_fuel
+Hemlock Falls HY,hydro,2.8,0.0,0.0,HY,MI,MISO,1777,zero_fuel
+Kingsford HY,hydro,7.199999999999999,0.0,0.0,HY,MI,MISO,1778,zero_fuel
+Michigamme Falls HY,hydro,9.6,0.0,0.0,HY,MI,MISO,1780,zero_fuel
+Peavy Falls HY,hydro,12.0,0.0,0.0,HY,MI,MISO,1781,zero_fuel
+Way Dam HY,hydro,1.8,0.0,0.0,HY,MI,MISO,1785,zero_fuel
+White Rapids HY,hydro,7.2,0.0,0.0,HY,MI,MISO,1786,zero_fuel
+Grand Rapids HY,hydro,6.0,0.0,0.0,HY,MI,MISO,1787,zero_fuel
+Crystal Falls HY,hydro,1.0,0.0,0.0,HY,MI,MISO,1821,zero_fuel
+Hart IC,gas,1.4,9.0,3.0,IC,MI,MISO,1827,default
+Hart IC,oil,3.7,10.5,6.0,IC,MI,MISO,1827,default
+Hillsdale IC,gas,11.6,10.119589977220958,3.0,IC,MI,MISO,1829,eia923
+Plant Four GT,oil,20.0,13.0,6.0,GT,MI,MISO,1840,default
+James R Smith HY,hydro,3.2,0.0,0.0,HY,MI,MISO,1842,zero_fuel
+Marshall (MI) IC,gas,8.899999999999999,9.0,3.0,IC,MI,MISO,1844,default
+Marshall (MI) HY,hydro,0.30000000000000004,0.0,0.0,HY,MI,MISO,1844,zero_fuel
+Norway (MI) HY,hydro,6.2,0.0,0.0,HY,MI,MISO,1848,zero_fuel
+Frank Jenkins IC,oil,3.5,11.743920182914156,6.0,IC,MI,MISO,1851,eia923
+St Louis HY,hydro,0.4,0.0,0.0,HY,MI,MISO,1852,zero_fuel
+St Louis IC,oil,5.0,15.428571428571429,6.0,IC,MI,MISO,1852,eia923
+Main Street (MI) IC,oil,5.6000000000000005,10.5,6.0,IC,MI,MISO,1853,default
+Saint Marys Falls HY,hydro,20.6,0.0,0.0,HY,MI,MISO,1865,zero_fuel
+Wyandotte ST,gas,42.5,10.5,3.0,ST,MI,MISO,1866,default
+Wyandotte IC,oil,5.4,8.4,6.0,IC,MI,MISO,1866,eia923
+Zeeland IC,gas,23.700000000000003,9.0,3.0,IC,MI,MISO,1867,default
+Dafter IC,oil,9.700000000000001,11.640355912743972,6.0,IC,MI,MISO,1868,eia923
+Degray HY,hydro,40.0,0.0,0.0,HY,AR,MISO,187,zero_fuel
+Kleber HY,hydro,1.7999999999999998,0.0,0.0,HY,MI,MISO,1871,zero_fuel
+Tower GT,oil,19.3,15.419354838709678,6.0,GT,MI,MISO,1873,eia923
+Caro IC,oil,8.5,10.5,6.0,IC,MI,MISO,1874,default
+Ubly IC,oil,12.3,11.275167785234899,6.0,IC,MI,MISO,1875,eia923
+George Johnson GT,gas,48.7,11.086653737658674,3.0,GT,MI,MISO,1877,eia923
+George Johnson IC,oil,1.0,10.5,6.0,IC,MI,MISO,1877,default
+Claude Vandyke GT,gas,20.2,14.714628297362111,3.0,GT,MI,MISO,1880,eia923
+Vestaburg GT,gas,18.5,11.0,3.0,GT,MI,MISO,1881,default
+Syl Laskin ST,gas,98.0,13.102842260088018,3.0,ST,MN,MISO,1891,eia923
+Blanchard HY,hydro,16.200000000000003,0.0,0.0,HY,MN,MISO,1892,zero_fuel
+Clay Boswell ST,coal,937.0,11.00201513764638,4.5,ST,MN,MISO,1893,eia923
+Clay Boswell IC,oil,0.8,10.5,6.0,IC,MN,MISO,1893,default
+Fond Du Lac HY,hydro,13.1,0.0,0.0,HY,MN,MISO,1894,zero_fuel
+Knife Falls HY,hydro,2.3,0.0,0.0,HY,MN,MISO,1895,zero_fuel
+Little Falls (MN) HY,hydro,5.1,0.0,0.0,HY,MN,MISO,1896,zero_fuel
+M L Hibbard ST,waste,60.0,0.0,5.0,ST,MN,MISO,1897,zero_fuel
+Pillager HY,hydro,0.9,0.0,0.0,HY,MN,MISO,1898,zero_fuel
+Scanlon HY,hydro,1.2000000000000002,0.0,0.0,HY,MN,MISO,1899,zero_fuel
+Sylvan HY,hydro,1.7999999999999998,0.0,0.0,HY,MN,MISO,1900,zero_fuel
+Thomson HY,hydro,76.2,0.0,0.0,HY,MN,MISO,1901,zero_fuel
+Winton HY,hydro,4.1,0.0,0.0,HY,MN,MISO,1902,zero_fuel
+Black Dog CC,gas,282.0,7.386954006097736,3.0,CC,MN,MISO,1904,eia923
+Black Dog GT,gas,209.0,10.249299501699587,3.0,GT,MN,MISO,1904,eia923
+Hennepin Island HY,hydro,6.1,0.0,0.0,HY,MN,MISO,1911,zero_fuel
+High Bridge CC,gas,530.0,6.686691813996176,3.0,CC,MN,MISO,1912,eia923
+Inver Hills GT,gas,272.0,11.0,3.0,GT,MN,MISO,1913,default
+Inver Hills GT,oil,3.6,13.0,6.0,GT,MN,MISO,1913,default
+Allen S King ST,coal,511.0,10.38520869591085,4.5,ST,MN,MISO,1915,eia923
+Monticello Nuclear Facility ST,nuclear,617.0,10.442601894029336,2.5,ST,MN,MISO,1922,eia923
+Prairie Island ST,nuclear,1040.0,10.5843097883824,2.5,ST,MN,MISO,1925,eia923
+Red Wing ST,waste,18.0,0.0,5.0,ST,MN,MISO,1926,zero_fuel
+Riverside (MN) CC,gas,454.0,7.08449425935934,3.0,CC,MN,MISO,1927,eia923
+St James IC,oil,12.0,10.13888888888889,6.0,IC,MN,MISO,1929,eia923
+Wilmarth ST,waste,18.0,0.0,5.0,ST,MN,MISO,1934,zero_fuel
+Hoot Lake HY,hydro,0.8,0.0,0.0,HY,MN,MISO,1943,zero_fuel
+Alexandria IC,oil,8.2,9.30232558139535,6.0,IC,MN,MISO,1958,eia923
+Benson City of IC,oil,9.0,9.75925925925926,6.0,IC,MN,MISO,1964,eia923
+Blooming Prairie IC,oil,8.3,10.5,6.0,IC,MN,MISO,1966,default
+Blue Earth IC,oil,11.0,10.5,6.0,IC,MN,MISO,1967,default
+Delano IC,oil,14.5,10.5,6.0,IC,MN,MISO,1969,default
+Blakely Mountain HY,hydro,75.0,0.0,0.0,HY,AR,MISO,197,zero_fuel
+Detroit Lakes GT,oil,9.6,13.0,6.0,GT,MN,MISO,1970,default
+Fairfax IC,oil,1.9,10.5,6.0,IC,MN,MISO,1972,default
+Fairmont (MN) IC,gas,26.0,9.658585578487104,3.0,IC,MN,MISO,1973,eia923
+Fairmont (MN) IC,oil,12.0,9.65821543633562,6.0,IC,MN,MISO,1973,eia923
+Glencoe IC,oil,35.7,9.868928296067848,6.0,IC,MN,MISO,1975,eia923
+Grand Marais IC,oil,6.1,9.529411764705882,6.0,IC,MN,MISO,1976,eia923
+Granite Falls HY,hydro,1.1,0.0,0.0,HY,MN,MISO,1977,zero_fuel
+Hibbing ST,gas,32.1,10.5,3.0,ST,MN,MISO,1979,default
+Hutchinson Plant #1 IC,gas,28.900000000000002,8.583702416325615,3.0,IC,MN,MISO,1980,eia923
+Janesville IC,oil,4.3,10.5,6.0,IC,MN,MISO,1982,default
+Kenyon Municipal IC,oil,5.4,14.714285714285714,6.0,IC,MN,MISO,1983,eia923
+Lake Crystal IC,oil,5.8,10.1,6.0,IC,MN,MISO,1985,eia923
+Lanesboro HY,hydro,0.2,0.0,0.0,HY,MN,MISO,1987,zero_fuel
+Lanesboro IC,oil,2.1,14.2,6.0,IC,MN,MISO,1987,eia923
+Litchfield IC,oil,21.9,10.5,6.0,IC,MN,MISO,1989,default
+Marshall (MN) GT,oil,13.9,17.949146871863498,6.0,GT,MN,MISO,1993,eia923
+Melrose IC,oil,8.100000000000001,10.73469387755102,6.0,IC,MN,MISO,1994,eia923
+Moose Lake IC,gas,2.0,10.214007782101168,3.0,IC,MN,MISO,1996,eia923
+Moose Lake IC,oil,8.2,9.977238239757208,6.0,IC,MN,MISO,1996,eia923
+Mora IC,gas,6.9,9.0,3.0,IC,MN,MISO,1997,default
+Mora IC,oil,6.3,10.5,6.0,IC,MN,MISO,1997,default
+Mountain Lake IC,gas,2.1,9.0,3.0,IC,MN,MISO,1998,default
+Mountain Lake IC,oil,3.6,10.5,6.0,IC,MN,MISO,1998,default
+Mountain Lake WT,wind,1.2,0.0,0.0,WT,MN,MISO,1998,zero_fuel
+New Prague IC,gas,16.8,9.0,3.0,IC,MN,MISO,1999,default
+New Ulm ST,gas,17.9,10.5,3.0,ST,MN,MISO,2001,default
+New Ulm GT,oil,48.0,13.0,6.0,GT,MN,MISO,2001,default
+North Branch (MN) IC,oil,10.0,9.076666666666666,6.0,IC,MN,MISO,2002,eia923
+Owatonna GT,gas,16.6,11.0,3.0,GT,MN,MISO,2003,default
+Preston (MN) IC,gas,3.3000000000000003,9.0,3.0,IC,MN,MISO,2004,default
+Preston (MN) IC,oil,0.8,10.5,6.0,IC,MN,MISO,2004,default
+Princeton (MN) IC,oil,12.8,10.5,6.0,IC,MN,MISO,2005,default
+Rochester Hydro HY,hydro,2.6,0.0,0.0,HY,MN,MISO,2007,zero_fuel
+Redwood Falls IC,gas,6.0,9.343683839096682,3.0,IC,MN,MISO,2009,eia923
+Redwood Falls HY,hydro,0.5,0.0,0.0,HY,MN,MISO,2009,zero_fuel
+Redwood Falls IC,oil,2.1,9.343453510436433,6.0,IC,MN,MISO,2009,eia923
+Sleepy Eye IC,oil,11.2,8.923664122137405,6.0,IC,MN,MISO,2011,eia923
+Springfield (MN) IC,oil,7.2,10.5,6.0,IC,MN,MISO,2012,default
+Spring Valley IC,oil,7.1,10.5,6.0,IC,MN,MISO,2013,default
+Thief River Falls HY,hydro,0.5,0.0,0.0,HY,MN,MISO,2014,zero_fuel
+Thief River Falls IC,oil,5.3,8.727272727272727,6.0,IC,MN,MISO,2014,eia923
+Truman IC,oil,6.0,11.179487179487179,6.0,IC,MN,MISO,2015,eia923
+Wells IC IC,gas,7.0,10.8797096439682,3.0,IC,MN,MISO,2020,eia923
+Wells IC IC,oil,1.8,10.88985687616677,6.0,IC,MN,MISO,2020,eia923
+Westbrook IC,oil,2.0,14.0,6.0,IC,MN,MISO,2021,eia923
+Willmar WT,wind,4.0,0.0,0.0,WT,MN,MISO,2022,zero_fuel
+Windom IC,oil,10.7,13.434782608695652,6.0,IC,MN,MISO,2023,eia923
+Worthington IC,oil,14.0,10.16,6.0,IC,MN,MISO,2024,eia923
+Worthington WT,wind,5.6,0.0,0.0,WT,MN,MISO,2024,zero_fuel
+McClellan (AR) ST,gas,134.0,12.825597963561846,3.0,ST,AR,MISO,203,eia923
+Cambridge CT Hybrid GT,gas,152.3,11.5895844748781,3.0,GT,MN,MISO,2038,eia923
+Cambridge CT Hybrid GT,oil,21.4,11.559404506748537,6.0,GT,MN,MISO,2038,eia923
+Elk River GT,gas,179.4,11.455142833760632,3.0,GT,MN,MISO,2039,eia923
+Clinton Power Station ST,nuclear,1078.9,10.44260181290576,2.5,ST,IL,MISO,204,eia923
+Maple Lake GT,oil,21.1,15.488636363636363,6.0,GT,MN,MISO,2042,eia923
+L L Wilkins CC,gas,49.5,7.6,3.0,CC,MS,MISO,2059,default
+Yazoo CC,gas,33.3,7.6,3.0,CC,MS,MISO,2067,default
+Benndale IC,gas,22.6,8.45371607879598,3.0,IC,MS,MISO,2068,eia923
+Moselle CC,gas,268.0,8.238453652910918,3.0,CC,MS,MISO,2070,eia923
+Moselle GT,gas,150.0,12.312299784600844,3.0,GT,MS,MISO,2070,eia923
+Moselle ST,gas,59.0,11.917814652473387,3.0,ST,MS,MISO,2070,eia923
+Fairgrounds GT,oil,55.0,13.0,6.0,GT,MO,MISO,2082,default
+Labadie ST,coal,2372.0,10.551112571018738,4.5,ST,MO,MISO,2103,eia923
+Osage Dam HY,hydro,234.0,0.0,0.0,HY,MO,MISO,2106,zero_fuel
+Sioux ST,coal,974.0,10.404090989529637,4.5,ST,MO,MISO,2107,eia923
+Columbia (MO) GT,gas,12.5,11.0,3.0,GT,MO,MISO,2123,default
+Columbia (MO) ST,gas,35.0,12.905437985534423,3.0,ST,MO,MISO,2123,eia923
+Columbia (MO) IC,oil,10.6,10.5,6.0,IC,MO,MISO,2123,default
+Columbia (MO) IC,waste,3.0,0.0,5.0,IC,MO,MISO,2123,zero_fuel
+Jackson (MO) IC,oil,25.3,10.5,6.0,IC,MO,MISO,2137,default
+Kahoka IC,gas,2.9,9.0,3.0,IC,MO,MISO,2138,default
+Kahoka IC,oil,4.2,10.5,6.0,IC,MO,MISO,2138,default
+Glendive GT GT,gas,74.9,11.0,3.0,GT,MT,MISO,2176,default
+Miles City GT GT,gas,23.6,11.0,3.0,GT,MT,MISO,2177,default
+R M Heskett GT,gas,176.4,14.280884686376737,3.0,GT,ND,MISO,2790,eia923
+Jamestown GT,oil,40.599999999999994,13.0,6.0,GT,ND,MISO,2801,default
+Grafton IC,oil,4.0,10.5,6.0,IC,ND,MISO,2811,default
+Milton R Young ST,coal,684.0,11.851277615351576,4.5,ST,ND,MISO,2823,eia923
+Madelia IC,oil,10.600000000000001,10.5,6.0,IC,MN,MISO,30,default
+Lake Preston GT,oil,18.9,13.0,6.0,GT,SD,MISO,3352,default
+Lewis Creek ST,gas,500.0,10.735663487965837,3.0,ST,TX,MISO,3457,eia923
+Sabine ST,gas,1493.5,11.79395769046009,3.0,ST,TX,MISO,3459,eia923
+Prairie River HY,hydro,0.7,0.0,0.0,HY,MN,MISO,378,zero_fuel
+Biron HY,hydro,5.1,0.0,0.0,HY,WI,MISO,3971,zero_fuel
+Du Bay HY,hydro,7.2,0.0,0.0,HY,WI,MISO,3972,zero_fuel
+Stevens Point HY,hydro,4.800000000000001,0.0,0.0,HY,WI,MISO,3973,zero_fuel
+Wisconsin Rapids HY,hydro,8.1,0.0,0.0,HY,WI,MISO,3974,zero_fuel
+Whiting HY,hydro,9.0,0.0,0.0,HY,WI,MISO,3975,zero_fuel
+Gordon IC,oil,2.8,10.5,6.0,IC,WI,MISO,3976,default
+Bay Front ST,gas,23.0,15.615212527964205,3.0,ST,WI,MISO,3982,eia923
+Bay Front ST,waste,18.0,0.0,5.0,ST,WI,MISO,3982,zero_fuel
+Big Falls HY,hydro,3.3000000000000003,0.0,0.0,HY,WI,MISO,3983,zero_fuel
+Ladysmith Dam HY,hydro,1.0,0.0,0.0,HY,WI,MISO,3986,zero_fuel
+Thornapple HY,hydro,0.8,0.0,0.0,HY,WI,MISO,3988,zero_fuel
+White River (WI) HY,hydro,0.4,0.0,0.0,HY,WI,MISO,3989,zero_fuel
+Fitchburg GT,gas,33.8,11.0,3.0,GT,WI,MISO,3991,default
+Blount Street ST,gas,95.7,14.73010827659749,3.0,ST,WI,MISO,3992,eia923
+Sycamore (WI) GT,gas,30.3,11.0,3.0,GT,WI,MISO,3993,default
+Arpin Dam HY,hydro,1.4,0.0,0.0,HY,WI,MISO,3995,zero_fuel
+Cedar Falls (WI) HY,hydro,3.6,0.0,0.0,HY,WI,MISO,3998,zero_fuel
+Chippewa Falls HY,hydro,12.1,0.0,0.0,HY,WI,MISO,4000,zero_fuel
+Dells HY,hydro,7.3,0.0,0.0,HY,WI,MISO,4002,zero_fuel
+French Island GT,oil,119.0,13.0,6.0,GT,WI,MISO,4005,default
+French Island ST,waste,16.0,0.0,5.0,ST,WI,MISO,4005,zero_fuel
+Holcombe HY,hydro,21.9,0.0,0.0,HY,WI,MISO,4007,zero_fuel
+Jim Falls HY,hydro,25.0,0.0,0.0,HY,WI,MISO,4008,zero_fuel
+Menomonie HY,hydro,2.2,0.0,0.0,HY,WI,MISO,4009,zero_fuel
+St Croix Falls HY,hydro,15.2,0.0,0.0,HY,WI,MISO,4011,zero_fuel
+Trego HY,hydro,0.7,0.0,0.0,HY,WI,MISO,4012,zero_fuel
+Wheaton GT,gas,189.0,11.0,3.0,GT,WI,MISO,4014,default
+Wissota HY,hydro,18.0,0.0,0.0,HY,WI,MISO,4015,zero_fuel
+Clam River Dam HY,hydro,1.2000000000000002,0.0,0.0,HY,WI,MISO,4018,zero_fuel
+Danbury Dam HY,hydro,0.9999999999999999,0.0,0.0,HY,WI,MISO,4019,zero_fuel
+Frederic Diesel IC,oil,13.5,10.5,6.0,IC,WI,MISO,4020,default
+Grantsburg Diesel IC,oil,6.3,10.5,6.0,IC,WI,MISO,4021,default
+Port Washington Generating Station CC,gas,1236.5,6.905839802333981,3.0,CC,WI,MISO,4040,eia923
+South Oak Creek ST,coal,616.0,10.692629510852482,4.5,ST,WI,MISO,4041,eia923
+Valley (WI) ST,gas,263.9,8.648720539511714,3.0,ST,WI,MISO,4042,eia923
+Valley (WI) IC,oil,2.7,10.5,6.0,IC,WI,MISO,4042,default
+Appleton HY,hydro,2.2,0.0,0.0,HY,WI,MISO,4043,zero_fuel
+Oconto Falls Upper HY,hydro,1.1,0.0,0.0,HY,WI,MISO,4044,zero_fuel
+Pine HY,hydro,3.6,0.0,0.0,HY,WI,MISO,4045,zero_fuel
+Point Beach Nuclear Plant ST,nuclear,1185.3,10.442601960742381,2.5,ST,WI,MISO,4046,eia923
+Point Beach Nuclear Plant GT,oil,15.0,13.0,6.0,GT,WI,MISO,4046,default
+Edgewater ST,coal,405.4,10.960631941288367,4.5,ST,WI,MISO,4050,eia923
+Kilbourn HY,hydro,9.5,0.0,0.0,HY,WI,MISO,4053,zero_fuel
+Prairie Du Sac HY,hydro,29.0,0.0,0.0,HY,WI,MISO,4056,zero_fuel
+Alexander HY,hydro,4.199999999999999,0.0,0.0,HY,WI,MISO,4060,zero_fuel
+Caldron Falls HY,hydro,6.4,0.0,0.0,HY,WI,MISO,4061,zero_fuel
+Grandfather Falls HY,hydro,17.2,0.0,0.0,HY,WI,MISO,4063,zero_fuel
+Hat Rapids HY,hydro,1.7000000000000002,0.0,0.0,HY,WI,MISO,4064,zero_fuel
+High Falls (WI) HY,hydro,5.6,0.0,0.0,HY,WI,MISO,4065,zero_fuel
+Johnson Falls HY,hydro,3.4,0.0,0.0,HY,WI,MISO,4067,zero_fuel
+Merrill HY,hydro,2.3,0.0,0.0,HY,WI,MISO,4068,zero_fuel
+Potato Rapids HY,hydro,1.3,0.0,0.0,HY,WI,MISO,4071,zero_fuel
+Pulliam GT,gas,79.8,12.551317489948305,3.0,GT,WI,MISO,4072,eia923
+Sandstone Rapids HY,hydro,3.8,0.0,0.0,HY,WI,MISO,4074,zero_fuel
+Tomahawk HY,hydro,2.6,0.0,0.0,HY,WI,MISO,4075,zero_fuel
+West Marinette GT,gas,153.0,14.075439684145268,3.0,GT,WI,MISO,4076,eia923
+Wausau HY,hydro,5.4,0.0,0.0,HY,WI,MISO,4077,zero_fuel
+Weston ST,coal,887.9000000000001,9.819003867814901,4.5,ST,WI,MISO,4078,eia923
+Castle Rock HY,hydro,14.0,0.0,0.0,HY,WI,MISO,4079,zero_fuel
+Petenwell HY,hydro,20.0,0.0,0.0,HY,WI,MISO,4080,zero_fuel
+Arcadia Electric IC,gas,6.0,9.0,3.0,IC,WI,MISO,4100,default
+Arcadia Electric IC,oil,10.9,10.5,6.0,IC,WI,MISO,4100,default
+Barron HY,hydro,0.1,0.0,0.0,HY,WI,MISO,4102,zero_fuel
+Cashton IC,gas,1.1,11.11111111111111,3.0,IC,WI,MISO,4107,eia923
+Cashton IC,oil,2.4,11.483870967741936,6.0,IC,WI,MISO,4107,eia923
+Cumberland (WI) IC,gas,11.8,10.14864864864865,3.0,IC,WI,MISO,4112,eia923
+Cumberland (WI) IC,oil,8.9,10.150537634408602,6.0,IC,WI,MISO,4112,eia923
+Elroy IC,oil,6.6000000000000005,10.5,6.0,IC,WI,MISO,4113,default
+Fennimore IC,oil,7.4,11.555555555555555,6.0,IC,WI,MISO,4114,eia923
+Kaukauna Gas Turbine GT,gas,15.8,16.425074626865673,3.0,GT,WI,MISO,4118,eia923
+Little Chute HY,hydro,3.3000000000000003,0.0,0.0,HY,WI,MISO,4119,zero_fuel
+New Badger HY,hydro,8.0,0.0,0.0,HY,WI,MISO,4120,zero_fuel
+Rapide Croche HY,hydro,2.4,0.0,0.0,HY,WI,MISO,4122,zero_fuel
+La Farge IC,oil,1.5,10.5,6.0,IC,WI,MISO,4124,default
+Manitowoc ST,coal,58.4,11.592233860717885,4.5,ST,WI,MISO,4125,eia923
+Manitowoc ST,waste,44.0,0.0,5.0,ST,WI,MISO,4125,zero_fuel
+New Lisbon IC,oil,7.6,12.263157894736842,6.0,IC,WI,MISO,4130,eia923
+Viola IC,oil,1.8,10.0,6.0,IC,WI,MISO,4139,eia923
+Flambeau Hydroelectric Station HY,hydro,24.1,0.0,0.0,HY,WI,MISO,4142,zero_fuel
+Stiles HY,hydro,0.6,0.0,0.0,HY,WI,MISO,4147,zero_fuel
+Washington Island IC,oil,5.0,10.5,6.0,IC,WI,MISO,4148,default
+Combined Locks HY,hydro,6.2,0.0,0.0,HY,WI,MISO,4201,zero_fuel
+Waterford 3 ST,nuclear,1076.0,10.442602035641661,2.5,ST,LA,MISO,4270,eia923
+John P Madgett ST,coal,389.8,12.223817224136342,4.5,ST,WI,MISO,4271,eia923
+Plant 31 Paper Mill GT,gas,32.0,11.111403304193612,3.0,GT,LA,MISO,50028,eia923
+Plant 31 Paper Mill ST,waste,45.0,0.0,5.0,ST,LA,MISO,50028,zero_fuel
+University of Northern Iowa ST,gas,7.5,10.5,3.0,ST,IA,MISO,50088,default
+WestRock (TX) ST,waste,59.5,0.0,5.0,ST,TX,MISO,50101,zero_fuel
+Dow St Charles Operations CC,gas,270.0,7.6,3.0,CC,LA,MISO,50152,default
+Domtar Paper Company Rothschild HY,hydro,1.1,0.0,0.0,HY,WI,MISO,50190,zero_fuel
+Purdue University ST,gas,37.8,10.5,3.0,ST,IN,MISO,50240,default
+Purdue University IC,oil,1.8,10.5,6.0,IC,IN,MISO,50240,default
+Billerud Quinnesec Mill ST,waste,59.0,0.0,5.0,ST,MI,MISO,50251,zero_fuel
+Sartell Dam HY,hydro,9.3,0.0,0.0,HY,MN,MISO,50252,zero_fuel
+Corewell Health Dearborn Campus IC,oil,4.5,10.5,6.0,IC,MI,MISO,50260,default
+Alpena Cement Plant ST,coal,47.2,12.076968624851524,4.5,ST,MI,MISO,50305,eia923
+PCS Nitrogen Fertilizer LP IC,oil,3.6,10.5,6.0,IC,LA,MISO,50341,default
+Port Allen (LA) GT,gas,7.0,11.0,3.0,GT,LA,MISO,50389,default
+Georgia-Pacific Corp - Nekoosa Mill ST,gas,18.7,10.5,3.0,ST,WI,MISO,50395,default
+Georgia-Pacific Corp - Nekoosa Mill HY,hydro,3.9,0.0,0.0,HY,WI,MISO,50395,zero_fuel
+Georgia-Pacific Corp - Nekoosa Mill ST,waste,12.5,0.0,5.0,ST,WI,MISO,50395,zero_fuel
+Park Mill HY,hydro,2.1,0.0,0.0,HY,WI,MISO,50408,zero_fuel
+Menominee Mill Marinette HY,hydro,1.8,0.0,0.0,HY,MI,MISO,50409,zero_fuel
+Olmsted Waste Energy IC,oil,1.3,10.5,6.0,IC,MN,MISO,50413,default
+Olmsted Waste Energy ST,waste,7.699999999999999,0.0,5.0,ST,MN,MISO,50413,zero_fuel
+University of Michigan CC,gas,45.5,7.6,3.0,CC,MI,MISO,50431,default
+Ada Dam HY,hydro,1.4,0.0,0.0,HY,MI,MISO,50433,zero_fuel
+Cascade Dam (MI) HY,hydro,1.6,0.0,0.0,HY,MI,MISO,50436,zero_fuel
+French Landing Dam HY,hydro,1.6,0.0,0.0,HY,MI,MISO,50437,zero_fuel
+Oconto Falls Lower HY,hydro,1.7,0.0,0.0,HY,WI,MISO,50439,zero_fuel
+Cheboygan HY,hydro,0.7,0.0,0.0,HY,MI,MISO,50461,zero_fuel
+Packaging of America Tomahawk Mill HY,hydro,1.1,0.0,0.0,HY,WI,MISO,50476,zero_fuel
+Packaging of America Tomahawk Mill ST,waste,13.6,0.0,5.0,ST,WI,MISO,50476,zero_fuel
+PPG Riverside ST,waste,68.0,0.0,5.0,ST,LA,MISO,50488,zero_fuel
+PPG Powerhouse C GT,gas,251.2,11.0,3.0,GT,LA,MISO,50489,default
+PPG Powerhouse C ST,gas,52.0,10.5,3.0,ST,LA,MISO,50489,default
+PPG Plant C Caustic ST,gas,2.7,10.5,3.0,ST,LA,MISO,50490,default
+Milam Gas Recovery IC,gas,2.4000000000000004,11.016347790211954,3.0,IC,IL,MISO,50566,eia923
+Metro Gas Recovery GT,waste,5.8,0.0,5.0,GT,WI,MISO,50576,zero_fuel
+Metro Gas Recovery IC,waste,3.2,0.0,5.0,IC,WI,MISO,50576,zero_fuel
+Omega Hills Gas Recovery GT,waste,11.7,0.0,5.0,GT,WI,MISO,50577,zero_fuel
+Mosinee Mill HY,hydro,3.9,0.0,0.0,HY,WI,MISO,50614,zero_fuel
+Mosinee Mill ST,waste,18.0,0.0,5.0,ST,WI,MISO,50614,zero_fuel
+ExxonMobil Beaumont Refinery GT,gas,467.0,11.0,3.0,GT,TX,MISO,50625,default
+ExxonMobil Beaumont Refinery ST,gas,138.6,11.373335874062018,3.0,ST,TX,MISO,50625,eia923
+ExxonMobil Beaumont Refinery ST,waste,5.0,0.0,5.0,ST,TX,MISO,50625,zero_fuel
+Brainerd Public Utilities HY,hydro,1.2,0.0,0.0,HY,MN,MISO,50636,zero_fuel
+Clearwater Paper APP CB ST,waste,28.0,0.0,5.0,ST,AR,MISO,50638,zero_fuel
+Sappi Cloquet Mill HY,hydro,3.6,0.0,0.0,HY,MN,MISO,50639,zero_fuel
+Sappi Cloquet Mill ST,waste,73.0,0.0,5.0,ST,MN,MISO,50639,zero_fuel
+Covanta Indianapolis Energy ST,waste,5.0,0.0,5.0,ST,IN,MISO,50647,zero_fuel
+Tazewell Gas Recovery IC,waste,2.4000000000000004,0.0,5.0,IC,IL,MISO,50721,zero_fuel
+Gary Works ST,gas,161.0,10.5,3.0,ST,IN,MISO,50733,default
+National Energy of McBain ST,waste,18.0,0.0,5.0,ST,MI,MISO,50770,zero_fuel
+Westrock Hodge (LA) ST,waste,66.4,0.0,5.0,ST,LA,MISO,50810,zero_fuel
+TES Filer City Station ST,coal,60.0,10.942460471304166,4.5,ST,MI,MISO,50835,eia923
+"Atlantic Alumina, Gramercy Operations GT",gas,36.0,8.927262864375647,3.0,GT,LA,MISO,50846,eia923
+"Atlantic Alumina, Gramercy Operations ST",gas,40.0,9.019288630485669,3.0,ST,LA,MISO,50846,eia923
+Kent County Waste to Energy Facility ST,waste,15.7,0.0,5.0,ST,MI,MISO,50860,zero_fuel
+Sagamore Plant Cogeneration ST,gas,7.4,10.5,3.0,ST,IN,MISO,50903,default
+Des Moines Wastewater Reclamation Fac IC,waste,2.8,0.0,5.0,IC,IA,MISO,50932,zero_fuel
+Rhinelander Mill HY,hydro,1.0,0.0,0.0,HY,WI,MISO,50933,zero_fuel
+Caterpillar IC,gas,7.5,9.927759993200942,3.0,IC,IN,MISO,50935,eia923
+Caterpillar IC,oil,2.1,9.905466502260584,6.0,IC,IN,MISO,50935,eia923
+Winnebago County Landfill Gas IC,waste,1.5,0.0,5.0,IC,WI,MISO,50936,zero_fuel
+MU Combined Heat and Power Plant GT,gas,22.8,11.0,3.0,GT,MO,MISO,50969,default
+MU Combined Heat and Power Plant ST,gas,45.0,10.5,3.0,ST,MO,MISO,50969,default
+MU Combined Heat and Power Plant IC,oil,3.0,10.5,6.0,IC,MO,MISO,50969,default
+Motiva Enterprises Port Arthur Refinery CC,gas,183.4,7.6,3.0,CC,TX,MISO,50973,default
+Motiva Enterprises Port Arthur Refinery GT,gas,15.6,11.0,3.0,GT,TX,MISO,50973,default
+Motiva Enterprises Port Arthur Refinery CC,waste,40.4,0.0,5.0,CC,TX,MISO,50973,zero_fuel
+Enterprise Sugar Factory ST,waste,1.0,0.0,5.0,ST,LA,MISO,51008,zero_fuel
+Whiting Refinery ST,waste,61.0,0.0,5.0,ST,IN,MISO,52130,zero_fuel
+CITGO Refinery Powerhouse ST,waste,34.0,0.0,5.0,ST,LA,MISO,52175,zero_fuel
+Riverview Energy Systems GT,waste,5.6,0.0,5.0,GT,MI,MISO,54057,zero_fuel
+Mansfield Mill GT,gas,45.0,11.0,3.0,GT,LA,MISO,54091,default
+Mansfield Mill ST,waste,72.30000000000001,0.0,5.0,ST,LA,MISO,54091,zero_fuel
+Kaukauna Paper Mill ST,waste,32.6,0.0,5.0,ST,WI,MISO,54098,zero_fuel
+International Paper Vicksburg Mill ST,waste,38.5,0.0,5.0,ST,MS,MISO,54100,zero_fuel
+Port Edwards Mill HY,hydro,6.6,0.0,0.0,HY,WI,MISO,54103,zero_fuel
+Iowa State University ST,gas,39.9,10.5,3.0,ST,IA,MISO,54201,default
+Mississippi Baptist Medical Center GT,gas,4.0,11.0,3.0,GT,MS,MISO,54203,default
+American Crystal Sugar Hillsboro ST,coal,13.3,10.6,4.5,ST,ND,MISO,54210,default
+American Crystal Sugar Crookston ST,coal,6.5,10.6,4.5,ST,MN,MISO,54212,default
+American Crystal Sugar Drayton ST,coal,6.0,10.6,4.5,ST,ND,MISO,54213,default
+American Crystal Sugar East Grand Forks ST,coal,7.5,10.6,4.5,ST,MN,MISO,54214,default
+Franklin Heating Station ST,gas,10.1,10.5,3.0,ST,MN,MISO,54224,default
+Franklin Heating Station IC,oil,16.2,10.5,6.0,IC,MN,MISO,54224,default
+Franklin Heating Station ST,waste,2.8,0.0,5.0,ST,MN,MISO,54224,zero_fuel
+Louisiana Tech University Power Plant GT,gas,6.4,11.0,3.0,GT,LA,MISO,54240,default
+Saint Marys Hospital Power Plant GT,gas,4.5,11.0,3.0,GT,MN,MISO,54262,default
+Saint Marys Hospital Power Plant ST,gas,2.7,10.5,3.0,ST,MN,MISO,54262,default
+Saint Marys Hospital Power Plant IC,oil,8.6,10.5,6.0,IC,MN,MISO,54262,default
+Hastings City Hydroelectric HY,hydro,4.0,0.0,0.0,HY,MN,MISO,54285,zero_fuel
+West Group Data Center IC,oil,2.4,10.89090909090909,6.0,IC,MN,MISO,54294,eia923
+Goodyear Beaumont Chemical Plant GT,gas,19.0,11.0,3.0,GT,TX,MISO,54321,default
+Goodyear Beaumont Chemical Plant ST,gas,13.0,10.5,3.0,ST,TX,MISO,54321,default
+Norway Point Hydropower Project HY,hydro,4.0,0.0,0.0,HY,MI,MISO,54340,zero_fuel
+Four Mile Hydropower Project HY,hydro,2.0,0.0,0.0,HY,MI,MISO,54341,zero_fuel
+Ninth Street Hydropower Project HY,hydro,1.2000000000000002,0.0,0.0,HY,MI,MISO,54342,zero_fuel
+Fuyao Glass Illinois Inc. IC,oil,4.7,10.5,6.0,IC,IL,MISO,54360,default
+Capitol Heat and Power IC,oil,2.0,10.5,6.0,IC,WI,MISO,54406,default
+Waupun Correctional Central Heating Plt ST,gas,2.0,10.5,3.0,ST,WI,MISO,54407,default
+Waupun Correctional Central Heating Plt IC,oil,2.3,10.5,6.0,IC,WI,MISO,54407,default
+UW Madison Charter Street Plant ST,gas,9.7,10.5,3.0,ST,WI,MISO,54408,default
+UW Madison Charter Street Plant IC,oil,1.3,10.5,6.0,IC,WI,MISO,54408,default
+John Deere Dubuque Works IC,oil,8.399999999999999,10.717391304347826,6.0,IC,IA,MISO,54414,eia923
+Cadillac Renewable Energy ST,waste,38.0,0.0,5.0,ST,MI,MISO,54415,zero_fuel
+Gaylord Container Bogalusa ST,waste,91.8,0.0,5.0,ST,LA,MISO,54427,zero_fuel
+Domino Sugar Arabi Plant ST,gas,5.4,10.5,3.0,ST,LA,MISO,54512,default
+Formosa Plastics GT,gas,66.0,11.0,3.0,GT,LA,MISO,54518,default
+Formosa Plastics ST,gas,16.0,10.5,3.0,ST,LA,MISO,54518,default
+Southern Minnesota Beet Sugar ST,coal,7.5,10.6,4.5,ST,MN,MISO,54533,default
+Sumpter Energy Associates IC,waste,11.200000000000001,0.0,5.0,IC,MI,MISO,54536,zero_fuel
+Venice Resources Gas Recovery IC,waste,1.6,0.0,5.0,IC,MI,MISO,54539,zero_fuel
+Warner Lambert GT,gas,2.8,11.0,3.0,GT,MI,MISO,54604,default
+Warner Lambert IC,oil,9.399999999999999,10.5,6.0,IC,MI,MISO,54604,default
+JCO Oxides Olefins Plant GT,gas,61.0,11.0,3.0,GT,TX,MISO,54637,default
+Pheasant Run Landfill Gas Recovery IC,waste,7.2,0.0,5.0,IC,WI,MISO,54661,zero_fuel
+Sidney A Murray Jr Hydroelectric HY,hydro,192.0,0.0,0.0,HY,LA,MISO,54678,zero_fuel
+Metro Methane Recovery Facility IC,waste,11.200000000000001,0.0,5.0,IC,IA,MISO,54700,zero_fuel
+Alliant SBD 9205 A Y McDonald IC,oil,3.6,14.965986394557822,6.0,IC,IA,MISO,54710,eia923
+Alliant SBD 9201 Norplex IC,oil,2.1,14.740761169332599,6.0,IC,IA,MISO,54712,eia923
+Alliant SBD 9107 JBS USA IC,oil,11.4,14.518950437317786,6.0,IC,IA,MISO,54715,eia923
+Alliant SBD 8602 Marion Sub IC,oil,5.6,15.359828141783028,6.0,IC,IA,MISO,54716,eia923
+Alliant SBD 9106 Rockwell CR IC,oil,16.0,15.317987660180352,6.0,IC,IA,MISO,54717,eia923
+Alliant SBD 9206 Donaldson IC,oil,1.6,15.306122448979592,6.0,IC,IA,MISO,54718,eia923
+Alliant SBD 9203 Profol IC,oil,5.6,10.893939393939394,6.0,IC,IA,MISO,54719,eia923
+Hendricks Regional Health IC,oil,4.3,10.5,6.0,IC,IN,MISO,54731,default
+Alliant SBD 9301 Prairie Farms IC,oil,3.5,15.41048237476809,6.0,IC,IA,MISO,54735,eia923
+Genesee Power Station LP ST,waste,35.0,0.0,5.0,ST,MI,MISO,54751,zero_fuel
+Coopersville IC,waste,6.4,0.0,5.0,IC,MI,MISO,54756,zero_fuel
+Grand Blanc Generating Station IC,waste,7.2,0.0,5.0,IC,MI,MISO,54757,zero_fuel
+University of Iowa Main Power Plant IC,gas,8.0,9.0,3.0,IC,IA,MISO,54775,default
+University of Iowa Main Power Plant ST,gas,30.8,10.5,3.0,ST,IA,MISO,54775,default
+University of Illinois Abbott Power Plt GT,gas,25.0,11.0,3.0,GT,IL,MISO,54780,default
+University of Illinois Abbott Power Plt ST,gas,54.3,10.5,3.0,ST,IL,MISO,54780,default
+Storm Lake 1 WT,wind,105.7,0.0,0.0,WT,IA,MISO,54793,zero_fuel
+Evonik Industries AG IC,oil,1.2,12.0,6.0,IC,IN,MISO,54835,eia923
+MMSD Jones Island Wastewater GT,gas,17.6,11.0,3.0,GT,WI,MISO,54851,default
+MMSD Jones Island Wastewater GT,waste,9.2,0.0,5.0,GT,WI,MISO,54851,zero_fuel
+Southwestern Bell Telephone IC,oil,17.2,10.661290322580646,6.0,IC,MO,MISO,54858,eia923
+Neenah Paper Munising Mill ST,coal,5.8,10.6,4.5,ST,MI,MISO,54867,default
+Kimberly Mill HY,hydro,2.0999999999999996,0.0,0.0,HY,WI,MISO,54885,zero_fuel
+Peoples Generating Station IC,waste,2.2,0.0,5.0,IC,MI,MISO,54890,zero_fuel
+Adrian Energy Associates LLC IC,waste,2.4000000000000004,0.0,5.0,IC,MI,MISO,54903,zero_fuel
+Enderlin ST,waste,9.8,0.0,5.0,ST,ND,MISO,54908,zero_fuel
+Brent Run Generating Station IC,waste,7.0,0.0,5.0,IC,MI,MISO,54910,zero_fuel
+Michigan Power LP CC,gas,128.0,6.092858582187228,3.0,CC,MI,MISO,54915,eia923
+Ergon Refining Vicksburg GT,gas,4.5,11.0,3.0,GT,MS,MISO,54918,default
+Twin Bridges LFGTE IC,gas,9.600000000000001,9.0,3.0,IC,IN,MISO,54925,default
+Twin Bridges LFGTE IC,waste,3.2,0.0,5.0,IC,IN,MISO,54925,zero_fuel
+Prairie View I & II LFGTE IC,gas,6.4,9.0,3.0,IC,IN,MISO,54926,default
+Grand Isle Gas Plant / Treating Station IC,gas,8.7,9.0,3.0,IC,LA,MISO,54927,default
+Alliant SBD 9403 Aegon DC IC,oil,4.1,15.204081632653061,6.0,IC,IA,MISO,54929,eia923
+Deercroft I & II LFGTE IC,gas,3.2,9.0,3.0,IC,IN,MISO,54956,default
+Deercroft I & II LFGTE IC,waste,3.2,0.0,5.0,IC,IN,MISO,54956,zero_fuel
+"Phoenix Investors, LLC IC",oil,5.4,10.5,6.0,IC,IA,MISO,54968,default
+Pine Tree Acres IC,waste,8.8,0.0,5.0,IC,MI,MISO,54989,zero_fuel
+Indiana Harbor E 5 AC Station ST,waste,90.0,0.0,5.0,ST,IN,MISO,54995,zero_fuel
+LSP-Cottage Grove LP CC,gas,251.0,7.254140858457638,3.0,CC,MN,MISO,55010,eia923
+Whitewater Generating Station CC,gas,261.0,7.909081846633342,3.0,CC,WI,MISO,55011,eia923
+De Pere Energy Center GT,gas,166.0,11.0,3.0,GT,WI,MISO,55029,default
+Davenport Water Pollution Control Plant IC,waste,1.6,0.0,5.0,IC,IA,MISO,55035,zero_fuel
+Westlake Plaquemine GT,gas,225.0,11.0,3.0,GT,LA,MISO,55051,default
+Heat Recovery Coke Facility ST,gas,88.0,10.5,3.0,ST,IN,MISO,55066,default
+Pine Bluff Energy Center CC,gas,179.0,7.6,3.0,CC,AR,MISO,55075,default
+Zeeland Generating Station CC,gas,524.5,7.123214097357401,3.0,CC,MI,MISO,55087,eia923
+Zeeland Generating Station GT,gas,318.20000000000005,10.603814030370229,3.0,GT,MI,MISO,55087,eia923
+Dearborn Industrial Generation CC,gas,326.0,7.6,3.0,CC,MI,MISO,55088,default
+Dearborn Industrial Generation GT,gas,163.0,11.0,3.0,GT,MI,MISO,55088,default
+Dearborn Industrial Generation CC,waste,250.0,0.0,5.0,CC,MI,MISO,55088,zero_fuel
+Taft Cogeneration Facility CC,gas,738.9000000000001,6.719009793224079,3.0,CC,LA,MISO,55089,eia923
+Portside Energy GT,gas,34.0,11.0,3.0,GT,IN,MISO,55096,default
+Portside Energy ST,gas,19.0,10.5,3.0,ST,IN,MISO,55096,default
+Kalamazoo River Generating Station GT,gas,72.0,12.020762107825718,3.0,GT,MI,MISO,55101,eia923
+Livingston Generating Station GT,gas,132.0,11.0,3.0,GT,MI,MISO,55102,default
+Vermillion Energy Facility GT,gas,576.0,12.254425325888638,3.0,GT,IN,MISO,55111,eia923
+RS Cogen CC,gas,415.4,6.764472659591518,3.0,CC,LA,MISO,55117,eia923
+NAFTA Region Olefins Complex Cogen Fac GT,gas,70.0,11.0,3.0,GT,TX,MISO,55122,default
+Thomson Reuters Campus Bldg A-D IC,oil,11.200000000000001,9.263157894736842,6.0,IC,MN,MISO,55133,eia923
+Alliant Energy Neenah GT,gas,297.6,11.296699702528574,3.0,GT,WI,MISO,55135,eia923
+Worthington Generation LLC GT,gas,169.5,10.9279241921612,3.0,GT,IN,MISO,55148,eia923
+Calcasieu GT,gas,314.6,11.18906937682053,3.0,GT,LA,MISO,55165,eia923
+Acadia Energy Center CC,gas,1064.5,8.03247653329297,3.0,CC,LA,MISO,55173,eia923
+Gibson City Energy Center LLC GT,gas,232.0,11.750748222114426,3.0,GT,IL,MISO,55201,eia923
+Pinckneyville GT,gas,316.0,10.961654173038834,3.0,GT,IL,MISO,55202,eia923
+Kinmundy GT,gas,208.0,11.0,3.0,GT,IL,MISO,55204,default
+Lake Benton I WT,wind,103.5,0.0,0.0,WT,MN,MISO,55208,zero_fuel
+Hinds Energy Facility CC,gas,445.5,7.150688497704328,3.0,CC,MS,MISO,55218,eia923
+Hinds Energy Facility GT,gas,27.4,10.8379222253761,3.0,GT,MS,MISO,55218,eia923
+Attala CC,gas,459.3,6.467028211963934,3.0,CC,MS,MISO,55220,eia923
+Harry L. Oswald CC,gas,548.0,8.791960496096344,3.0,CC,AR,MISO,55221,eia923
+Wheatland Generating Facility GT,gas,442.0,13.763501556111551,3.0,GT,IN,MISO,55224,eia923
+Montpelier Electric Generating Station GT,gas,233.1,11.726155904362448,3.0,GT,IN,MISO,55229,eia923
+Audrain Generating Station GT,gas,608.0,12.472325832411089,3.0,GT,MO,MISO,55234,eia923
+Shelby Energy County GT,gas,336.0,10.225385823630607,3.0,GT,IL,MISO,55237,eia923
+Whiting Clean Energy CC,gas,513.0,7.301492835839041,3.0,CC,IN,MISO,55259,eia923
+Lake Benton II WT,wind,98.8,0.0,0.0,WT,MN,MISO,55265,zero_fuel
+Jackson Generating Station CC,gas,534.4,8.564718838233954,3.0,CC,MI,MISO,55270,eia923
+Storm Lake II WT,wind,76.5,0.0,0.0,WT,IA,MISO,55287,zero_fuel
+Air Products Port Arthur GT,gas,66.0,11.0,3.0,GT,TX,MISO,55309,default
+Air Products Port Arthur GT,waste,72.4,0.0,5.0,GT,TX,MISO,55309,zero_fuel
+Air Products Port Arthur ST,waste,20.5,0.0,5.0,ST,TX,MISO,55309,zero_fuel
+Holland Energy Facility CC,gas,602.2,7.348764682104157,3.0,CC,IL,MISO,55334,eia923
+Woodstock Windfarm WT,wind,9.2,0.0,0.0,WT,MN,MISO,55342,zero_fuel
+Lakota Ridge LLC WT,wind,11.2,0.0,0.0,WT,MN,MISO,55353,zero_fuel
+Shaokatan Hills LLC WT,wind,11.8,0.0,0.0,WT,MN,MISO,55354,zero_fuel
+Jack Fusco Energy Center CC,gas,538.0,7.436722409581688,3.0,CC,TX,MISO,55357,eia923
+Cottonwood Energy Company LP CC,gas,1138.8,7.49395265282296,3.0,CC,TX,MISO,55358,eia923
+Sugar Creek Power CC,gas,537.3,6.879761380572572,3.0,CC,IN,MISO,55364,eia923
+Union Power Station CC,gas,2037.0,7.282564971174532,3.0,CC,AR,MISO,55380,eia923
+RockGen Energy Center GT,gas,489.0,11.345764214407634,3.0,GT,WI,MISO,55391,eia923
+Crossroads Energy Center GT,gas,308.0,13.091761543070918,3.0,GT,MS,MISO,55395,eia923
+Renaissance Power Plant GT,gas,652.0,11.314969091818092,3.0,GT,MI,MISO,55402,eia923
+Carville Energy LLC CC,gas,521.0,6.568555164128984,3.0,CC,LA,MISO,55404,eia923
+Raccoon Creek Energy Center GT,gas,304.0,11.0,3.0,GT,IL,MISO,55417,default
+Hot Spring Generating Facility CC,gas,562.7,7.422174535120387,3.0,CC,AR,MISO,55418,eia923
+Plaquemine Cogeneration Plant CC,gas,890.8,7.893202697710593,3.0,CC,LA,MISO,55419,eia923
+Kentucky Mills ST,waste,49.0,0.0,5.0,ST,KY,MISO,55429,zero_fuel
+Bayou Cove Peaking Power GT,gas,291.1,12.86953125,3.0,GT,LA,MISO,55433,eia923
+Columbia Energy Center GT,gas,140.0,11.988385247756241,3.0,GT,MO,MISO,55447,eia923
+Ouachita CC,gas,722.0,7.198216082007635,3.0,CC,LA,MISO,55467,eia923
+Washington Parish Energy Center GT,gas,365.5,10.502851458651195,3.0,GT,LA,MISO,55486,eia923
+Goose Creek Energy Center GT,gas,438.0,11.0,3.0,GT,IL,MISO,55496,default
+MMSD South Shore Wastewater IC,waste,5.0,0.0,5.0,IC,WI,MISO,55525,zero_fuel
+Security IC,waste,3.4,0.0,5.0,IC,TX,MISO,55556,zero_fuel
+Combined Locks Energy Center CC,gas,51.9,8.123813788082797,3.0,CC,WI,MISO,55558,eia923
+Tsar Nicholas LLC WT,wind,1.9,0.0,0.0,WT,MN,MISO,55561,zero_fuel
+Sun River LLC WT,wind,1.9,0.0,0.0,WT,MN,MISO,55562,zero_fuel
+Julia Hills LLC WT,wind,1.9,0.0,0.0,WT,MN,MISO,55563,zero_fuel
+Jessica Mills LLC WT,wind,1.9,0.0,0.0,WT,MN,MISO,55564,zero_fuel
+Jack River LLC WT,wind,1.9,0.0,0.0,WT,MN,MISO,55565,zero_fuel
+Autumn Hills LLC WT,wind,1.9,0.0,0.0,WT,MN,MISO,55566,zero_fuel
+Winters Spawn LLC WT,wind,1.9,0.0,0.0,WT,MN,MISO,55567,zero_fuel
+Twin Lake Hills LLC WT,wind,1.9,0.0,0.0,WT,MN,MISO,55568,zero_fuel
+Spartan Hills LLC WT,wind,1.9,0.0,0.0,WT,MN,MISO,55569,zero_fuel
+Soliloquoy Ridge LLC WT,wind,1.9,0.0,0.0,WT,MN,MISO,55570,zero_fuel
+Ruthton Ridge LLC WT,wind,1.9,0.0,0.0,WT,MN,MISO,55571,zero_fuel
+Hope Creek LLC WT,wind,1.9,0.0,0.0,WT,MN,MISO,55572,zero_fuel
+Hadley Ridge LLC WT,wind,1.9,0.0,0.0,WT,MN,MISO,55573,zero_fuel
+Florence Hills LLC WT,wind,1.9,0.0,0.0,WT,MN,MISO,55574,zero_fuel
+Agassiz Beach LLC WT,wind,1.9,0.0,0.0,WT,MN,MISO,55576,zero_fuel
+GRS Arbor Hills CC,waste,23.799999999999997,0.0,5.0,CC,MI,MISO,55596,zero_fuel
+GRS C&C GT,waste,2.3,0.0,5.0,GT,MI,MISO,55597,zero_fuel
+GRS C&C IC,waste,1.8,0.0,5.0,IC,MI,MISO,55597,zero_fuel
+Perryville Power Station CC,gas,577.0,6.829753140038618,3.0,CC,LA,MISO,55620,eia923
+Perryville Power Station GT,gas,148.5,10.534242758589945,3.0,GT,LA,MISO,55620,eia923
+Riverside Energy Center CC,gas,530.0,6.849637287918349,3.0,CC,WI,MISO,55641,eia923
+Flambeau Crowley Rapids Project HY,hydro,1.5,0.0,0.0,HY,WI,MISO,55684,zero_fuel
+Flambeau Lower Project HY,hydro,1.2000000000000002,0.0,0.0,HY,WI,MISO,55685,zero_fuel
+Magnet Cove CC,gas,641.5,6.789162154947701,3.0,CC,AR,MISO,55714,eia923
+Dean GT,gas,312.0,11.858994487406743,3.0,GT,MI,MISO,55718,eia923
+Montfort Wind Energy Center WT,wind,30.0,0.0,0.0,WT,WI,MISO,55742,zero_fuel
+Noble Ridge LLC WT,wind,1.5,0.0,0.0,WT,MN,MISO,55782,zero_fuel
+Otsego Mill Power Plant GT,gas,17.6,11.0,3.0,GT,MI,MISO,55799,default
+"Old Gold Energy Center, LLC WT",wind,80.0,0.0,0.0,WT,IA,MISO,55804,zero_fuel
+Kas Brothers Windfarm WT,wind,1.5,0.0,0.0,WT,MN,MISO,55809,zero_fuel
+Hawkeye Power Partners LLC WT,wind,42.0,0.0,0.0,WT,IA,MISO,55816,zero_fuel
+MNDOT Standby Generation IC,oil,1.9,11.576923076923077,6.0,IC,MN,MISO,55824,eia923
+Island Street Peaking Plant GT,gas,54.4,10.905693155444489,3.0,GT,WI,MISO,55836,eia923
+Prairie State Generating Station ST,coal,1630.0,9.5854794457053,4.5,ST,IL,MISO,55856,eia923
+Oak Point Cogen GT,gas,22.2,11.0,3.0,GT,LA,MISO,55857,default
+Stevens Point Mill ST,gas,7.0,11.373401333856414,3.0,ST,WI,MISO,55861,eia923
+Ridgeview IC,waste,4.800000000000001,0.0,5.0,IC,WI,MISO,55925,zero_fuel
+Alliant SBD0201 Ingredion IC,oil,6.1000000000000005,15.68206229860365,6.0,IC,IA,MISO,55996,eia923
+Minwind WT,wind,3.8,0.0,0.0,WT,MN,MISO,56002,zero_fuel
+Hancock County Wind Energy Center WT,wind,98.0,0.0,0.0,WT,IA,MISO,56010,zero_fuel
+Traer East IC,oil,4.0,10.5,6.0,IC,IA,MISO,56025,default
+Fox Energy Center CC,gas,577.5,6.922272084398041,3.0,CC,WI,MISO,56031,eia923
+Casey City of IC,oil,5.4,10.754098360655737,6.0,IC,IL,MISO,56053,eia923
+G McNeilus Wind Farm Dodge Center WT,wind,43.0,0.0,0.0,WT,MN,MISO,56054,zero_fuel
+Elm Road Generating Station ST,coal,1270.8,9.278661412123327,4.5,ST,WI,MISO,56068,eia923
+Berlin Landfill Gas IC,waste,2.4000000000000004,0.0,5.0,IC,WI,MISO,56069,zero_fuel
+Diesel Generators IC,oil,52.5,9.073469387755102,6.0,IC,WI,MISO,56070,eia923
+Alliant SBG 9802 Toyota IC,gas,1.0,9.489795918367346,3.0,IC,IA,MISO,56073,eia923
+Hillsboro IC,oil,4.0,9.916666666666666,6.0,IC,ND,MISO,56098,eia923
+FPL Energy North Dakota Wind I/II WT,wind,61.5,0.0,0.0,WT,ND,MISO,56099,zero_fuel
+St. Charles Power Plant IC,oil,8.0,9.154929577464788,6.0,IC,MN,MISO,56100,eia923
+Mankato Energy Center CC,gas,654.0,7.036695962059764,3.0,CC,MN,MISO,56104,eia923
+T J Labbe Electric Generating GT,gas,95.5,12.218716074401101,3.0,GT,LA,MISO,56108,eia923
+IMEA Highland IC,oil,3.6,10.5,6.0,IC,IL,MISO,56114,default
+IMEA Flora IC,oil,9.0,12.333333333333334,6.0,IC,IL,MISO,56116,eia923
+Flora Site A IC,oil,5.4,11.135135135135135,6.0,IC,IL,MISO,56117,eia923
+Flora Site B IC,oil,3.6,11.03125,6.0,IC,IL,MISO,56118,eia923
+Anderson Erickson IC,oil,2.0,12.894736842105264,6.0,IC,IA,MISO,56138,eia923
+Faribault Energy Park CC,gas,261.0,7.277233905826414,3.0,CC,MN,MISO,56164,eia923
+Sheboygan Falls GT,gas,297.6,9.788292957781556,3.0,GT,WI,MISO,56166,eia923
+Flying Cloud Power Partners LLC WT,wind,43.5,0.0,0.0,WT,IA,MISO,56172,zero_fuel
+Moraine Wind LLC WT,wind,51.0,0.0,0.0,WT,MN,MISO,56174,zero_fuel
+Central Michigan University GT,gas,3.2,11.0,3.0,GT,MI,MISO,56190,default
+Central Michigan University ST,gas,1.0,10.5,3.0,ST,MI,MISO,56190,default
+Dike City Power Plant IC,oil,2.0,8.9,6.0,IC,IA,MISO,56194,eia923
+TG Windfarm LLC WT,wind,2.0,0.0,0.0,WT,MN,MISO,56199,zero_fuel
+CG Windfarm LLC WT,wind,2.0,0.0,0.0,WT,MN,MISO,56200,zero_fuel
+Bisson Windfarm LLC WT,wind,2.0,0.0,0.0,WT,MN,MISO,56201,zero_fuel
+Tofteland Windfarm LLC WT,wind,2.0,0.0,0.0,WT,MN,MISO,56202,zero_fuel
+Westridge Windfarm LLC WT,wind,2.0,0.0,0.0,WT,MN,MISO,56203,zero_fuel
+Fey Windfarm LLC WT,wind,2.0,0.0,0.0,WT,MN,MISO,56204,zero_fuel
+Windcurrent Farms LLC WT,wind,2.0,0.0,0.0,WT,MN,MISO,56205,zero_fuel
+K-Brink Windfarm LLC WT,wind,2.0,0.0,0.0,WT,MN,MISO,56206,zero_fuel
+DL Windy Acres LLC WT,wind,2.0,0.0,0.0,WT,MN,MISO,56207,zero_fuel
+S&P Windfarm LLC WT,wind,2.0,0.0,0.0,WT,MN,MISO,56208,zero_fuel
+Boeve Windfarm LLC WT,wind,2.0,0.0,0.0,WT,MN,MISO,56209,zero_fuel
+B&K Energy Systems LLC WT,wind,2.0,0.0,0.0,WT,MN,MISO,56210,zero_fuel
+Cannon Falls Energy Center GT,gas,316.0,10.900618065942123,3.0,GT,MN,MISO,56241,eia923
+Kindred School IC,oil,2.0,10.5,6.0,IC,ND,MISO,56242,default
+State Auto Insurance IC,oil,1.7,10.5,6.0,IC,SD,MISO,56244,default
+Stevens Community Medical Center IC,oil,1.0,10.5,6.0,IC,MN,MISO,56245,default
+Shell Chemical GT,gas,69.0,11.0,3.0,GT,LA,MISO,56248,default
+Intrepid WT,wind,175.5,0.0,0.0,WT,IA,MISO,56251,zero_fuel
+Century WT,wind,201.2,0.0,0.0,WT,IA,MISO,56252,zero_fuel
+IBM West IC,oil,3.6,11.2,6.0,IC,MN,MISO,56269,eia923
+Valley Queen Cheese IC,oil,1.5,9.774193548387096,6.0,IC,SD,MISO,56274,eia923
+Hargis-Hebert Electric Generating GT,gas,95.1,11.066886588556478,3.0,GT,LA,MISO,56283,eia923
+Trimont Area Wind Farm WT,wind,100.5,0.0,0.0,WT,MN,MISO,56296,zero_fuel
+Adams Wind Farm WT,wind,23.3,0.0,0.0,WT,MN,MISO,56307,zero_fuel
+Trigen St. Louis CC,gas,29.2,7.6,3.0,CC,MO,MISO,56309,default
+Trigen St. Louis IC,gas,1.2,9.0,3.0,IC,MO,MISO,56309,default
+Trigen St. Louis ST,gas,3.0,10.5,3.0,ST,MO,MISO,56309,default
+Cedar Ridge WT,wind,67.7,0.0,0.0,WT,WI,MISO,56347,zero_fuel
+Whispering Willow Wind Farm - East WT,wind,199.7,0.0,0.0,WT,IA,MISO,56355,zero_fuel
+FPL Energy Burleigh County Wind WT,wind,49.5,0.0,0.0,WT,ND,MISO,56357,zero_fuel
+Victory Wind Farm WT,wind,99.0,0.0,0.0,WT,IA,MISO,56379,zero_fuel
+Northern Iowa Windpower II WT,wind,80.0,0.0,0.0,WT,IA,MISO,56383,zero_fuel
+Top of Iowa Windfarm III WT,wind,29.7,0.0,0.0,WT,IA,MISO,56386,zero_fuel
+Blue Sky Green Field Wind Project WT,wind,145.2,0.0,0.0,WT,WI,MISO,56391,zero_fuel
+FPL Energy Oliver Wind I LLC WT,wind,50.6,0.0,0.0,WT,ND,MISO,56392,zero_fuel
+Agriwind WT,wind,8.4,0.0,0.0,WT,IL,MISO,56408,zero_fuel
+Stahl Wind Energy WT,wind,1.7,0.0,0.0,WT,MN,MISO,56409,zero_fuel
+Carstensen Wind WT,wind,1.7,0.0,0.0,WT,MN,MISO,56410,zero_fuel
+Northern Lights Wind LLC WT,wind,1.7,0.0,0.0,WT,MN,MISO,56411,zero_fuel
+Lucky Wind WT,wind,1.7,0.0,0.0,WT,MN,MISO,56412,zero_fuel
+Greenback Energy WT,wind,1.7,0.0,0.0,WT,MN,MISO,56413,zero_fuel
+Redwood Falls Wind WT,wind,3.4,0.0,0.0,WT,MN,MISO,56414,zero_fuel
+Fairmont Wind WT,wind,5.2,0.0,0.0,WT,MN,MISO,56415,zero_fuel
+Michigan Wind 1 WT,wind,69.0,0.0,0.0,WT,MI,MISO,56416,zero_fuel
+Mower County Wind Energy Center WT,wind,91.1,0.0,0.0,WT,MN,MISO,56424,zero_fuel
+Ameresco Janesville IC,waste,3.0,0.0,5.0,IC,WI,MISO,56427,zero_fuel
+Plum Point Energy Station ST,coal,680.0,10.300423965202304,4.5,ST,AR,MISO,56456,eia923
+MinnDakota Wind LLC WT,wind,150.0,0.0,0.0,WT,MN,MISO,56459,zero_fuel
+Oak Ridge LFGTE IC,waste,3.2,0.0,5.0,IC,IN,MISO,56463,zero_fuel
+Liberty I & II LFGTE IC,gas,6.4,9.0,3.0,IC,IN,MISO,56465,default
+Liberty I & II LFGTE IC,waste,6.4,0.0,5.0,IC,IN,MISO,56465,zero_fuel
+Marshfield Utilities Gas Plant GT,gas,53.3,11.220232088799193,3.0,GT,WI,MISO,56480,eia923
+Prairie Star Wind Farm WT,wind,100.7,0.0,0.0,WT,MN,MISO,56494,zero_fuel
+Pomeroy Wind Farm WT,wind,296.9,0.0,0.0,WT,IA,MISO,56501,zero_fuel
+Riley Generating Station IC,gas,10.0,9.0,3.0,IC,MI,MISO,56503,default
+Municipal Power Plant IC,gas,2.0,11.841269841269842,3.0,IC,MI,MISO,56504,eia923
+Jonesboro City Water & Light Plant GT,gas,177.0,10.614746030382285,3.0,GT,AR,MISO,56505,eia923
+West Diesel Generation Unit IC,oil,3.8,9.391304347826088,6.0,IC,IA,MISO,56517,eia923
+Deertrack Park Gas Recovery IC,waste,6.4,0.0,5.0,IC,WI,MISO,56520,zero_fuel
+Lake Mills Gas Recovery IC,waste,4.0,0.0,5.0,IC,IA,MISO,56521,zero_fuel
+Two Pine Landfill Gas Recovery IC,waste,4.800000000000001,0.0,5.0,IC,AR,MISO,56523,zero_fuel
+Timberline Trail Gas Recovery IC,waste,3.2,0.0,5.0,IC,WI,MISO,56525,zero_fuel
+Five Oaks Gas Recovery IC,waste,3.2,0.0,5.0,IC,IL,MISO,56529,zero_fuel
+Eastridge Wind Project WT,wind,10.4,0.0,0.0,WT,MN,MISO,56543,zero_fuel
+Windom Wind Project WT,wind,15.6,0.0,0.0,WT,MN,MISO,56544,zero_fuel
+FPL Energy Oliver Wind II LLC WT,wind,48.0,0.0,0.0,WT,ND,MISO,56573,zero_fuel
+Shane's Wind Machine WT,wind,1.3,0.0,0.0,WT,MN,MISO,56577,zero_fuel
+Blue Breezes LLC WT,wind,1.3,0.0,0.0,WT,MN,MISO,56580,zero_fuel
+Blue Breezes II LLC WT,wind,1.3,0.0,0.0,WT,MN,MISO,56581,zero_fuel
+Sunset Breeze LLC WT,wind,1.3,0.0,0.0,WT,MN,MISO,56586,zero_fuel
+Minnesota Breeze LLC WT,wind,1.3,0.0,0.0,WT,MN,MISO,56587,zero_fuel
+G Flow Wind LLC WT,wind,1.3,0.0,0.0,WT,MN,MISO,56588,zero_fuel
+Wolf Wind Enterprises LLC WT,wind,1.3,0.0,0.0,WT,MN,MISO,56589,zero_fuel
+Green Acres Breeze LLC WT,wind,1.3,0.0,0.0,WT,MN,MISO,56590,zero_fuel
+Elm Street Substation Generators IC,oil,3.9000000000000004,11.5,6.0,IC,MO,MISO,56597,eia923
+Walton Street Substation IC,oil,1.3,10.5,6.0,IC,MO,MISO,56598,default
+Overall Road Station IC,oil,5.2,11.961538461538462,6.0,IC,MO,MISO,56600,eia923
+San Jacinto County Peaking Facility GT,gas,146.0,12.894181713958154,3.0,GT,TX,MISO,56603,eia923
+Hardin County Peaking Facility GT,gas,141.6,11.940753984155853,3.0,GT,TX,MISO,56604,eia923
+"Langdon Renewables, LLC WT",wind,118.5,0.0,0.0,WT,ND,MISO,56605,zero_fuel
+Fenton Wind Farm WT,wind,205.5,0.0,0.0,WT,MN,MISO,56617,zero_fuel
+"Ewington Energy Systems, LLC WT",wind,20.0,0.0,0.0,WT,MN,MISO,56626,zero_fuel
+Taconite Ridge 1 Wind Energy Center WT,wind,25.0,0.0,0.0,WT,MN,MISO,56630,zero_fuel
+Harvest WT,wind,51.2,0.0,0.0,WT,MI,MISO,56635,zero_fuel
+St Paul Cogeneration ST,waste,33.0,0.0,5.0,ST,MN,MISO,56643,zero_fuel
+Butler Ridge WT,wind,54.0,0.0,0.0,WT,WI,MISO,56647,zero_fuel
+Michigan Wind 2 WT,wind,90.0,0.0,0.0,WT,MI,MISO,56659,zero_fuel
+Tatanka Wind Power LLC WT,wind,180.0,0.0,0.0,WT,ND,MISO,56669,zero_fuel
+Velva Windfarm LLC WT,wind,11.9,0.0,0.0,WT,ND,MISO,56670,zero_fuel
+Charles City Wind Farm WT,wind,75.0,0.0,0.0,WT,IA,MISO,56677,zero_fuel
+Benton County Wind Farm WT,wind,130.5,0.0,0.0,WT,IN,MISO,56679,zero_fuel
+Jeffers Wind 20 LLC WT,wind,43.1,0.0,0.0,WT,MN,MISO,56750,zero_fuel
+Odin Wind Farm LLC WT,wind,20.0,0.0,0.0,WT,MN,MISO,56755,zero_fuel
+Winnebago Wind Power Project WT,wind,20.0,0.0,0.0,WT,IA,MISO,56764,zero_fuel
+Barton Windpower LLC WT,wind,158.0,0.0,0.0,WT,IA,MISO,56765,zero_fuel
+Farmers City Wind LLC WT,wind,146.0,0.0,0.0,WT,MO,MISO,56767,zero_fuel
+Diamond Willow Wind Facility WT,wind,30.0,0.0,0.0,WT,MT,MISO,56782,zero_fuel
+Spiritwood Station ST,gas,96.9,10.5,3.0,ST,ND,MISO,56786,default
+Geismar Cogen GT,gas,72.5,11.0,3.0,GT,LA,MISO,56787,default
+Buffalo Ridge I LLC WT,wind,50.4,0.0,0.0,WT,SD,MISO,56792,zero_fuel
+Elm Creek Wind LLC WT,wind,99.0,0.0,0.0,WT,MN,MISO,56793,zero_fuel
+Moraine II Wind LLC WT,wind,49.5,0.0,0.0,WT,MN,MISO,56794,zero_fuel
+Pioneer Prairie Wind Farm WT,wind,300.0,0.0,0.0,WT,IA,MISO,56797,zero_fuel
+Carroll Wind Farm WT,wind,150.0,0.0,0.0,WT,IA,MISO,56809,zero_fuel
+Adair Wind Farm WT,wind,174.8,0.0,0.0,WT,IA,MISO,56810,zero_fuel
+Walnut Wind Farm WT,wind,150.0,0.0,0.0,WT,IA,MISO,56811,zero_fuel
+Marshall Wind 2 LLC WT,wind,4.2,0.0,0.0,WT,MN,MISO,56824,zero_fuel
+Marshall Wind 3 LLC WT,wind,4.2,0.0,0.0,WT,MN,MISO,56825,zero_fuel
+Marshall Wind 4 LLC WT,wind,4.2,0.0,0.0,WT,MN,MISO,56826,zero_fuel
+Marshall Wind 5 LLC WT,wind,2.1,0.0,0.0,WT,MN,MISO,56827,zero_fuel
+Marshall Wind 6 LLC WT,wind,2.1,0.0,0.0,WT,MN,MISO,56828,zero_fuel
+Crane Creek Wind Energy Center WT,wind,99.0,0.0,0.0,WT,IA,MISO,56831,zero_fuel
+Marshall Wind 1 LLC WT,wind,2.1,0.0,0.0,WT,MN,MISO,56840,zero_fuel
+Bryon Center IC,waste,4.5,0.0,5.0,IC,MI,MISO,56851,zero_fuel
+Pinconning White Feather IC,waste,3.0,0.0,5.0,IC,MI,MISO,56852,zero_fuel
+Rail Splitter Wind Farm WT,wind,100.5,0.0,0.0,WT,IL,MISO,56856,zero_fuel
+Hardin Hilltop Wind LLC WT,wind,14.7,0.0,0.0,WT,IA,MISO,56860,zero_fuel
+Wapsipinicon Wind Project WT,wind,100.5,0.0,0.0,WT,MN,MISO,56876,zero_fuel
+Hoosier Wind Project LLC WT,wind,106.0,0.0,0.0,WT,IN,MISO,56878,zero_fuel
+Ameresco Jefferson City IC,waste,2.7,0.0,5.0,IC,MO,MISO,56896,zero_fuel
+Langdon Wind II LLC WT,wind,40.5,0.0,0.0,WT,ND,MISO,56912,zero_fuel
+Osceola Windpower II WT,wind,49.6,0.0,0.0,WT,IA,MISO,56913,zero_fuel
+FPL Energy Ashtabula Wind LLC WT,wind,148.5,0.0,0.0,WT,ND,MISO,56919,zero_fuel
+FPL Energy Crystal Lake Wind LLC WT,wind,150.0,0.0,0.0,WT,IA,MISO,56923,zero_fuel
+FPL Energy Story Wind LLC WT,wind,150.0,0.0,0.0,WT,IA,MISO,56924,zero_fuel
+FPL Energy Crystal Lake Wind II LLC WT,wind,199.0,0.0,0.0,WT,IA,MISO,56925,zero_fuel
+Forward Wind Energy Center WT,wind,129.0,0.0,0.0,WT,WI,MISO,56942,zero_fuel
+Grand Meadow WT,wind,100.0,0.0,0.0,WT,MN,MISO,56994,zero_fuel
+Spruce Ridge Gas Recovery IC,waste,3.2,0.0,5.0,IC,MN,MISO,57017,zero_fuel
+Waste Management Northern Oaks LFGTE IC,waste,1.6,0.0,5.0,IC,MI,MISO,57024,zero_fuel
+Waste Management Eco Vista LFGTE IC,waste,4.0,0.0,5.0,IC,AR,MISO,57025,zero_fuel
+Luverne Wind Energy Center WT,wind,49.5,0.0,0.0,WT,ND,MISO,57031,zero_fuel
+Ashtabula Wind Energy Center WT,wind,48.0,0.0,0.0,WT,ND,MISO,57032,zero_fuel
+Langdon Wind Energy Center WT,wind,40.5,0.0,0.0,WT,ND,MISO,57033,zero_fuel
+Willmar Municipal East Substation IC,oil,6.0,10.5,6.0,IC,MN,MISO,57034,default
+Willmar Municipal SW Substation IC,oil,6.0,10.5,6.0,IC,MN,MISO,57035,default
+Bison I Wind Energy Center WT,wind,81.8,0.0,0.0,WT,ND,MISO,57038,zero_fuel
+Nobles Wind Project WT,wind,200.0,0.0,0.0,WT,MN,MISO,57047,zero_fuel
+Merricourt Wind Energy Center WT,wind,150.0,0.0,0.0,WT,ND,MISO,57048,zero_fuel
+Twin Cities Hydro LLC HY,hydro,18.0,0.0,0.0,HY,MN,MISO,57069,zero_fuel
+Granite City Works ST,waste,78.0,0.0,5.0,ST,IL,MISO,57072,zero_fuel
+Rugby Wind Power Project WT,wind,149.0,0.0,0.0,WT,ND,MISO,57097,zero_fuel
+Lost Lakes Wind Farm LLC WT,wind,100.0,0.0,0.0,WT,IA,MISO,57111,zero_fuel
+Quilt Block Wind Farm LLC WT,wind,98.0,0.0,0.0,WT,WI,MISO,57116,zero_fuel
+Koda Biomass Plant ST,waste,20.3,0.0,5.0,ST,MN,MISO,57119,zero_fuel
+Wilton Wind II LLC WT,wind,49.5,0.0,0.0,WT,ND,MISO,57120,zero_fuel
+Ashtabula Wind II LLC WT,wind,120.0,0.0,0.0,WT,ND,MISO,57121,zero_fuel
+Stoney Corners Wind Farm WT,wind,59.0,0.0,0.0,WT,MI,MISO,57131,zero_fuel
+Cedar Hills Wind Farm WT,wind,19.5,0.0,0.0,WT,ND,MISO,57171,zero_fuel
+Glen Ullin Station 6 ST,gas,5.3,10.5,3.0,ST,ND,MISO,57172,default
+Little Quinnesec Falls Hydro Project HY,hydro,9.0,0.0,0.0,HY,WI,MISO,57190,zero_fuel
+Bent Tree Wind Farm Phase 1 WT,wind,201.3,0.0,0.0,WT,MN,MISO,57198,zero_fuel
+Glacier Hills WT,wind,162.0,0.0,0.0,WT,WI,MISO,57199,zero_fuel
+Thomson Reuters Data Center Bldg ES101 IC,oil,0.6,10.142857142857142,6.0,IC,MN,MISO,57207,eia923
+Waverly Community Wind Project WT,wind,2.7,0.0,0.0,WT,IA,MISO,57214,zero_fuel
+Iowa Lakes Community College Wind Farm WT,wind,1.0,0.0,0.0,WT,IA,MISO,57257,zero_fuel
+Grant County Wind LLC WT,wind,20.0,0.0,0.0,WT,MN,MISO,57274,zero_fuel
+OREG 3 Inc OT,gas,3.3,11.0,3.0,OT,MN,MISO,57281,default
+Big Blue WT,wind,36.0,0.0,0.0,WT,MN,MISO,57289,zero_fuel
+Carleton College IC,oil,4.6,15.45,6.0,IC,MN,MISO,57296,eia923
+Carleton College WT,wind,3.2,0.0,0.0,WT,MN,MISO,57296,zero_fuel
+White Oak Energy LLC WT,wind,150.0,0.0,0.0,WT,IL,MISO,57342,zero_fuel
+Baldwin Wind LLC WT,wind,102.4,0.0,0.0,WT,ND,MISO,57347,zero_fuel
+Uilk Wind LLC WT,wind,4.5,0.0,0.0,WT,MN,MISO,57351,zero_fuel
+Lakefield Wind Project LLC WT,wind,205.5,0.0,0.0,WT,MN,MISO,57374,zero_fuel
+Adams Wind Generations LLC WT,wind,20.0,0.0,0.0,WT,MN,MISO,57375,zero_fuel
+Community Wind North LLC WT,wind,25.9,0.0,0.0,WT,MN,MISO,57385,zero_fuel
+Ridgewind WT,wind,25.3,0.0,0.0,WT,MN,MISO,57386,zero_fuel
+Ashtabula Wind III LLC WT,wind,62.4,0.0,0.0,WT,ND,MISO,57387,zero_fuel
+Danielson Wind Farms LLC WT,wind,20.0,0.0,0.0,WT,MN,MISO,57396,zero_fuel
+Cannelton Hydroelectric Plant HY,hydro,87.9,0.0,0.0,HY,KY,MISO,57399,zero_fuel
+Smithland Hydroelectric Plant HY,hydro,75.9,0.0,0.0,HY,KY,MISO,57400,zero_fuel
+Eagle Valley (MI) IC,waste,3.2,0.0,5.0,IC,MI,MISO,57405,zero_fuel
+Elk Wind Farm WT,wind,40.8,0.0,0.0,WT,IA,MISO,57417,zero_fuel
+Gratiot Wind Park WT,wind,102.0,0.0,0.0,WT,MI,MISO,57421,zero_fuel
+Buffalo Ridge II LLC WT,wind,210.0,0.0,0.0,WT,SD,MISO,57424,zero_fuel
+Oak Glen Wind Farm WT,wind,44.0,0.0,0.0,WT,MN,MISO,57432,zero_fuel
+Valley View Transmission LLC WT,wind,10.0,0.0,0.0,WT,MN,MISO,57434,zero_fuel
+Pine Tree Acres WM LFGTE IC,waste,12.8,0.0,5.0,IC,MI,MISO,57443,zero_fuel
+Crystal Lake 3 LLC WT,wind,66.0,0.0,0.0,WT,IA,MISO,57468,zero_fuel
+Garden Wind LLC WT,wind,150.0,0.0,0.0,WT,IA,MISO,57469,zero_fuel
+Settlers Trail Wind Farm LLC WT,wind,150.4,0.0,0.0,WT,IL,MISO,57493,zero_fuel
+Laurel Wind Farm WT,wind,119.6,0.0,0.0,WT,IA,MISO,57500,zero_fuel
+Rolling Hills Wind Farm WT,wind,443.2,0.0,0.0,WT,IA,MISO,57501,zero_fuel
+Shirley Wind WT,wind,20.0,0.0,0.0,WT,WI,MISO,57553,zero_fuel
+New Harvest Wind Project LLC WT,wind,100.0,0.0,0.0,WT,IA,MISO,57609,zero_fuel
+"Bos Dairy, LLC IC",gas,0.9,9.269719251336898,3.0,IC,IN,MISO,57625,eia923
+Wolverine WT,wind,1.5,0.0,0.0,WT,IA,MISO,57631,zero_fuel
+Bulldog WT,wind,1.5,0.0,0.0,WT,IA,MISO,57632,zero_fuel
+Prairie Rose Wind Farm WT,wind,200.0,0.0,0.0,WT,MN,MISO,57644,zero_fuel
+Elm Creek Wind II LLC WT,wind,148.8,0.0,0.0,WT,MN,MISO,57649,zero_fuel
+SAF Hydroelectric LLC HY,hydro,5.3999999999999995,0.0,0.0,HY,MN,MISO,57665,zero_fuel
+Oakdale Renewable Energy Plant IC,gas,2.8,9.0,3.0,IC,IA,MISO,57672,default
+"Pioneer Trail Wind Farm, LLC WT",wind,150.4,0.0,0.0,WT,IL,MISO,57675,zero_fuel
+Blue Water Renewables Inc IC,waste,3.2,0.0,5.0,IC,MI,MISO,57706,zero_fuel
+UMM Wind Turbine WT,wind,0.6,0.0,0.0,WT,MN,MISO,57732,zero_fuel
+Brown County Wind Turbine WT,wind,1.5,0.0,0.0,WT,IL,MISO,57767,zero_fuel
+Bison 2 Wind Energy Center WT,wind,105.0,0.0,0.0,WT,ND,MISO,57800,zero_fuel
+Bison 3 Wind Energy Center WT,wind,105.0,0.0,0.0,WT,ND,MISO,57801,zero_fuel
+GL Wind WT,wind,4.8,0.0,0.0,WT,MN,MISO,57813,zero_fuel
+WCROC Wind Farm WT,wind,0.4,0.0,0.0,WT,MN,MISO,57823,zero_fuel
+Onalaska Campus Landfill Biogas IC,waste,1.1,0.0,5.0,IC,WI,MISO,57824,zero_fuel
+Rippey Wind Farm WT,wind,50.0,0.0,0.0,WT,IA,MISO,57830,zero_fuel
+Hawkeye Wind Farm WT,wind,34.0,0.0,0.0,WT,IA,MISO,57832,zero_fuel
+Wabash Valley Power IGCC GT,gas,154.0,10.436005353683306,3.0,GT,IN,MISO,57842,eia923
+Franklin County Wind Farm WT,wind,99.0,0.0,0.0,WT,IA,MISO,57844,zero_fuel
+Sigel Wind Park WT,wind,64.0,0.0,0.0,WT,MI,MISO,57851,zero_fuel
+Minden Wind Park WT,wind,32.0,0.0,0.0,WT,MI,MISO,57852,zero_fuel
+McKinley Wind Park WT,wind,14.0,0.0,0.0,WT,MI,MISO,57853,zero_fuel
+Eclipse Wind Farm WT,wind,200.0,0.0,0.0,WT,IA,MISO,57873,zero_fuel
+Vienna Wind Farm WT,wind,150.2,0.0,0.0,WT,IA,MISO,57874,zero_fuel
+Morning Light Wind Farm WT,wind,100.9,0.0,0.0,WT,IA,MISO,57875,zero_fuel
+Eolos Wind Energy Research Field Station WT,wind,2.5,0.0,0.0,WT,MN,MISO,57880,zero_fuel
+Lake Charles Polymers GT,gas,14.5,12.300928183180742,3.0,GT,LA,MISO,57884,eia923
+Lake Charles Polymers IC,gas,16.0,9.05717673248161,3.0,IC,LA,MISO,57884,eia923
+Harvest 2 WT,wind,59.4,0.0,0.0,WT,MI,MISO,57888,zero_fuel
+SMMPA Methane Energy Facility IC,waste,1.5,0.0,5.0,IC,MN,MISO,57903,zero_fuel
+SIUC ST,coal,2.8,10.6,4.5,ST,IL,MISO,57928,default
+SIUC IC,oil,1.6,10.5,6.0,IC,IL,MISO,57928,default
+ADA Carbon Solutions Red River ST,gas,20.5,10.5,3.0,ST,LA,MISO,57938,default
+Roquette America ST,coal,32.0,10.6,4.5,ST,IA,MISO,57953,default
+Roquette America CC,gas,38.0,7.6,3.0,CC,IA,MISO,57953,default
+Southeast Steam Plant ST,gas,2.0,10.5,3.0,ST,MN,MISO,57966,default
+Cashton Greens Wind Farm WT,wind,4.8,0.0,0.0,WT,WI,MISO,57968,zero_fuel
+Pocahontas Prairie Wind Farm WT,wind,80.0,0.0,0.0,WT,IA,MISO,57976,zero_fuel
+Lake Winds Energy Park WT,wind,100.8,0.0,0.0,WT,MI,MISO,57984,zero_fuel
+California Ridge Wind Energy LLC WT,wind,200.0,0.0,0.0,WT,IL,MISO,58008,zero_fuel
+Beebe 1A WT,wind,81.6,0.0,0.0,WT,MI,MISO,58020,zero_fuel
+Buffalo Center Wind LLC WT,wind,1.5,0.0,0.0,WT,IA,MISO,58038,zero_fuel
+Lilly Technical Center IC,oil,6.0,10.5,6.0,IC,IN,MISO,58043,default
+Community Wind South WT,wind,30.0,0.0,0.0,WT,MN,MISO,58045,zero_fuel
+SABIC Innovative Plastics Mt. Vernon GT,gas,78.6,11.747309574372002,3.0,GT,IN,MISO,58063,eia923
+"PCA, Filer City Mill ST",gas,19.5,11.373348151141645,3.0,ST,MI,MISO,58066,eia923
+Windwalkers LLC WT,wind,1.6,0.0,0.0,WT,IA,MISO,58071,zero_fuel
+Roeder Family Wind Farm LLC WT,wind,1.6,0.0,0.0,WT,IA,MISO,58089,zero_fuel
+Heritage Garden Wind Farm I LLC WT,wind,28.0,0.0,0.0,WT,MI,MISO,58103,zero_fuel
+International Paper Red River Mill ST,waste,55.0,0.0,5.0,ST,LA,MISO,58108,zero_fuel
+Bishop Hill II Wind Farm WT,wind,81.0,0.0,0.0,WT,IL,MISO,58111,zero_fuel
+Echo Wind Park WT,wind,162.0,0.0,0.0,WT,MI,MISO,58121,zero_fuel
+Rothschild Biomass Cogen Facility ST,waste,46.6,0.0,5.0,ST,WI,MISO,58124,zero_fuel
+Otter Creek Ethanol Poet - Ashton GT,gas,5.5,11.0,3.0,GT,IA,MISO,58138,default
+Western Michigan University Power Plant CC,gas,9.3,7.6,3.0,CC,MI,MISO,58161,default
+Western Michigan University Power Plant IC,gas,5.8,9.0,3.0,IC,MI,MISO,58161,default
+Slayton Solar PV,solar,1.7,0.0,0.0,PV,MN,MISO,58164,zero_fuel
+M. G. Emmett J. Bean Federal Center PV,solar,1.5,0.0,0.0,PV,IN,MISO,58178,zero_fuel
+POET Biorefining Lake Crystal ST,gas,1.0,11.373346897253306,3.0,ST,MN,MISO,58197,eia923
+POET Biorefining Lake Crystal IC,oil,6.0,10.5,6.0,IC,MN,MISO,58197,default
+Marshalltown Generating Station CC,gas,665.8,6.467634110549486,3.0,CC,IA,MISO,58236,eia923
+Marshalltown Generating Station PV,solar,2.6,0.0,0.0,PV,IA,MISO,58236,zero_fuel
+Chatham GT,gas,6.6,14.69047619047619,3.0,GT,MI,MISO,58254,eia923
+NCAH Central Utility Plant GT,gas,3.0,11.0,3.0,GT,IA,MISO,58265,default
+NCAH Central Utility Plant IC,oil,11.1,10.5,6.0,IC,IA,MISO,58265,default
+Lake Charles Plant ST,gas,28.0,10.5,3.0,ST,LA,MISO,58310,default
+The Andersons Albion Ethanol LLC GT,gas,6.0,11.0,3.0,GT,MI,MISO,58330,default
+The Andersons Albion Ethanol LLC ST,gas,1.2,10.5,3.0,ST,MI,MISO,58330,default
+Tuscola Bay Wind WT,wind,120.0,0.0,0.0,WT,MI,MISO,58351,zero_fuel
+IND Community Solar Farm 1st Phase PV,solar,10.0,0.0,0.0,PV,IN,MISO,58391,zero_fuel
+Luther College Wind Project WT,wind,1.6,0.0,0.0,WT,IA,MISO,58407,zero_fuel
+NLMU Wind WT,wind,1.5,0.0,0.0,WT,IA,MISO,58414,zero_fuel
+Lansing BWL REO Town Plant CC,gas,74.9,7.6,3.0,CC,MI,MISO,58427,default
+LSU Cogen GT,gas,20.6,11.0,3.0,GT,LA,MISO,58428,default
+Red Rock Hydro Plant HY,hydro,55.0,0.0,0.0,HY,IA,MISO,58434,zero_fuel
+Junction Hilltop Wind Farm WT,wind,8.0,0.0,0.0,WT,IA,MISO,58444,zero_fuel
+Cumberland Rose WT,wind,1.6,0.0,0.0,WT,IA,MISO,58456,zero_fuel
+Fontanelle WT,wind,1.6,0.0,0.0,WT,IA,MISO,58457,zero_fuel
+Greenfield Wind WT,wind,1.6,0.0,0.0,WT,IA,MISO,58458,zero_fuel
+Meadow Ridge WT,wind,1.6,0.0,0.0,WT,IA,MISO,58459,zero_fuel
+Sky Volt WT,wind,1.6,0.0,0.0,WT,IA,MISO,58460,zero_fuel
+Wiota WT,wind,1.6,0.0,0.0,WT,IA,MISO,58461,zero_fuel
+LEPA Unit No. 1 CC,gas,64.0,8.423736312354828,3.0,CC,LA,MISO,58478,eia923
+Lincoln Solar PV,solar,1.5,0.0,0.0,PV,IN,MISO,58496,zero_fuel
+Watervliet IC,waste,4.0,0.0,5.0,IC,MI,MISO,58546,zero_fuel
+"Indy Solar I, LLC PV",solar,10.0,0.0,0.0,PV,IN,MISO,58552,zero_fuel
+"Indy Solar III, LLC PV",solar,8.6,0.0,0.0,PV,IN,MISO,58553,zero_fuel
+"Indy Solar II, LLC PV",solar,10.0,0.0,0.0,PV,IN,MISO,58556,zero_fuel
+Hometown Bio Energy LLC IC,waste,7.6,0.0,5.0,IC,MN,MISO,58563,zero_fuel
+Veolia ES Blackfoot Landfill Facility IC,waste,2.2,0.0,5.0,IC,IN,MISO,58577,zero_fuel
+Pheasant Run Wind LLC WT,wind,74.8,0.0,0.0,WT,MI,MISO,58580,zero_fuel
+Tuscola Wind II LLC WT,wind,100.3,0.0,0.0,WT,MI,MISO,58587,zero_fuel
+Indianapolis Motor Speedway Solar PV PV,solar,9.0,0.0,0.0,PV,IN,MISO,58615,zero_fuel
+Water Reclamation Plant IC,waste,0.6,0.0,5.0,IC,MN,MISO,58617,zero_fuel
+RC Thomas Hydroelectric Project HY,hydro,24.299999999999997,0.0,0.0,HY,TX,MISO,58645,zero_fuel
+Odell Wind Farm WT,wind,200.0,0.0,0.0,WT,MN,MISO,58657,zero_fuel
+Courtenay Wind Farm WT,wind,190.2,0.0,0.0,WT,ND,MISO,58658,zero_fuel
+Gratiot County Wind LLC WT,wind,110.4,0.0,0.0,WT,MI,MISO,58677,zero_fuel
+Apple Blossom Wind Farm WT,wind,100.0,0.0,0.0,WT,MI,MISO,58690,zero_fuel
+South Fork Wind Farm WT,wind,13.0,0.0,0.0,WT,MN,MISO,58691,zero_fuel
+Black Oak Wind Farm WT,wind,78.0,0.0,0.0,WT,MN,MISO,58692,zero_fuel
+Lenape II PV,solar,4.0,0.0,0.0,PV,IN,MISO,58703,zero_fuel
+Zeeland Farm Services IC,waste,2.9,0.0,5.0,IC,MI,MISO,58704,zero_fuel
+Brookfield WT,wind,74.8,0.0,0.0,WT,MI,MISO,58719,zero_fuel
+Viresco Turtle Lake IC,waste,1.6,0.0,5.0,IC,WI,MISO,58747,zero_fuel
+Maywood Photovoltaic Project PV,solar,8.0,0.0,0.0,PV,IN,MISO,58770,zero_fuel
+"Hobart Solar, LLC PV",solar,1.0,0.0,0.0,PV,IN,MISO,58795,zero_fuel
+"Waterloo Solar, LLC PV",solar,1.0,0.0,0.0,PV,IN,MISO,58796,zero_fuel
+"Valparaiso Solar, LLC PV",solar,1.0,0.0,0.0,PV,IN,MISO,58797,zero_fuel
+Cross Winds Energy Park WT,wind,230.9,0.0,0.0,WT,MI,MISO,58830,zero_fuel
+Richland Center Renewable Energy LLC IC,waste,1.6,0.0,5.0,IC,WI,MISO,58834,zero_fuel
+Lakeswind Power Partners WT,wind,50.0,0.0,0.0,WT,MN,MISO,58836,zero_fuel
+Bison 4 Wind Energy Center WT,wind,201.8,0.0,0.0,WT,ND,MISO,58872,zero_fuel
+Highland Wind Project (IA) WT,wind,500.0,0.0,0.0,WT,IA,MISO,58883,zero_fuel
+Lundgren Wind Project WT,wind,250.0,0.0,0.0,WT,IA,MISO,58884,zero_fuel
+Macksburg Wind Project WT,wind,119.6,0.0,0.0,WT,IA,MISO,58885,zero_fuel
+Wellsburg Wind Project WT,wind,138.6,0.0,0.0,WT,IA,MISO,58886,zero_fuel
+"Big Turtle Wind Farm, LLC WT",wind,20.0,0.0,0.0,WT,MI,MISO,58891,zero_fuel
+Beebe 1B WT,wind,50.4,0.0,0.0,WT,MI,MISO,58908,zero_fuel
+Sugar Creek Wind One LLC WT,wind,202.0,0.0,0.0,WT,IL,MISO,58924,zero_fuel
+Lincoln Land Wind WT,wind,302.0,0.0,0.0,WT,IL,MISO,58925,zero_fuel
+Story City Wind Project WT,wind,1.5,0.0,0.0,WT,IA,MISO,58927,zero_fuel
+Melrose 2 IC,oil,0.9,13.0,6.0,IC,MN,MISO,58929,eia923
+Traer Wind Project WT,wind,1.5,0.0,0.0,WT,IA,MISO,58932,zero_fuel
+Rockville Solar I LLC PV,solar,2.8,0.0,0.0,PV,IN,MISO,58942,zero_fuel
+"Rockville Solar II, LLC PV",solar,2.7,0.0,0.0,PV,IN,MISO,58953,zero_fuel
+"Thunder Spirit Wind, LLC WT",wind,155.5,0.0,0.0,WT,ND,MISO,58965,zero_fuel
+St. Olaf Wind Turbine WT,wind,1.6,0.0,0.0,WT,MN,MISO,58995,zero_fuel
+St. Olaf StandBy Generators IC,oil,3.8,13.64516129032258,6.0,IC,MN,MISO,58996,eia923
+East Chicago PV,solar,2.0,0.0,0.0,PV,IN,MISO,59018,zero_fuel
+Griffith PV,solar,2.0,0.0,0.0,PV,IN,MISO,59019,zero_fuel
+Hoopeston Wind LLC WT,wind,98.0,0.0,0.0,WT,IL,MISO,59021,zero_fuel
+Michelangelo Wind 3 LLC WT,wind,3.0,0.0,0.0,WT,IA,MISO,59053,zero_fuel
+Carroll Area Wind Farm WT,wind,20.7,0.0,0.0,WT,IA,MISO,59071,zero_fuel
+Holland Energy Park CC,gas,127.1,7.425172467858263,3.0,CC,MI,MISO,59093,eia923
+Belmont PV,solar,3.8,0.0,0.0,PV,IN,MISO,59172,zero_fuel
+Marion Solar LNG PV,solar,1.5,0.0,0.0,PV,IN,MISO,59180,zero_fuel
+AgriReNew GT,waste,1.0,0.0,5.0,GT,IA,MISO,59181,zero_fuel
+Univ Minnesota CHP Plant GT,gas,18.0,12.011682632373184,3.0,GT,MN,MISO,59197,eia923
+Border Winds Wind Farm WT,wind,147.9,0.0,0.0,WT,ND,MISO,59200,zero_fuel
+Pleasant Valley Wind Farm WT,wind,195.8,0.0,0.0,WT,MN,MISO,59201,zero_fuel
+Optimum Wind 5 LLC WT,wind,3.0,0.0,0.0,WT,IA,MISO,59223,zero_fuel
+Optimum Wind 6 LLC WT,wind,3.0,0.0,0.0,WT,IA,MISO,59224,zero_fuel
+Optimum Wind 7 LLC WT,wind,3.0,0.0,0.0,WT,IA,MISO,59225,zero_fuel
+Optimum Wind 4 LLC WT,wind,3.0,0.0,0.0,WT,IA,MISO,59226,zero_fuel
+Optimum Wind 3 LLC WT,wind,3.0,0.0,0.0,WT,IA,MISO,59227,zero_fuel
+Leonardo Wind 1 LLC WT,wind,3.0,0.0,0.0,WT,IA,MISO,59228,zero_fuel
+Venus Wind 3 LLC WT,wind,3.0,0.0,0.0,WT,IA,MISO,59230,zero_fuel
+Michelangelo Wind 1 LLC WT,wind,3.0,0.0,0.0,WT,IA,MISO,59231,zero_fuel
+Michelangelo Wind 4 LLC WT,wind,3.0,0.0,0.0,WT,IA,MISO,59232,zero_fuel
+"Hidden View Dairy, LLC IC",gas,0.9,9.0,3.0,IC,IN,MISO,59260,default
+Wapsie Valley Creamery Back Up Generator IC,oil,1.1,10.5,6.0,IC,IA,MISO,59379,default
+IND Solar Farm (Phase IIA) PV,solar,7.5,0.0,0.0,PV,IN,MISO,59424,zero_fuel
+Zimmerman Energy IC,waste,7.1,0.0,5.0,IC,IN,MISO,59425,zero_fuel
+Duke Building 87 PV,solar,2.7,0.0,0.0,PV,IN,MISO,59432,zero_fuel
+Duke Building 98 PV,solar,2.7,0.0,0.0,PV,IN,MISO,59433,zero_fuel
+Duke Building 129 PV,solar,3.4,0.0,0.0,PV,IN,MISO,59434,zero_fuel
+Lennon Generating IC,waste,6.0,0.0,5.0,IC,MI,MISO,59436,zero_fuel
+Waxdale GT,gas,3.5,11.0,3.0,GT,WI,MISO,59448,default
+Waxdale PV,solar,2.1,0.0,0.0,PV,WI,MISO,59448,zero_fuel
+Waxdale GT,waste,3.5,0.0,5.0,GT,WI,MISO,59448,zero_fuel
+Waxdale WT,wind,3.0,0.0,0.0,WT,WI,MISO,59448,zero_fuel
+East. Michigan Univ. Heating Plant GT,gas,6.8,11.0,3.0,GT,MI,MISO,59452,default
+Coldwater Peaking Plant IC,gas,12.899999999999999,9.0,3.0,IC,MI,MISO,59467,default
+IMPA Rensselaer Solar Park PV,solar,1.0,0.0,0.0,PV,IN,MISO,59480,zero_fuel
+IMPA Peru Solar Park PV,solar,3.0,0.0,0.0,PV,IN,MISO,59481,zero_fuel
+IMPA Tell City Solar Park PV,solar,1.1,0.0,0.0,PV,IN,MISO,59482,zero_fuel
+IMPA Crawfordsville Solar Park PV,solar,3.0,0.0,0.0,PV,IN,MISO,59483,zero_fuel
+Clinton LFGTE IC,waste,3.2,0.0,5.0,IC,IL,MISO,59635,zero_fuel
+Adams Wind WT,wind,150.0,0.0,0.0,WT,IA,MISO,59637,zero_fuel
+St. Paul Intl Airport Red & Blue Parking PV,solar,3.1999999999999997,0.0,0.0,PV,MN,MISO,59709,zero_fuel
+IKEA St. Louis 410 PV,solar,1.0,0.0,0.0,PV,MO,MISO,59714,zero_fuel
+IMPA Pendleton Solar Park PV,solar,2.0,0.0,0.0,PV,IN,MISO,59770,zero_fuel
+Jefferson Solar Park PV,solar,1.0,0.0,0.0,PV,WI,MISO,59771,zero_fuel
+BioTown Ag IC,waste,6.0,0.0,5.0,IC,IN,MISO,59774,zero_fuel
+Heartland Community College PV,solar,0.2,0.0,0.0,PV,IL,MISO,59776,zero_fuel
+Heartland Community College WT,wind,1.7,0.0,0.0,WT,IL,MISO,59776,zero_fuel
+"Fremont Community Digester, LLC IC",waste,5.8,0.0,5.0,IC,MI,MISO,59785,zero_fuel
+INDY III PV,solar,2.5,0.0,0.0,PV,IN,MISO,59823,zero_fuel
+Indy Grocers PV,solar,1.0,0.0,0.0,PV,IN,MISO,59834,zero_fuel
+Twin Falls (WI) HY,hydro,9.2,0.0,0.0,HY,WI,MISO,59836,zero_fuel
+North Star Solar Project PV,solar,100.0,0.0,0.0,PV,MN,MISO,59852,zero_fuel
+Marshall Solar Energy Project PV,solar,62.3,0.0,0.0,PV,MN,MISO,59875,zero_fuel
+Cardinal Point Wind WT,wind,150.0,0.0,0.0,WT,IL,MISO,59902,zero_fuel
+New Frontier Wind WT,wind,100.0,0.0,0.0,WT,ND,MISO,59903,zero_fuel
+Alpine Power Plant GT,gas,405.2,11.301795431888523,3.0,GT,MI,MISO,59926,eia923
+New Castle Solar RES PV,solar,1.1,0.0,0.0,PV,IN,MISO,59981,zero_fuel
+Scotland Solar RES PV,solar,1.1,0.0,0.0,PV,IN,MISO,59982,zero_fuel
+New Haven Solar RES PV,solar,1.1,0.0,0.0,PV,IN,MISO,59983,zero_fuel
+Lanesville Solar RES PV,solar,1.1,0.0,0.0,PV,IN,MISO,59984,zero_fuel
+Ellettsville Solar RES PV,solar,1.1,0.0,0.0,PV,IN,MISO,59985,zero_fuel
+Henryville Solar RES PV,solar,1.1,0.0,0.0,PV,IN,MISO,59986,zero_fuel
+Spring Mill Solar RES PV,solar,1.1,0.0,0.0,PV,IN,MISO,59987,zero_fuel
+Decatur Co. Solar RES (IN) PV,solar,1.1,0.0,0.0,PV,IN,MISO,59988,zero_fuel
+Jackson Co. Solar RES PV,solar,1.1,0.0,0.0,PV,IN,MISO,59989,zero_fuel
+Johnson Co. Solar RES PV,solar,1.1,0.0,0.0,PV,IN,MISO,59990,zero_fuel
+Domino Farms Solar PV,solar,1.0,0.0,0.0,PV,MI,MISO,60017,zero_fuel
+Greenwood Solar Farm PV,solar,1.4,0.0,0.0,PV,MI,MISO,60019,zero_fuel
+Portage Solar PV,solar,1.5,0.0,0.0,PV,IN,MISO,60046,zero_fuel
+Middlebury Solar PV,solar,1.5,0.0,0.0,PV,IN,MISO,60047,zero_fuel
+White Bluff ST,coal,1243.6,11.34298404840926,4.5,ST,AR,MISO,6009,eia923
+Lorin Industries IC,gas,3.2,9.0,3.0,IC,MI,MISO,60102,default
+Western Michigan Solar Gardens PV,solar,1.0,0.0,0.0,PV,MI,MISO,60117,zero_fuel
+Grand Valley Solar Gardens PV,solar,3.0,0.0,0.0,PV,MI,MISO,60118,zero_fuel
+Newton ST,coal,595.0,11.219552869793326,4.5,ST,IL,MISO,6017,eia923
+"McDonald Solar Farm, LLC PV",solar,5.2,0.0,0.0,PV,IN,MISO,60238,zero_fuel
+"Pastime Farm, LLC PV",solar,5.2,0.0,0.0,PV,IN,MISO,60239,zero_fuel
+IMPA Huntingburg Solar Park PV,solar,2.0,0.0,0.0,PV,IN,MISO,60251,zero_fuel
+IMPA Washington Solar Park PV,solar,4.0,0.0,0.0,PV,IN,MISO,60252,zero_fuel
+Owatonna Energy Station IC,gas,38.8,8.759634812542094,3.0,IC,MN,MISO,60254,eia923
+Coal Creek ST,coal,1142.1999999999998,10.001062053963286,4.5,ST,ND,MISO,6030,eia923
+Coal Creek IC,oil,6.0,10.5,6.0,IC,ND,MISO,6030,default
+Sumrall II Solar Farm PV,solar,52.0,0.0,0.0,PV,MS,MISO,60303,zero_fuel
+O'Brien Wind WT,wind,250.3,0.0,0.0,WT,IA,MISO,60326,zero_fuel
+Belle River ST,coal,1270.0,10.819860895141957,4.5,ST,MI,MISO,6034,eia923
+Belle River GT,gas,224.0,12.893975171015962,3.0,GT,MI,MISO,6034,eia923
+Belle River IC,oil,14.0,10.5,6.0,IC,MI,MISO,6034,default
+Ida Grove Wind WT,wind,300.0,0.0,0.0,WT,IA,MISO,60342,zero_fuel
+Demille Solar Farm PV,solar,28.4,0.0,0.0,PV,MI,MISO,60346,zero_fuel
+Turrill Solar Farm PV,solar,19.6,0.0,0.0,PV,MI,MISO,60347,zero_fuel
+O'Shea Solar Farm PV,solar,2.0,0.0,0.0,PV,MI,MISO,60348,zero_fuel
+Greenwood (MI) GT,gas,224.0,12.54081395411708,3.0,GT,MI,MISO,6035,eia923
+Greenwood (MI) ST,gas,785.0,10.829862306130526,3.0,ST,MI,MISO,6035,eia923
+Crane Solar Facility PV,solar,17.0,0.0,0.0,PV,IN,MISO,60435,zero_fuel
+Crowned Ridge Wind Energy Center WT,wind,200.1,0.0,0.0,WT,SD,MISO,60503,zero_fuel
+Blazing Star Wind Farm 1 WT,wind,200.0,0.0,0.0,WT,MN,MISO,60504,zero_fuel
+Crocker Wind Farm WT,wind,200.0,0.0,0.0,WT,SD,MISO,60505,zero_fuel
+Albany Solar PV,solar,10.0,0.0,0.0,PV,MN,MISO,60519,zero_fuel
+Annandale Solar PV,solar,6.0,0.0,0.0,PV,MN,MISO,60520,zero_fuel
+Atwater Solar PV,solar,4.0,0.0,0.0,PV,MN,MISO,60521,zero_fuel
+Chisago Solar PV,solar,6.5,0.0,0.0,PV,MN,MISO,60522,zero_fuel
+Dodge Center Solar PV,solar,6.5,0.0,0.0,PV,MN,MISO,60523,zero_fuel
+Eastwood Solar PV,solar,5.5,0.0,0.0,PV,MN,MISO,60524,zero_fuel
+Hastings Solar PV,solar,4.5,0.0,0.0,PV,MN,MISO,60525,zero_fuel
+Lake Emily Solar PV,solar,4.5,0.0,0.0,PV,MN,MISO,60526,zero_fuel
+Lake Pulaski Solar PV,solar,7.5,0.0,0.0,PV,MN,MISO,60527,zero_fuel
+Lawrence Creek Solar PV,solar,3.5,0.0,0.0,PV,MN,MISO,60528,zero_fuel
+Montrose Solar PV,solar,3.5,0.0,0.0,PV,MN,MISO,60529,zero_fuel
+Paynesville Solar PV,solar,10.0,0.0,0.0,PV,MN,MISO,60530,zero_fuel
+Pine Island Solar PV,solar,4.0,0.0,0.0,PV,MN,MISO,60531,zero_fuel
+Waseca Solar PV,solar,10.0,0.0,0.0,PV,MN,MISO,60532,zero_fuel
+West Faribault Solar PV,solar,5.5,0.0,0.0,PV,MN,MISO,60533,zero_fuel
+West Waconia Solar PV,solar,8.5,0.0,0.0,PV,MN,MISO,60534,zero_fuel
+Wind GEM WT,wind,1.9,0.0,0.0,WT,IA,MISO,60541,zero_fuel
+Big Cajun 2 ST,coal,1108.8000000000002,12.238631105075262,4.5,ST,LA,MISO,6055,eia923
+Big Cajun 2 ST,gas,562.6,12.663016286486675,3.0,ST,LA,MISO,6055,eia923
+Marquette Energy Center IC,gas,50.099999999999994,8.383515790429685,3.0,IC,MI,MISO,60559,eia923
+Westside Energy Station IC,gas,46.5,8.594072477434999,3.0,IC,MN,MISO,60564,eia923
+HQC Rock River Solar Power Gen Station PV,solar,2.1,0.0,0.0,PV,WI,MISO,60573,zero_fuel
+Cascade Creek GT,gas,77.4,11.908241202525023,3.0,GT,MN,MISO,6058,eia923
+R D Morrow CC,gas,530.5,6.538439073759059,3.0,CC,MS,MISO,6061,eia923
+St. Mary Clean Energy Center ST,gas,41.1,10.5,3.0,ST,LA,MISO,60610,default
+Electrifarm GT,gas,190.3,14.651046405823475,3.0,GT,IA,MISO,6063,eia923
+Empire Solar PV,solar,5.0,0.0,0.0,PV,MN,MISO,60631,zero_fuel
+Blue Lake Solar PV,solar,3.0,0.0,0.0,PV,MN,MISO,60632,zero_fuel
+Shakopee Energy Park IC,gas,46.5,8.8142660378146,3.0,IC,MN,MISO,60647,eia923
+Dickinson Solar Array PV,solar,2.3,0.0,0.0,PV,MN,MISO,60652,zero_fuel
+Pierre Solar PV,solar,1.0,0.0,0.0,PV,SD,MISO,60686,zero_fuel
+WakeSun LLC PV,solar,3.0,0.0,0.0,PV,MN,MISO,60694,zero_fuel
+BentonSun LLC PV,solar,5.0,0.0,0.0,PV,MN,MISO,60695,zero_fuel
+Chisago Community Solar PV,solar,3.6,0.0,0.0,PV,MN,MISO,60711,zero_fuel
+Ursa Community Solar PV,solar,4.5,0.0,0.0,PV,MN,MISO,60712,zero_fuel
+Sunrise Community Solar PV,solar,4.5,0.0,0.0,PV,MN,MISO,60713,zero_fuel
+Rosemount Community Solar PV,solar,4.5,0.0,0.0,PV,MN,MISO,60714,zero_fuel
+Paynesville Community Solar PV,solar,4.5,0.0,0.0,PV,MN,MISO,60715,zero_fuel
+Orion Community Solar PV,solar,2.7,0.0,0.0,PV,MN,MISO,60716,zero_fuel
+Northfield Community Solar PV,solar,4.5,0.0,0.0,PV,MN,MISO,60717,zero_fuel
+Grand Gulf ST,nuclear,1390.3,10.44260186158357,2.5,ST,MS,MISO,6072,eia923
+Green Cow Power IC,waste,4.3,0.0,5.0,IC,IN,MISO,60721,zero_fuel
+Eichtens Community Solar PV,solar,3.9,0.0,0.0,PV,MN,MISO,60795,zero_fuel
+Red Wing Community Solar PV,solar,4.9,0.0,0.0,PV,MN,MISO,60796,zero_fuel
+Webster Holdco Solar CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,60830,zero_fuel
+Farmington Holdco Solar PV,solar,5.0,0.0,0.0,PV,MN,MISO,60832,zero_fuel
+Dodge Holdco Solar CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,60833,zero_fuel
+Hwy 14 Holdco Solar CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,60834,zero_fuel
+Pine Island Solar CSG PV,solar,3.9,0.0,0.0,PV,MN,MISO,60835,zero_fuel
+Big Lake Holdco Solar CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,60836,zero_fuel
+Forest Lake Solar CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,60837,zero_fuel
+Wabasha Holdco Solar CSG PV,solar,3.0,0.0,0.0,PV,MN,MISO,60838,zero_fuel
+R M Schahfer ST,coal,722.0,12.825439193442621,4.5,ST,IN,MISO,6085,eia923
+R M Schahfer GT,gas,155.0,15.43712341237158,3.0,GT,IN,MISO,6085,eia923
+Cornell HY,hydro,19.900000000000002,0.0,0.0,HY,WI,MISO,6086,zero_fuel
+"Kokomo Solar 1, LLC PV",solar,5.4,0.0,0.0,PV,IN,MISO,60864,zero_fuel
+Prairie Wind Farm WT,wind,169.0,0.0,0.0,WT,IA,MISO,60873,zero_fuel
+Eastern Iowa Solar PV,solar,1.8,0.0,0.0,PV,IA,MISO,60876,zero_fuel
+"Deerfield Wind Energy, LLC WT",wind,149.0,0.0,0.0,WT,MI,MISO,60883,zero_fuel
+Sauk DPC Solar PV,solar,1.0,0.0,0.0,PV,WI,MISO,60887,zero_fuel
+Lafayette DPC Solar PV,solar,1.0,0.0,0.0,PV,WI,MISO,60888,zero_fuel
+Conrath DPC Solar PV,solar,1.0,0.0,0.0,PV,WI,MISO,60889,zero_fuel
+Lewis & Clark IC,gas,18.2,9.0,3.0,IC,MT,MISO,6089,default
+Warren DPC Solar PV,solar,2.2,0.0,0.0,PV,WI,MISO,60890,zero_fuel
+Liberty Pole DPC Solar PV,solar,1.1,0.0,0.0,PV,WI,MISO,60891,zero_fuel
+Downsville DPC Solar PV,solar,1.0,0.0,0.0,PV,WI,MISO,60892,zero_fuel
+Mt. Hope DPC Solar PV,solar,1.0,0.0,0.0,PV,WI,MISO,60893,zero_fuel
+Medford DPC Solar PV,solar,2.0,0.0,0.0,PV,WI,MISO,60894,zero_fuel
+Whistling Winds DPC Solar PV,solar,1.5,0.0,0.0,PV,WI,MISO,60895,zero_fuel
+Sherburne County ST,coal,1556.0,9.849106166139725,4.5,ST,MN,MISO,6090,eia923
+"Oliver Wind III, LLC WT",wind,99.3,0.0,0.0,WT,ND,MISO,60905,zero_fuel
+Green Energy Machine WT,wind,1.7,0.0,0.0,WT,IA,MISO,60911,zero_fuel
+Shakopee Met Council WTP PV,solar,1.3,0.0,0.0,PV,MN,MISO,60919,zero_fuel
+Montgomery County CC,gas,1000.0,7.4808414405188595,3.0,CC,TX,MISO,60925,eia923
+St. Charles Power Station (LA) CC,gas,1000.0,6.9639743853702685,3.0,CC,LA,MISO,60926,eia923
+Lake Charles Power CC,gas,1000.0,6.969409042280842,3.0,CC,LA,MISO,60927,eia923
+New Orleans Power IC,gas,131.6,9.0,3.0,IC,LA,MISO,60928,default
+GRE Marshan Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,60935,zero_fuel
+New Auburn DPC Solar PV,solar,2.5,0.0,0.0,PV,WI,MISO,60936,zero_fuel
+Antlia Community Solar PV,solar,1.8,0.0,0.0,PV,MN,MISO,60937,zero_fuel
+Aries Community Solar PV,solar,3.6,0.0,0.0,PV,MN,MISO,60938,zero_fuel
+Centaurus Community Solar PV,solar,1.8,0.0,0.0,PV,MN,MISO,60939,zero_fuel
+Gemini Community Solar PV,solar,2.7,0.0,0.0,PV,MN,MISO,60940,zero_fuel
+Mapleton Community Solar PV,solar,2.7,0.0,0.0,PV,MN,MISO,60941,zero_fuel
+Morgan Community Solar PV,solar,2.7,0.0,0.0,PV,MN,MISO,60942,zero_fuel
+Spica Community Solar PV,solar,1.8,0.0,0.0,PV,MN,MISO,60943,zero_fuel
+Vega Community Solar PV,solar,4.5,0.0,0.0,PV,MN,MISO,60944,zero_fuel
+"Spartan PV 1, LLC PV",solar,10.5,0.0,0.0,PV,MI,MISO,60945,zero_fuel
+West Dubuque Solar PV,solar,3.4,0.0,0.0,PV,IA,MISO,60951,zero_fuel
+Strawberry Point DPC Solar PV,solar,1.3,0.0,0.0,PV,IA,MISO,60955,zero_fuel
+Sand Lake DPC Solar PV,solar,1.0,0.0,0.0,PV,WI,MISO,60957,zero_fuel
+Nesvold Watertown Solar PV,solar,5.0,0.0,0.0,PV,MN,MISO,60958,zero_fuel
+Red Maple Solar PV,solar,3.0,0.0,0.0,PV,MN,MISO,60962,zero_fuel
+Lind Solar CSG PV,solar,4.9,0.0,0.0,PV,MN,MISO,60966,zero_fuel
+Michael Solar PV,solar,4.0,0.0,0.0,PV,MN,MISO,60971,zero_fuel
+Big Stone ST,coal,477.3,10.343614814672987,4.5,ST,SD,MISO,6098,eia923
+Big Stone IC,oil,0.6,10.5,6.0,IC,SD,MISO,6098,default
+Tatanka Ridge WT,wind,154.0,0.0,0.0,WT,SD,MISO,61046,zero_fuel
+Kramer Solar CSG PV,solar,3.0,0.0,0.0,PV,MN,MISO,61058,zero_fuel
+Novel OYA of Osakis CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,61059,zero_fuel
+Novel - OYA of Mapleton CSG PV,solar,3.5,0.0,0.0,PV,MN,MISO,61060,zero_fuel
+Saratoga Wind Farm WT,wind,66.0,0.0,0.0,WT,IA,MISO,61070,zero_fuel
+Lemond Solar PV,solar,5.0,0.0,0.0,PV,MN,MISO,61072,zero_fuel
+Orient Wind Farm WT,wind,500.0,0.0,0.0,WT,IA,MISO,61077,zero_fuel
+Beaver Creek Wind WT,wind,340.0,0.0,0.0,WT,IA,MISO,61079,zero_fuel
+Pine River Wind Park WT,wind,161.3,0.0,0.0,WT,MI,MISO,61106,zero_fuel
+Gibson ST,coal,3132.0,11.03329676878261,4.5,ST,IN,MISO,6113,eia923
+Armstrong Solar PV,solar,3.0,0.0,0.0,PV,MN,MISO,61138,zero_fuel
+Marmas Solar CSG PV,solar,4.0,0.0,0.0,PV,MN,MISO,61139,zero_fuel
+"CF Novel Solar CSG Gardens Two, LLC PV",solar,1.8,0.0,0.0,PV,MN,MISO,61140,zero_fuel
+"CF Novel Solar CSG Gardens Eleven, LLC PV",solar,3.0,0.0,0.0,PV,MN,MISO,61141,zero_fuel
+WasecaSun PV,solar,5.0,0.0,0.0,PV,MN,MISO,61142,zero_fuel
+Astoria Station GT,gas,242.7,10.403637463697967,3.0,GT,SD,MISO,61144,eia923
+Harvest Ridge Wind Farm WT,wind,202.0,0.0,0.0,WT,IL,MISO,61161,zero_fuel
+Taurus Community Solar PV,solar,3.6,0.0,0.0,PV,MN,MISO,61174,zero_fuel
+Pegasus Community Solar PV,solar,1.8,0.0,0.0,PV,MN,MISO,61175,zero_fuel
+Antares Community Solar PV,solar,2.7,0.0,0.0,PV,MN,MISO,61176,zero_fuel
+Corvus Community Solar PV,solar,4.5,0.0,0.0,PV,MN,MISO,61177,zero_fuel
+Capella Community Solar PV,solar,4.5,0.0,0.0,PV,MN,MISO,61178,zero_fuel
+Carina Community Solar PV,solar,3.6,0.0,0.0,PV,MN,MISO,61179,zero_fuel
+Caelum Community Solar PV,solar,1.8,0.0,0.0,PV,MN,MISO,61180,zero_fuel
+Andromeda Community Solar PV,solar,4.5,0.0,0.0,PV,MN,MISO,61181,zero_fuel
+Lyra Community Solar PV,solar,2.7,0.0,0.0,PV,MN,MISO,61182,zero_fuel
+Argo Navis Community Solar PV,solar,2.7,0.0,0.0,PV,MN,MISO,61183,zero_fuel
+"Lahr 1, LLC PV",solar,5.0,0.0,0.0,PV,MN,MISO,61203,zero_fuel
+Stuttgart Solar PV,solar,81.0,0.0,0.0,PV,AR,MISO,61262,zero_fuel
+Hurricane Creek Lift Station IC,oil,2.0,10.5,6.0,IC,IN,MISO,61267,default
+Crater Community Solar PV,solar,2.7,0.0,0.0,PV,MN,MISO,61328,zero_fuel
+Delphinus Community Solar PV,solar,1.8,0.0,0.0,PV,MN,MISO,61329,zero_fuel
+Oak Hill Solar Array PV,solar,2.0,0.0,0.0,PV,IN,MISO,61333,zero_fuel
+Volkman Road Solar Array Hybrid PV,solar,2.0,0.0,0.0,PV,IN,MISO,61334,zero_fuel
+Red Pine Wind Project WT,wind,200.0,0.0,0.0,WT,MN,MISO,61357,zero_fuel
+Equuleus Community Solar Gardens PV,solar,5.0,0.0,0.0,PV,MN,MISO,61363,zero_fuel
+A B Brown GT,gas,160.0,13.229498000315825,3.0,GT,IN,MISO,6137,eia923
+DodgeSun CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,61379,zero_fuel
+Johnson Solar CSG PV,solar,4.7,0.0,0.0,PV,MN,MISO,61380,zero_fuel
+Koppelman Sun CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,61381,zero_fuel
+Lindstrom Solar CSG PV,solar,3.0,0.0,0.0,PV,MN,MISO,61382,zero_fuel
+Rengstorf Solar CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,61383,zero_fuel
+St. Cloud Solar CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,61384,zero_fuel
+A.J. Mihm Generating Station IC,gas,56.5,8.570796927846674,3.0,IC,MI,MISO,61391,eia923
+F.D. Kuester Generating Station IC,gas,131.6,8.674728593649531,3.0,IC,MI,MISO,61392,eia923
+Gopher CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,61426,zero_fuel
+Richmond CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,61427,zero_fuel
+Taylors Falls CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,61428,zero_fuel
+DG AMP Solar Coldwater PV,solar,1.3,0.0,0.0,PV,MI,MISO,61435,zero_fuel
+Northfield Holdco CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,61451,zero_fuel
+Waterford Holdco CSG PV,solar,2.7,0.0,0.0,PV,MN,MISO,61452,zero_fuel
+B.R. Corcoran CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,61453,zero_fuel
+B.R. Sartell CSG PV,solar,3.0,0.0,0.0,PV,MN,MISO,61454,zero_fuel
+B.R. Sauk Rapids CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,61455,zero_fuel
+Montgomery Winsted CSG PV,solar,3.0,0.0,0.0,PV,MN,MISO,61456,zero_fuel
+"SunE Feely 1 CSG, LLC PV",solar,5.0,0.0,0.0,PV,MN,MISO,61478,zero_fuel
+"Cottage Grove CSG, LLC PV",solar,5.0,0.0,0.0,PV,MN,MISO,61483,zero_fuel
+"Fox CSG, LLC PV",solar,5.0,0.0,0.0,PV,MN,MISO,61484,zero_fuel
+"SunE Stolee CSG, LLC PV",solar,3.0,0.0,0.0,PV,MN,MISO,61485,zero_fuel
+"Wyoming 2 CSG, LLC PV",solar,5.0,0.0,0.0,PV,MN,MISO,61486,zero_fuel
+Wright Cuddyer CSG PV,solar,4.0,0.0,0.0,PV,MN,MISO,61494,zero_fuel
+Carver Gladden CSG PV,solar,3.0,0.0,0.0,PV,MN,MISO,61495,zero_fuel
+Porter Way Community Solar Garden PV,solar,3.0,0.0,0.0,PV,MN,MISO,61500,zero_fuel
+RJC I CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,61504,zero_fuel
+Huneke I CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,61505,zero_fuel
+Krause CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,61506,zero_fuel
+School Sisters CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,61516,zero_fuel
+Callaway ST,nuclear,1190.0,10.442601900248,2.5,ST,MO,MISO,6153,eia923
+"PopeSun CSG, LLC PV",solar,5.0,0.0,0.0,PV,MN,MISO,61542,zero_fuel
+"CF Novel Solar CSG Gardens Five, LLC PV",solar,3.4,0.0,0.0,PV,MN,MISO,61543,zero_fuel
+"LeSun CSG, LLC PV",solar,5.0,0.0,0.0,PV,MN,MISO,61544,zero_fuel
+"CGSun, LLC Community Solar PV",solar,4.0,0.0,0.0,PV,MN,MISO,61545,zero_fuel
+"WrightSun CSG, LLC PV",solar,5.0,0.0,0.0,PV,MN,MISO,61547,zero_fuel
+"CF Novel Solar CSG Gardens Seven, LLC PV",solar,3.3,0.0,0.0,PV,MN,MISO,61548,zero_fuel
+Upland Prairie WT,wind,299.3,0.0,0.0,WT,IA,MISO,61564,zero_fuel
+English Farms WT,wind,171.5,0.0,0.0,WT,IA,MISO,61565,zero_fuel
+Veseli Community Solar Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,61570,zero_fuel
+New Germany Community Solar Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,61571,zero_fuel
+Lake Waconia Community Solar Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,61572,zero_fuel
+Lake Waconia IV Community Solar Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,61573,zero_fuel
+Zumbro Community Solar Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,61574,zero_fuel
+Scandia CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,61585,zero_fuel
+MontSun Community Solar PV,solar,5.0,0.0,0.0,PV,MN,MISO,61586,zero_fuel
+WaveSun Community Solar PV,solar,5.0,0.0,0.0,PV,MN,MISO,61587,zero_fuel
+Flambeau Solar Partners PV,solar,2.5,0.0,0.0,PV,WI,MISO,61595,zero_fuel
+"Heartland Divide Wind Project, LLC WT",wind,103.5,0.0,0.0,WT,IA,MISO,61609,zero_fuel
+Dundas Solar Holdings LLC CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,61626,zero_fuel
+Waterville CSG Solar Holdings LLC PV,solar,5.0,0.0,0.0,PV,MN,MISO,61627,zero_fuel
+Turtle Creek Wind Farm LLC WT,wind,199.2,0.0,0.0,WT,IA,MISO,61638,zero_fuel
+August Wind Farm WT,wind,1.8,0.0,0.0,WT,IA,MISO,61644,zero_fuel
+Altair Community Solar Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,61645,zero_fuel
+LA3 West Baton Rouge Solar Facility PV,solar,50.0,0.0,0.0,PV,LA,MISO,61646,zero_fuel
+ENO Paterson Solar PV,solar,1.1,0.0,0.0,PV,LA,MISO,61647,zero_fuel
+Blazing Star 2 Wind Farm WT,wind,200.0,0.0,0.0,WT,MN,MISO,61650,zero_fuel
+Capricornus Community Solar Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,61651,zero_fuel
+"Fiber Recovery, Inc. IC",waste,2.4000000000000004,0.0,5.0,IC,WI,MISO,61652,zero_fuel
+Scandia Community Solar Garden PV,solar,2.5,0.0,0.0,PV,MN,MISO,61669,zero_fuel
+RJC II Community Solar Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,61670,zero_fuel
+Betcher Community Solar Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,61671,zero_fuel
+Sherburne Community Solar PV,solar,5.0,0.0,0.0,PV,MN,MISO,61672,zero_fuel
+Tatanka Wi PV,solar,7.1,0.0,0.0,PV,MN,MISO,61680,zero_fuel
+Johnson 1 Community Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,61686,zero_fuel
+Grimm Community Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,61689,zero_fuel
+Foreman's Hill Community Solar PV,solar,5.0,0.0,0.0,PV,MN,MISO,61690,zero_fuel
+Johnson II Community Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,61695,zero_fuel
+Aquila Community Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,61704,zero_fuel
+Acturus Community Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,61705,zero_fuel
+Auriga Community Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,61706,zero_fuel
+Canopus Community Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,61707,zero_fuel
+Sagitta Community Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,61708,zero_fuel
+Libra Community Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,61709,zero_fuel
+Aquarius Community Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,61710,zero_fuel
+Cassiopeia Community Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,61711,zero_fuel
+Crux Community Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,61712,zero_fuel
+Leo Community Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,61713,zero_fuel
+Deneb Community Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,61715,zero_fuel
+Kaus Community Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,61716,zero_fuel
+"Foxtail Wind, LLC WT",wind,150.0,0.0,0.0,WT,ND,MISO,61747,zero_fuel
+Meadow Lake Wind Farm VI LLC WT,wind,200.4,0.0,0.0,WT,IN,MISO,61756,zero_fuel
+Sherburne North Project CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,61762,zero_fuel
+Bishop Hill III WT,wind,119.0,0.0,0.0,WT,IL,MISO,61787,zero_fuel
+Hilltop Power WT,wind,2.0,0.0,0.0,WT,MN,MISO,61788,zero_fuel
+Heyer CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,61793,zero_fuel
+Rensselaer Solar Site 2 PV,solar,3.8,0.0,0.0,PV,IN,MISO,61799,zero_fuel
+IKEA Oak Creek Rooftop PV System PV,solar,1.2,0.0,0.0,PV,WI,MISO,61816,zero_fuel
+Big Lake Project CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,61817,zero_fuel
+O'Fallon Renewable Energy Center PV,solar,4.5,0.0,0.0,PV,MO,MISO,61826,zero_fuel
+Amana Society Service Company IC,oil,21.6,14.81330685203575,6.0,IC,IA,MISO,61850,eia923
+"Montevideo Solar LLC, CSG PV",solar,5.0,0.0,0.0,PV,MN,MISO,61870,zero_fuel
+John A Logan College Solar PV,solar,1.3,0.0,0.0,PV,IL,MISO,61878,zero_fuel
+Staunton PV,solar,4.0,0.0,0.0,PV,IN,MISO,61885,zero_fuel
+Brame Energy Center ST,coal,1101.8,11.777728190574791,4.5,ST,LA,MISO,6190,eia923
+Brame Energy Center ST,gas,420.6,11.612363431730632,3.0,ST,LA,MISO,6190,eia923
+Ivester Wind Farm WT,wind,90.0,0.0,0.0,WT,IA,MISO,61911,zero_fuel
+Pegasus Wind WT,wind,178.0,0.0,0.0,WT,MI,MISO,61916,zero_fuel
+"Frontenac Holdco LLC, CSG PV",solar,5.0,0.0,0.0,PV,MN,MISO,61919,zero_fuel
+Delta Solar Power I PV,solar,7.7,0.0,0.0,PV,MI,MISO,61954,zero_fuel
+Delta Solar Power II PV,solar,15.2,0.0,0.0,PV,MI,MISO,61955,zero_fuel
+"Chisago Holdco LLC, CSG PV",solar,3.0,0.0,0.0,PV,MN,MISO,61968,zero_fuel
+Corcoran CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,61971,zero_fuel
+Cornillie PV,solar,1.0,0.0,0.0,PV,MN,MISO,61977,zero_fuel
+Syncarpha Prinsburg CSG (Ledeboer) PV,solar,1.0,0.0,0.0,PV,MN,MISO,61979,zero_fuel
+Syncarpha Clara City CSG I (Stamer) PV,solar,1.0,0.0,0.0,PV,MN,MISO,61980,zero_fuel
+Cottage Grove Project CSG PV,solar,4.9,0.0,0.0,PV,MN,MISO,61983,zero_fuel
+TAC-Distributed Energy Resource Hybrid IC,gas,1.0,9.0,3.0,IC,IL,MISO,61990,default
+TAC-Distributed Energy Resource Hybrid PV,solar,0.1,0.0,0.0,PV,IL,MISO,61990,zero_fuel
+TAC-Distributed Energy Resource Hybrid WT,wind,0.1,0.0,0.0,WT,IL,MISO,61990,zero_fuel
+USS Big Lake 1 Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,61997,zero_fuel
+USS Good Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,61998,zero_fuel
+USS Kasch Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,61999,zero_fuel
+USS Rockpoint Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62000,zero_fuel
+Gibbon Solar PV,solar,3.3,0.0,0.0,PV,MN,MISO,62010,zero_fuel
+Nautilus Lindstrom Solar (CSG) PV,solar,2.0,0.0,0.0,PV,MN,MISO,62030,zero_fuel
+Nautilus Saint Cloud Solar (CSG) PV,solar,5.0,0.0,0.0,PV,MN,MISO,62031,zero_fuel
+Nautilus Winsted Solar (CSG) PV,solar,3.0,0.0,0.0,PV,MN,MISO,62032,zero_fuel
+Glaciers Edge Wind Project WT,wind,200.0,0.0,0.0,WT,IA,MISO,62035,zero_fuel
+Sartell Holdco CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,62036,zero_fuel
+Rollingstone Holdco CSG PV,solar,4.8,0.0,0.0,PV,MN,MISO,62037,zero_fuel
+Becker Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62040,zero_fuel
+USS Solar Rapids CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62042,zero_fuel
+USS Solar Dawn CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62044,zero_fuel
+USS Norelius Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62045,zero_fuel
+USS Nillie Corn Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62046,zero_fuel
+USS JJ Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62047,zero_fuel
+USS Dubhe Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62048,zero_fuel
+USS Brockway Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62049,zero_fuel
+Syncarpha Dodge 1 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62053,zero_fuel
+Hampton MN GRE PV,solar,2.0,0.0,0.0,PV,MN,MISO,62060,zero_fuel
+Anoka County MN CONX PV,solar,3.4,0.0,0.0,PV,MN,MISO,62061,zero_fuel
+Athens MN CONX PV,solar,6.6,0.0,0.0,PV,MN,MISO,62062,zero_fuel
+Whispering Willow North WT,wind,201.3,0.0,0.0,WT,IA,MISO,62079,zero_fuel
+Richland (IA) WT,wind,130.9,0.0,0.0,WT,IA,MISO,62080,zero_fuel
+Golden Plains WT,wind,199.8,0.0,0.0,WT,IA,MISO,62081,zero_fuel
+Becker Solar 2 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62084,zero_fuel
+Becker Solar 3 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62085,zero_fuel
+Becker Solar 4 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62086,zero_fuel
+Becker Solar 5 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62087,zero_fuel
+Schultz CSG PV,solar,1.8,0.0,0.0,PV,MN,MISO,62088,zero_fuel
+Tiller CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,62098,zero_fuel
+Hammer CSG PV,solar,4.8,0.0,0.0,PV,MN,MISO,62099,zero_fuel
+Kossuth WT,wind,152.2,0.0,0.0,WT,IA,MISO,62103,zero_fuel
+Monticello Project CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,62105,zero_fuel
+Beloit Memorial Hospital Power Plant IC,gas,3.0,9.71628449280995,3.0,IC,WI,MISO,62117,eia923
+Merom ST,coal,978.0,10.876743037325907,4.5,ST,IN,MISO,6213,eia923
+Roseman WT,wind,1.8,0.0,0.0,WT,IA,MISO,62130,zero_fuel
+Arbor Hill Wind Farm WT,wind,310.0,0.0,0.0,WT,IA,MISO,62132,zero_fuel
+North English WT,wind,340.0,0.0,0.0,WT,IA,MISO,62133,zero_fuel
+Eichtens II CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62137,zero_fuel
+Barone CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62138,zero_fuel
+Huneke II CSG PV,solar,1.1,0.0,0.0,PV,MN,MISO,62139,zero_fuel
+MSC-GreyCloud01 Community Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,62143,zero_fuel
+MSC-Scandia01 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62144,zero_fuel
+Goose Lake MN DPC-GM PV,solar,1.5,0.0,0.0,PV,MN,MISO,62148,zero_fuel
+Galactic Wind WT,wind,9.9,0.0,0.0,WT,WI,MISO,62161,zero_fuel
+4710 Hosting IC,oil,5.0,11.241379310344827,6.0,IC,MN,MISO,62162,eia923
+Birch WT,wind,1.8,0.0,0.0,WT,IA,MISO,62172,zero_fuel
+Blue Water Energy Center CC,gas,1146.0,6.372868778545709,3.0,CC,MI,MISO,62192,eia923
+Winegar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62193,zero_fuel
+Bolduan CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62194,zero_fuel
+Guse CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62195,zero_fuel
+Durant IC,oil,4.4,10.918367346938775,6.0,IC,IA,MISO,6220,eia923
+Randolph CSG PV1-5 PV,solar,5.0,0.0,0.0,PV,MN,MISO,62209,zero_fuel
+Felton CSG PV1-5 PV,solar,5.0,0.0,0.0,PV,MN,MISO,62210,zero_fuel
+Held Solar Project PV,solar,5.0,0.0,0.0,PV,MN,MISO,62267,zero_fuel
+"Stoneray Power Partners, LLC WT",wind,100.0,0.0,0.0,WT,MN,MISO,62269,zero_fuel
+Dearborn Energy Center CC,gas,26.9,10.598457799756579,3.0,CC,MI,MISO,62289,eia923
+Polaris Wind Park WT,wind,168.6,0.0,0.0,WT,MI,MISO,62290,zero_fuel
+Tipton Solar Park PV,solar,5.3,0.0,0.0,PV,IN,MISO,62305,zero_fuel
+Apple River HY,hydro,1.4,0.0,0.0,HY,WI,MISO,6231,zero_fuel
+Cedar Falls Solar Farm PV,solar,1.5,0.0,0.0,PV,IA,MISO,62321,zero_fuel
+USS Centerfield Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62335,zero_fuel
+USS Webster Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62336,zero_fuel
+USS Lake Patterson Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62337,zero_fuel
+USS Kost Trail Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62339,zero_fuel
+USS King 2 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62358,zero_fuel
+USS Eggo Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62359,zero_fuel
+USS DVL Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62360,zero_fuel
+Nobles 2 Wind Project WT,wind,250.0,0.0,0.0,WT,MN,MISO,62364,zero_fuel
+Wright Kirby 1-5 CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,62365,zero_fuel
+Pearl Station GT,oil,20.1,13.0,6.0,GT,IL,MISO,6238,default
+"Emmons-Logan Wind, LLC WT",wind,200.0,0.0,0.0,WT,ND,MISO,62380,zero_fuel
+Lady Slipper Solar Array CSG PV,solar,4.5,0.0,0.0,PV,MN,MISO,62414,zero_fuel
+Prairie State Solar Project PV,solar,99.0,0.0,0.0,PV,IL,MISO,62420,zero_fuel
+Assembly Solar Project PV,solar,50.0,0.0,0.0,PV,MI,MISO,62422,zero_fuel
+"Lake Region Community Hybrid, LLC PV",solar,0.5,0.0,0.0,PV,MN,MISO,62442,zero_fuel
+"Lake Region Community Hybrid, LLC WT",wind,2.0,0.0,0.0,WT,MN,MISO,62442,zero_fuel
+Rantoul Solar PV,solar,2.0,0.0,0.0,PV,IL,MISO,62451,zero_fuel
+Farmers Electric Cooperative - Kalona IC,oil,6.0,10.5,6.0,IC,IA,MISO,62461,default
+Crawfordsville 2 Solar Park PV,solar,7.9,0.0,0.0,PV,IN,MISO,62484,zero_fuel
+Crawfordsville 3 Solar Park PV,solar,4.8,0.0,0.0,PV,IN,MISO,62485,zero_fuel
+Germantown GT,gas,75.5,14.472203108935156,3.0,GT,WI,MISO,6253,eia923
+Germantown GT,oil,179.1,14.464893597655326,6.0,GT,WI,MISO,6253,eia923
+MSC-Scott01 LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,62535,zero_fuel
+MSC-Chisago01 LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62536,zero_fuel
+MSC-Rice01 LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62537,zero_fuel
+MSC-Chisago02 LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,62538,zero_fuel
+Ottumwa ST,coal,699.7,11.247824274706755,4.5,ST,IA,MISO,6254,eia923
+High Prairie Wind Farm WT,wind,375.5,0.0,0.0,WT,MO,MISO,62563,zero_fuel
+Bloomfield Municipal Utilities Solar PV,solar,1.6,0.0,0.0,PV,IA,MISO,62607,zero_fuel
+Searcy Solar Hybrid PV,solar,100.0,0.0,0.0,PV,AR,MISO,62617,zero_fuel
+MBS Textbook Exchange IC,oil,2.0,10.5,6.0,IC,MO,MISO,62647,default
+Haven Solar Project CSG PV,solar,3.0,0.0,0.0,PV,MN,MISO,62651,zero_fuel
+Epic Verona IC,oil,43.699999999999996,10.627272727272727,6.0,IC,WI,MISO,62676,eia923
+Epic Verona PV,solar,2.1,0.0,0.0,PV,WI,MISO,62676,zero_fuel
+IKEA Canton Rooftop PV System PV,solar,1.0,0.0,0.0,PV,MI,MISO,62677,zero_fuel
+CED Champaign Solar LLC PV,solar,1.6,0.0,0.0,PV,IL,MISO,62681,zero_fuel
+FastSun 2 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62696,zero_fuel
+Helen Solar CSG PV,solar,4.0,0.0,0.0,PV,MN,MISO,62706,zero_fuel
+Walcott Solar CSG PV,solar,4.0,0.0,0.0,PV,MN,MISO,62707,zero_fuel
+Northfield Solar CSG PV,solar,5.0,0.0,0.0,PV,MN,MISO,62708,zero_fuel
+Warsaw Solar CSG PV,solar,2.0,0.0,0.0,PV,MN,MISO,62709,zero_fuel
+Middleton Airport Solar PV,solar,5.6,0.0,0.0,PV,WI,MISO,62731,zero_fuel
+Phoenix Solar South Farms LLC Solar Farm PV,solar,4.7,0.0,0.0,PV,IL,MISO,62735,zero_fuel
+"MSC-Empire01, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,62740,zero_fuel
+Arcadia Solar PV,solar,5.0,0.0,0.0,PV,WI,MISO,62744,zero_fuel
+Scottsburg Solar Park PV,solar,7.1,0.0,0.0,PV,IN,MISO,62766,zero_fuel
+Gas City Solar Park PV,solar,2.5,0.0,0.0,PV,IN,MISO,62767,zero_fuel
+Columbia City Solar Park PV,solar,4.3,0.0,0.0,PV,IN,MISO,62769,zero_fuel
+Crawfordsville Solar Park 4 PV,solar,2.3,0.0,0.0,PV,IN,MISO,62776,zero_fuel
+Novel Martin Solar One LLC (McLeod) CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62779,zero_fuel
+Tell City Solar Park PV,solar,3.2,0.0,0.0,PV,IN,MISO,62790,zero_fuel
+Crawfordsville 5 Solar Park PV,solar,9.8,0.0,0.0,PV,IN,MISO,62793,zero_fuel
+Ida Grove II WT,wind,200.0,0.0,0.0,WT,IA,MISO,62795,zero_fuel
+Winona Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,62799,zero_fuel
+Wabasha Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,62800,zero_fuel
+Fairbanks Wind Park WT,wind,72.8,0.0,0.0,WT,MI,MISO,62815,zero_fuel
+GSPP Held LLC CSG PV,solar,3.0,0.0,0.0,PV,MN,MISO,62829,zero_fuel
+GSPP Imholte CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62830,zero_fuel
+Fennimore Solar PV,solar,3.0,0.0,0.0,PV,WI,MISO,62847,zero_fuel
+New Lisbon Solar PV,solar,2.5,0.0,0.0,PV,WI,MISO,62848,zero_fuel
+Cumberland Solar PV,solar,2.5,0.0,0.0,PV,WI,MISO,62849,zero_fuel
+St. James Solar (LA) PV,solar,20.0,0.0,0.0,PV,LA,MISO,62854,zero_fuel
+Cashton Solar PV,solar,2.0,0.0,0.0,PV,WI,MISO,62858,zero_fuel
+Forest City Solar PV,solar,3.0,0.0,0.0,PV,IA,MISO,62861,zero_fuel
+Elroy Solar PV,solar,1.5,0.0,0.0,PV,WI,MISO,62868,zero_fuel
+St. Charles Solar PV,solar,2.0,0.0,0.0,PV,MN,MISO,62869,zero_fuel
+Rosewater Wind Farm WT,wind,102.0,0.0,0.0,WT,IN,MISO,62891,zero_fuel
+Prairie Wolf Solar LLC PV,solar,200.0,0.0,0.0,PV,IL,MISO,62893,zero_fuel
+Glen Ullin Energy Center WT,wind,106.7,0.0,0.0,WT,ND,MISO,62938,zero_fuel
+Deuel Harvest Wind Energy LLC WT,wind,300.0,0.0,0.0,WT,SD,MISO,62943,zero_fuel
+Badger Hollow I PV,solar,150.0,0.0,0.0,PV,WI,MISO,62955,zero_fuel
+Novel Brooten Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62961,zero_fuel
+Novel Reber Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62962,zero_fuel
+Novel Historical Society Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62963,zero_fuel
+Novel Herber Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62966,zero_fuel
+Novel Herickhoff Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62967,zero_fuel
+Novel DeCook Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62979,zero_fuel
+Novel Schmoll Farms Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62982,zero_fuel
+Novel Pederson Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62983,zero_fuel
+Novel Jewison Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62984,zero_fuel
+Novel Byron Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62985,zero_fuel
+Novel Kanewischer Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,62986,zero_fuel
+Novel Bartel Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63004,zero_fuel
+Novel Haley Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63005,zero_fuel
+Novel MNDot Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63007,zero_fuel
+Novel Winegar Partnership Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63008,zero_fuel
+Novel Peter Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63009,zero_fuel
+Novel Benedix Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63010,zero_fuel
+Green Lake Solar PV,solar,1.0,0.0,0.0,PV,MI,MISO,63019,zero_fuel
+TCLP Solar Phase 1 PV,solar,1.0,0.0,0.0,PV,MI,MISO,63020,zero_fuel
+FastSun 19 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63033,zero_fuel
+FastSun 18 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63034,zero_fuel
+FastSun 13 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63035,zero_fuel
+FastSun 14 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63036,zero_fuel
+FastSun 11 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63037,zero_fuel
+FastSun 10 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63038,zero_fuel
+FastSun 8 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63039,zero_fuel
+FastSun 9 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63040,zero_fuel
+FastSun 3 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63042,zero_fuel
+FastSun 7 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63043,zero_fuel
+FastSun 5 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63045,zero_fuel
+FastSun 1 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63046,zero_fuel
+Palo Alto Wind Farm WT,wind,340.0,0.0,0.0,WT,IA,MISO,63053,zero_fuel
+Two Creeks Solar PV,solar,150.0,0.0,0.0,PV,WI,MISO,63105,zero_fuel
+Dakota Community Solar One LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63116,zero_fuel
+Douglas Todd Community Solar One LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63117,zero_fuel
+Meeker Community Solar One LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63118,zero_fuel
+McLeod Community Solar One LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63119,zero_fuel
+Nicollet Community Solar One LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,63120,zero_fuel
+Stearns Community Solar One LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63121,zero_fuel
+Sherburne Community Solar One LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63122,zero_fuel
+Iris Solar LLC PV,solar,50.0,0.0,0.0,PV,LA,MISO,63128,zero_fuel
+Tippecanoe Solar Power Plant PV,solar,1.6,0.0,0.0,PV,IN,MISO,63137,zero_fuel
+USS Haven Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63138,zero_fuel
+USS White Cloud LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63139,zero_fuel
+USS Westeros Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63140,zero_fuel
+USS Sunrise Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63141,zero_fuel
+USS Milkweed Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63142,zero_fuel
+USS Greenhouse Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63143,zero_fuel
+USS Mayhew Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63144,zero_fuel
+USS Cheyenne Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63145,zero_fuel
+USS Midtown Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63146,zero_fuel
+USS Monarch Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63147,zero_fuel
+USS Turkey Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63148,zero_fuel
+USS Solar Sources LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63151,zero_fuel
+USS Christoffer Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63152,zero_fuel
+USS Buckaroo Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63153,zero_fuel
+USS Horne North Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63154,zero_fuel
+USS Horne South Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63155,zero_fuel
+USS JJ Clay Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63156,zero_fuel
+USS Verde Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63157,zero_fuel
+USS Cougar Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63158,zero_fuel
+USS Flower Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63159,zero_fuel
+USS All In Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63160,zero_fuel
+USS Reindeer Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63165,zero_fuel
+USS Bush Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63166,zero_fuel
+USS Hancock Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63167,zero_fuel
+USS Pheasant Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63168,zero_fuel
+USS KVPV Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63169,zero_fuel
+USS Kass Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,63170,zero_fuel
+USS Chariot Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,63171,zero_fuel
+Hartmann Project CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63174,zero_fuel
+E. Goenner Project CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63175,zero_fuel
+Prawer Project CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63176,zero_fuel
+Schwinghamer Project CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63177,zero_fuel
+STAG St. Paul Project CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63178,zero_fuel
+Linden 01 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63179,zero_fuel
+Linden 02 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63182,zero_fuel
+Linden 03 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63183,zero_fuel
+Sheridan School Corporation Solar PV,solar,0.8,0.0,0.0,PV,IN,MISO,63213,zero_fuel
+USS Dot Com Solar LLC CSG PV,solar,1.4,0.0,0.0,PV,MN,MISO,63215,zero_fuel
+USS B&B Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63216,zero_fuel
+USS Water Town Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63218,zero_fuel
+USS Water Fowl Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63219,zero_fuel
+USS Water City Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63220,zero_fuel
+USS Steamboat Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63221,zero_fuel
+Woodbury Solar PV,solar,3.0,0.0,0.0,PV,MN,MISO,63231,zero_fuel
+Novel Debra Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63247,zero_fuel
+Novel Wayne Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63249,zero_fuel
+Cannon Garden Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,63252,zero_fuel
+Delta Energy Park CC,gas,177.6,7.691722786504297,3.0,CC,MI,MISO,63259,eia923
+Delta Energy Park GT,gas,46.3,10.812236959571484,3.0,GT,MI,MISO,63259,eia923
+Crowned Ridge Wind II Energy Center WT,wind,192.2,0.0,0.0,WT,SD,MISO,63269,zero_fuel
+Cerro Gordo Wind Farm WT,wind,42.0,0.0,0.0,WT,IA,MISO,63287,zero_fuel
+Chicot Solar PV,solar,100.0,0.0,0.0,PV,AR,MISO,63295,zero_fuel
+"Allium Community Solar Garden, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63304,zero_fuel
+"Aster Community Solar Garden, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63305,zero_fuel
+"Westport Community Solar, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63307,zero_fuel
+"Marigold Community Solar Garden, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63308,zero_fuel
+"Honeysuckle Solar, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63309,zero_fuel
+"Lantana Solar, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63311,zero_fuel
+"Hyacinth Solar, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63312,zero_fuel
+"Coral Bells Solar, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63313,zero_fuel
+"Primrose Solar, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63314,zero_fuel
+"Kerria Solar, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63315,zero_fuel
+"Geranium Solar, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63317,zero_fuel
+"Bellflower Solar, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63318,zero_fuel
+"Iris Solar, LLC (MN) PV",solar,1.0,0.0,0.0,PV,MN,MISO,63319,zero_fuel
+"Bingham Solar, LLC PV",solar,20.0,0.0,0.0,PV,MI,MISO,63321,zero_fuel
+"Temperance Solar, LLC PV",solar,20.0,0.0,0.0,PV,MI,MISO,63322,zero_fuel
+Camp Atterbury Microgrid Hybrid PV,solar,2.0,0.0,0.0,PV,IN,MISO,63324,zero_fuel
+Strandness Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,63367,zero_fuel
+GSSP Schneider LLC PV,solar,5.0,0.0,0.0,PV,MN,MISO,63370,zero_fuel
+Wapello Solar LLC PV,solar,100.0,0.0,0.0,PV,IA,MISO,63378,zero_fuel
+Goodhue Community Solar One LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63380,zero_fuel
+Bennington Wind WT,wind,93.0,0.0,0.0,WT,IL,MISO,63384,zero_fuel
+"Jordan Creek Wind Farm, LLC WT",wind,398.6,0.0,0.0,WT,IN,MISO,63389,zero_fuel
+Falls Creek Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,63394,zero_fuel
+Star Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,63395,zero_fuel
+Buffalo Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,63396,zero_fuel
+Loon Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,63397,zero_fuel
+Galesburg Solar Array PV,solar,1.4,0.0,0.0,PV,IL,MISO,63399,zero_fuel
+Stearns Solar I PV,solar,1.0,0.0,0.0,PV,MN,MISO,63400,zero_fuel
+Olinda Trail Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,63401,zero_fuel
+New Munich Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,63402,zero_fuel
+Clara City Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,63403,zero_fuel
+Vermillion River_MN_GRE DEA-GM PV,solar,3.0,0.0,0.0,PV,MN,MISO,63406,zero_fuel
+Goodhue Community Solar Three LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63417,zero_fuel
+Straight Garden Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,63424,zero_fuel
+Leven Garden Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,63425,zero_fuel
+Zumbro Solar Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,63426,zero_fuel
+Mud Garden Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,63427,zero_fuel
+Erin Garden Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,63429,zero_fuel
+Chub Garden Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,63430,zero_fuel
+Cisco WT,wind,8.4,0.0,0.0,WT,MN,MISO,63431,zero_fuel
+Lincoln Heights I WT,wind,5.2,0.0,0.0,WT,MN,MISO,63432,zero_fuel
+Lincoln Heights II WT,wind,3.9,0.0,0.0,WT,MN,MISO,63433,zero_fuel
+Maston Garden Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,63434,zero_fuel
+Malmedal Solar Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,63453,zero_fuel
+Wollan Garden Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,63454,zero_fuel
+"Rock County Wind Fuel, LLC WT",wind,5.0,0.0,0.0,WT,MN,MISO,63460,zero_fuel
+Roberds Garden CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63480,zero_fuel
+Clear Garden CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63481,zero_fuel
+Gohman Community Solar (CSG) PV,solar,1.1,0.0,0.0,PV,MN,MISO,63484,zero_fuel
+CED Mason City Wind WT,wind,7.9,0.0,0.0,WT,IA,MISO,63521,zero_fuel
+Winona Community Solar One LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,63532,zero_fuel
+Goodhue Community Solar Two LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,63533,zero_fuel
+Houston/Winona Community Solar One LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,63534,zero_fuel
+Assembly Solar II LLC PV,solar,110.0,0.0,0.0,PV,MI,MISO,63538,zero_fuel
+Enter Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,63542,zero_fuel
+Lange Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,63543,zero_fuel
+FastSun 4 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63576,zero_fuel
+FastSun 21 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63577,zero_fuel
+Hutchinson Plant #2 CC,gas,51.0,10.966423357664233,3.0,CC,MN,MISO,6358,eia923
+Hutchinson Plant #2 GT,gas,22.0,10.625,3.0,GT,MN,MISO,6358,eia923
+"Brooten CSG1, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63593,zero_fuel
+"Buffalo Lake CSG1, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63594,zero_fuel
+"Lowry CSG2, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63595,zero_fuel
+"Paynesville CSG1, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63596,zero_fuel
+"Plato CSG1, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63597,zero_fuel
+"Sacred Heart CSG1, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63598,zero_fuel
+"Stewart CSG1, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63599,zero_fuel
+Isabella Wind Park WT,wind,383.5,0.0,0.0,WT,MI,MISO,63601,zero_fuel
+USS Solar Brick PV,solar,2.0,0.0,0.0,PV,IL,MISO,63618,zero_fuel
+"Hydra Community Solar Garden, LLC (CSG) PV",solar,1.0,0.0,0.0,PV,MN,MISO,63629,zero_fuel
+Contrail Wind Farm WT,wind,110.0,0.0,0.0,WT,IA,MISO,63639,zero_fuel
+Southern Hills Wind Farm WT,wind,250.0,0.0,0.0,WT,IA,MISO,63640,zero_fuel
+Diamond Trail Wind Farm WT,wind,250.0,0.0,0.0,WT,IA,MISO,63641,zero_fuel
+Flodquist Community Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63650,zero_fuel
+CED Peoria Solar PV,solar,2.0,0.0,0.0,PV,IL,MISO,63656,zero_fuel
+Siems Solar Project CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63657,zero_fuel
+Schueler Community Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,63658,zero_fuel
+M72 West Solar PV,solar,1.8,0.0,0.0,PV,MI,MISO,63660,zero_fuel
+Paulson Community (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,63678,zero_fuel
+Laurel Village (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,63679,zero_fuel
+Hertzberg Community (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,63680,zero_fuel
+Brenda Luhman - CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63682,zero_fuel
+Carlson Community (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,63683,zero_fuel
+Hammer Community (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,63684,zero_fuel
+Crescent Wind Park WT,wind,150.0,0.0,0.0,WT,MI,MISO,63686,zero_fuel
+Gratiot Farms Wind Project WT,wind,150.0,0.0,0.0,WT,MI,MISO,63687,zero_fuel
+Red Lake Falls Community Hybrid PV,solar,1.0,0.0,0.0,PV,MN,MISO,63689,zero_fuel
+Red Lake Falls Community Hybrid WT,wind,4.6,0.0,0.0,WT,MN,MISO,63689,zero_fuel
+Detour IC,oil,5.0,12.433862433862434,6.0,IC,MI,MISO,6369,eia923
+Hayfield Solar I LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63724,zero_fuel
+Hayfield Solar III LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63725,zero_fuel
+Pipestone City Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63726,zero_fuel
+USS Bluff Country Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63741,zero_fuel
+USS Viceroy Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63742,zero_fuel
+USS Solar Way LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63743,zero_fuel
+USS Hubers Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63744,zero_fuel
+Happy Solar 1 PV,solar,95.0,0.0,0.0,PV,AR,MISO,63766,zero_fuel
+Illinois PV Fulton 1 CSG PV,solar,2.0,0.0,0.0,PV,IL,MISO,63790,zero_fuel
+Sobania Community Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,63791,zero_fuel
+Svihel Community Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63792,zero_fuel
+Studenski Community Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63793,zero_fuel
+Stevens Community Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,63794,zero_fuel
+"RJC CSG, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63816,zero_fuel
+"Hinterland CSG, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63817,zero_fuel
+"Betcher CSG 1, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63819,zero_fuel
+"Huneke CSG 1, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63820,zero_fuel
+"Huneke CSG 2, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,63821,zero_fuel
+POET Biorefining - Jewell ST,gas,0.9,11.725069932277806,3.0,ST,IA,MISO,63826,eia923
+Conagra Foods at St. Elmo PV,solar,1.8,0.0,0.0,PV,IL,MISO,63830,zero_fuel
+"POET Biorefining Caro, LLC ST",gas,3.8,11.725089642856142,3.0,ST,MI,MISO,63831,eia923
+"POET Biorefining-Hanlontown, LLC ST",gas,4.0,11.37346134908912,3.0,ST,IA,MISO,63832,eia923
+"DePue Holdings, LLC PV",solar,20.0,0.0,0.0,PV,IL,MISO,63845,zero_fuel
+"POET Biorefining - North Manchester, LLC ST",gas,3.9,11.725099660940817,3.0,ST,IN,MISO,63852,eia923
+POET Biorefining - Chancellor ST,waste,5.4,0.0,5.0,ST,SD,MISO,63853,zero_fuel
+Logansport Solar PV,solar,16.0,0.0,0.0,PV,IN,MISO,63861,zero_fuel
+"ESIL-PFCHICAGO 3, LLC PV",solar,1.4,0.0,0.0,PV,IL,MISO,63888,zero_fuel
+"ESIL-PFCHICAGO 2, LLC PV",solar,1.0,0.0,0.0,PV,IL,MISO,63889,zero_fuel
+Cornillie 2 Community (CSG) PV,solar,1.4,0.0,0.0,PV,MN,MISO,63899,zero_fuel
+POET Biorefining - Hudson ST,gas,3.6,11.724935221189762,3.0,ST,SD,MISO,63918,eia923
+POET Biorefining LLC - Corning ST,gas,5.0,11.373338098641888,3.0,ST,IA,MISO,63919,eia923
+POET Biorefining - Shelbyville ST,gas,5.5,11.373356351604086,3.0,ST,IN,MISO,63921,eia923
+POET Biorefining - Gowrie ST,gas,5.0,11.373333333333333,3.0,ST,IA,MISO,63923,eia923
+Troy Solar PV,solar,50.4,0.0,0.0,PV,IN,MISO,63929,zero_fuel
+Severson Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,63934,zero_fuel
+Marion Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,63935,zero_fuel
+Silver Lake Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,63936,zero_fuel
+Lyman Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,63937,zero_fuel
+Nicollet Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,63938,zero_fuel
+Union Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,63939,zero_fuel
+Clinton Solar 4 LLC CSG PV,solar,2.0,0.0,0.0,PV,IL,MISO,63945,zero_fuel
+"Vermilion Solar 1, LLC CSG PV",solar,2.0,0.0,0.0,PV,IL,MISO,63946,zero_fuel
+Ridge Farm PV,solar,2.0,0.0,0.0,PV,IL,MISO,63952,zero_fuel
+FastSun12 CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,63966,zero_fuel
+The GSI Group LLC at Assumption PV,solar,1.5,0.0,0.0,PV,IL,MISO,63968,zero_fuel
+Central Generating IC,waste,4.0,0.0,5.0,IC,MI,MISO,63977,zero_fuel
+Novel Martens Solar LLC(CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,63987,zero_fuel
+"Camellia Solar, LLC PV",solar,1.0,0.0,0.0,PV,MN,MISO,64001,zero_fuel
+Edwardsville Solar II PV,solar,2.0,0.0,0.0,PV,IL,MISO,64016,zero_fuel
+West Riverside Energy Center CC,gas,692.7,6.591285503999277,3.0,CC,WI,MISO,64020,eia923
+West Riverside Energy Center PV,solar,4.4,0.0,0.0,PV,WI,MISO,64020,zero_fuel
+Bauer Solar CSG PV,solar,0.9,0.0,0.0,PV,MN,MISO,64029,zero_fuel
+Apple Canyon Lake Solar PV,solar,1.2,0.0,0.0,PV,IL,MISO,64040,zero_fuel
+Olney Solar II CSG PV,solar,2.0,0.0,0.0,PV,IL,MISO,64043,zero_fuel
+T Luhman CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,64056,zero_fuel
+2662 Freeport Solar 1 CSG PV,solar,2.0,0.0,0.0,PV,IL,MISO,64058,zero_fuel
+Whiteside Solar 1 CSG PV,solar,2.0,0.0,0.0,PV,IL,MISO,64059,zero_fuel
+Camp Ripley Solar PV,solar,10.8,0.0,0.0,PV,MN,MISO,64072,zero_fuel
+Dane County Airport Solar PV,solar,10.8,0.0,0.0,PV,WI,MISO,64080,zero_fuel
+Sunflower County PV,solar,100.0,0.0,0.0,PV,MS,MISO,64081,zero_fuel
+Tweite Community Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,64099,zero_fuel
+"Morgan Solar 4, LLC CSG PV",solar,2.0,0.0,0.0,PV,IL,MISO,64100,zero_fuel
+"Marlow Solar, LLC CSG PV",solar,2.0,0.0,0.0,PV,IL,MISO,64122,zero_fuel
+IGS Stockton DG CSG PV,solar,3.8,0.0,0.0,PV,IL,MISO,64124,zero_fuel
+Sam Rayburn Dam HY,hydro,52.0,0.0,0.0,HY,TX,MISO,6413,zero_fuel
+"REG Juhl Glenville Wind, LLC WT",wind,2.5,0.0,0.0,WT,MN,MISO,64130,zero_fuel
+Novel Novak Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,64153,zero_fuel
+Novel Shelly Solar LLC (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,64154,zero_fuel
+"Morgan Solar 2, LLC CSG PV",solar,2.0,0.0,0.0,PV,IL,MISO,64159,zero_fuel
+CED Manchester Wind WT,wind,7.9,0.0,0.0,WT,IA,MISO,64177,zero_fuel
+CED Centerville Wind WT,wind,7.9,0.0,0.0,WT,IA,MISO,64178,zero_fuel
+IA - City of Ames - Airport Road PV,solar,2.0,0.0,0.0,PV,IA,MISO,64179,zero_fuel
+Independence Wind Farm WT,wind,54.0,0.0,0.0,WT,IA,MISO,64183,zero_fuel
+Assembly Solar III PV,solar,79.0,0.0,0.0,PV,MI,MISO,64196,zero_fuel
+"McDonough Solar 1, LLC CSG PV",solar,4.0,0.0,0.0,PV,IL,MISO,64201,zero_fuel
+"Dressor Plains Solar, LLC PV",solar,99.0,0.0,0.0,PV,IL,MISO,64224,zero_fuel
+Blue Goose Solar CSG PV,solar,2.0,0.0,0.0,PV,IL,MISO,64228,zero_fuel
+Iroquois Solar 1B LLC CSG PV,solar,2.0,0.0,0.0,PV,IL,MISO,64229,zero_fuel
+Indiana Crossroads Wind Farm LLC WT,wind,302.4,0.0,0.0,WT,IN,MISO,64230,zero_fuel
+St. Cloud Hydro HY,hydro,8.6,0.0,0.0,HY,MN,MISO,64242,zero_fuel
+Sullivan B Community Solar LLC PV,solar,2.0,0.0,0.0,PV,IL,MISO,64243,zero_fuel
+Peru 2 PV,solar,9.5,0.0,0.0,PV,IN,MISO,64246,zero_fuel
+Peru 3 PV,solar,2.9,0.0,0.0,PV,IN,MISO,64250,zero_fuel
+Pickford Solar PV,solar,6.9,0.0,0.0,PV,MI,MISO,64251,zero_fuel
+Kent School Road Solar 1 PV,solar,2.0,0.0,0.0,PV,IL,MISO,64254,zero_fuel
+Schulte 2 Community Solar PV,solar,2.0,0.0,0.0,PV,IL,MISO,64257,zero_fuel
+Forrest City- Prison Site PV,solar,1.0,0.0,0.0,PV,AR,MISO,64261,zero_fuel
+Forrest City- Eldridge Road PV,solar,1.0,0.0,0.0,PV,AR,MISO,64262,zero_fuel
+Kankakee Solar 4 LLC PV,solar,2.0,0.0,0.0,PV,IL,MISO,64269,zero_fuel
+Renewable Energy Center at BJH PV,solar,1.6,0.0,0.0,PV,MO,MISO,64288,zero_fuel
+TCI France PV,solar,1.5,0.0,0.0,PV,LA,MISO,64305,zero_fuel
+TCI Alvar PV,solar,1.9,0.0,0.0,PV,LA,MISO,64306,zero_fuel
+New Orleans Solar Station PV,solar,20.0,0.0,0.0,PV,LA,MISO,64307,zero_fuel
+"SCS American Bottoms 009885 Sauget, LLC PV",solar,1.8,0.0,0.0,PV,IL,MISO,64362,zero_fuel
+"Glacier Sands Wind Power, LLC WT",wind,185.0,0.0,0.0,WT,IL,MISO,64381,zero_fuel
+Badger Hollow II PV,solar,150.0,0.0,0.0,PV,WI,MISO,64393,zero_fuel
+Schull CSG PV,solar,0.4,0.0,0.0,PV,MN,MISO,64413,zero_fuel
+Sandoval PV,solar,2.0,0.0,0.0,PV,IL,MISO,64416,zero_fuel
+Point Beach Solar PV,solar,100.0,0.0,0.0,PV,WI,MISO,64431,zero_fuel
+"13 Mile Solar, LLC PV",solar,2.0,0.0,0.0,PV,MI,MISO,64456,zero_fuel
+"Captain Solar, LLC PV",solar,2.0,0.0,0.0,PV,MI,MISO,64457,zero_fuel
+"Coldwater Solar, LLC PV",solar,2.0,0.0,0.0,PV,MI,MISO,64458,zero_fuel
+"Geddes 1 Solar, LLC PV",solar,2.0,0.0,0.0,PV,MI,MISO,64459,zero_fuel
+"Jack Francis Solar, LLC PV",solar,2.0,0.0,0.0,PV,MI,MISO,64460,zero_fuel
+"May Shannon Solar, LLC PV",solar,2.0,0.0,0.0,PV,MI,MISO,64461,zero_fuel
+"Stoneheart Solar, LLC PV",solar,2.0,0.0,0.0,PV,MI,MISO,64462,zero_fuel
+"Workman Road Solar Farm, LLC PV",solar,2.0,0.0,0.0,PV,MI,MISO,64463,zero_fuel
+"Clendenin A Community Solar, LLC CSG PV",solar,2.0,0.0,0.0,PV,IL,MISO,64464,zero_fuel
+"Kern A Community Solar, LLC CSG PV",solar,2.0,0.0,0.0,PV,IL,MISO,64465,zero_fuel
+Lukuc B Community Solar LLC CSG PV,solar,2.0,0.0,0.0,PV,IL,MISO,64466,zero_fuel
+"Interchange Solar, LLC PV",solar,2.0,0.0,0.0,PV,MI,MISO,64470,zero_fuel
+Novel Handeland Solar LLC (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,64479,zero_fuel
+Rice Two Solar CSG PV,solar,0.8,0.0,0.0,PV,MN,MISO,64480,zero_fuel
+Novel Stavem Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,64482,zero_fuel
+Novel Sunnyfield Farms Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,64483,zero_fuel
+Novel Schroeder Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,64484,zero_fuel
+"Novel Caroline Solar, LLC CSG PV",solar,1.0,0.0,0.0,PV,MN,MISO,64485,zero_fuel
+Novel David Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,64486,zero_fuel
+Novel Huneke Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,64487,zero_fuel
+Novel Denzer Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,64488,zero_fuel
+"Hendershot Solar, LLC PV",solar,2.0,0.0,0.0,PV,MI,MISO,64496,zero_fuel
+"Hazel Solar, LLC PV",solar,2.0,0.0,0.0,PV,MI,MISO,64497,zero_fuel
+"Geddes 2 Solar, LLC PV",solar,2.0,0.0,0.0,PV,MI,MISO,64498,zero_fuel
+"Bullhead Solar, LLC PV",solar,2.0,0.0,0.0,PV,MI,MISO,64499,zero_fuel
+"Angola Solar, LLC PV",solar,2.0,0.0,0.0,PV,MI,MISO,64500,zero_fuel
+Palmer Community Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,64503,zero_fuel
+Medin 2 Community Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,64504,zero_fuel
+Cokato CSG PV,solar,4.0,0.0,0.0,PV,MN,MISO,64506,zero_fuel
+Downtown Generation Plant IC,oil,5.0,11.379310344827585,6.0,IC,IA,MISO,64552,eia923
+Novel Stein Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,64563,zero_fuel
+"Cement City Solar, LLC PV",solar,20.0,0.0,0.0,PV,MI,MISO,64567,zero_fuel
+"Letts Creek Solar, LLC PV",solar,15.0,0.0,0.0,PV,MI,MISO,64568,zero_fuel
+"Pullman Solar, LLC PV",solar,20.0,0.0,0.0,PV,MI,MISO,64581,zero_fuel
+O'Brien Solar Fields PV,solar,22.1,0.0,0.0,PV,WI,MISO,64590,zero_fuel
+River Bend ST,nuclear,975.5,10.44260187704478,2.5,ST,LA,MISO,6462,eia923
+Freeborn Wind Farm WT,wind,200.0,0.0,0.0,WT,MN,MISO,64623,zero_fuel
+JM Huber at Quincy PV,solar,1.5,0.0,0.0,PV,IL,MISO,64629,zero_fuel
+Ames GT GT,oil,41.2,13.0,6.0,GT,IA,MISO,6463,default
+Big River Solar PV,solar,149.0,0.0,0.0,PV,IL,MISO,64637,zero_fuel
+Heartland Divide II WT,wind,200.0,0.0,0.0,WT,IA,MISO,64661,zero_fuel
+"Sac County Wind, LLC WT",wind,80.0,0.0,0.0,WT,IA,MISO,64662,zero_fuel
+Plymouth Wind WT,wind,200.0,0.0,0.0,WT,IA,MISO,64688,zero_fuel
+Swan Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,64697,zero_fuel
+"Blue Prairie Solar, LLC PV",solar,2.5,0.0,0.0,PV,WI,MISO,64698,zero_fuel
+Rice Lake Solar Array PV,solar,3.8,0.0,0.0,PV,WI,MISO,64714,zero_fuel
+Novel Froehle Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,64728,zero_fuel
+Novel Milbradt Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,64729,zero_fuel
+Holliday Creek Solar PV,solar,100.0,0.0,0.0,PV,IA,MISO,64738,zero_fuel
+Morgan Solar 1 CSG PV,solar,2.0,0.0,0.0,PV,IL,MISO,64741,zero_fuel
+Morgan Solar 1b CSG PV,solar,2.0,0.0,0.0,PV,IL,MISO,64742,zero_fuel
+Arbor Hill Solar PV,solar,24.0,0.0,0.0,PV,IA,MISO,64755,zero_fuel
+Hermsdorf Solar PV,solar,8.0,0.0,0.0,PV,WI,MISO,64780,zero_fuel
+Hurricane Creek CSG PV,solar,2.0,0.0,0.0,PV,IL,MISO,64786,zero_fuel
+Viking Solar CSG PV,solar,2.0,0.0,0.0,PV,IL,MISO,64787,zero_fuel
+Moraine CSG PV,solar,2.0,0.0,0.0,PV,IL,MISO,64789,zero_fuel
+Connexus Solar Stanford 1STF PV,solar,7.3,0.0,0.0,PV,MN,MISO,64818,zero_fuel
+Primient GT,gas,57.2,11.162429872477503,3.0,GT,IN,MISO,64854,eia923
+Calhoun Solar PV,solar,200.0,0.0,0.0,PV,MI,MISO,64856,zero_fuel
+Strobus PV,solar,1.5,0.0,0.0,PV,WI,MISO,64862,zero_fuel
+USS Wildcat Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,64866,zero_fuel
+Helen CSG 1 LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,64869,zero_fuel
+USS Quail Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,64870,zero_fuel
+USS Danube Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,64871,zero_fuel
+Hazel PV,solar,3.0,0.0,0.0,PV,MN,MISO,64906,zero_fuel
+Fountain PV,solar,3.0,0.0,0.0,PV,MN,MISO,64907,zero_fuel
+Stockton (MN) PV,solar,2.0,0.0,0.0,PV,MN,MISO,64930,zero_fuel
+Rushford Village PV,solar,1.0,0.0,0.0,PV,MN,MISO,64932,zero_fuel
+Barron Solar Array PV,solar,3.0,0.0,0.0,PV,WI,MISO,64969,zero_fuel
+Spooner Solar Array PV,solar,2.1,0.0,0.0,PV,WI,MISO,64976,zero_fuel
+Waterloo Solar (IA) PV,solar,3.0,0.0,0.0,PV,IA,MISO,64984,zero_fuel
+Johnson County Hills Solar PV,solar,3.0,0.0,0.0,PV,IA,MISO,64985,zero_fuel
+Franklin County Solar PV,solar,7.0,0.0,0.0,PV,IA,MISO,64986,zero_fuel
+USS Foley Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,64987,zero_fuel
+USS Prokosch Solar LLC	 PV,solar,1.0,0.0,0.0,PV,MN,MISO,64988,zero_fuel
+USS Rosebud Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,64989,zero_fuel
+Medin CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,64990,zero_fuel
+Johnson CSG 1 PV,solar,1.0,0.0,0.0,PV,MN,MISO,64991,zero_fuel
+Cornillie Solar CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,64992,zero_fuel
+Cassville Solar PV,solar,50.0,0.0,0.0,PV,WI,MISO,64995,zero_fuel
+Springfield Solar (WI) PV,solar,100.0,0.0,0.0,PV,WI,MISO,64996,zero_fuel
+Albany Solar (WI) PV,solar,50.0,0.0,0.0,PV,WI,MISO,64997,zero_fuel
+Paddock Solar PV,solar,65.0,0.0,0.0,PV,WI,MISO,64998,zero_fuel
+Wautoma Solar PV,solar,99.0,0.0,0.0,PV,WI,MISO,65000,zero_fuel
+Beaver Dam Solar PV,solar,50.0,0.0,0.0,PV,WI,MISO,65001,zero_fuel
+MN CSG 2019-16 LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65003,zero_fuel
+Grant County PV,solar,200.0,0.0,0.0,PV,WI,MISO,65007,zero_fuel
+Onion River PV,solar,150.0,0.0,0.0,PV,WI,MISO,65008,zero_fuel
+Bear Creek (WI) PV,solar,50.0,0.0,0.0,PV,WI,MISO,65009,zero_fuel
+North Rock PV,solar,50.0,0.0,0.0,PV,WI,MISO,65010,zero_fuel
+Wood County PV,solar,150.0,0.0,0.0,PV,WI,MISO,65011,zero_fuel
+Crawfish River PV,solar,75.0,0.0,0.0,PV,WI,MISO,65012,zero_fuel
+Bissell Solar and Battery Generator PV,solar,0.8,0.0,0.0,PV,MI,MISO,65029,zero_fuel
+Oxbow Solar 1 PV,solar,300.0,0.0,0.0,PV,LA,MISO,65030,zero_fuel
+Hoot Lake Solar PV,solar,49.9,0.0,0.0,PV,MN,MISO,65066,zero_fuel
+Walkerton PV,solar,1.1,0.0,0.0,PV,IN,MISO,65068,zero_fuel
+Linton PV,solar,5.4,0.0,0.0,PV,IN,MISO,65069,zero_fuel
+Everson Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,65075,zero_fuel
+Bremen PV,solar,6.8,0.0,0.0,PV,IN,MISO,65086,zero_fuel
+Shamrock Solar LLC PV,solar,3.0,0.0,0.0,PV,WI,MISO,65087,zero_fuel
+Stromland Solar PV,solar,3.0,0.0,0.0,PV,WI,MISO,65088,zero_fuel
+AES Belleville Solar LLC PV,solar,9.9,0.0,0.0,PV,IL,MISO,65127,zero_fuel
+Big Turtle Wind Farm 2 WT,wind,29.4,0.0,0.0,WT,MI,MISO,65143,zero_fuel
+Lily Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,65160,zero_fuel
+Grinnell College PV,solar,3.9,0.0,0.0,PV,IA,MISO,65164,zero_fuel
+Phare Garden PV,solar,0.9,0.0,0.0,PV,MN,MISO,65223,zero_fuel
+"Ameresco Danville Solar, LLC PV",solar,2.0,0.0,0.0,PV,IL,MISO,65227,zero_fuel
+Truman Solar PV,solar,10.0,0.0,0.0,PV,MO,MISO,65230,zero_fuel
+Lineage MS PV,solar,1.2,0.0,0.0,PV,MS,MISO,65257,zero_fuel
+USS Peach Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65276,zero_fuel
+Red Barn Energy WT,wind,91.6,0.0,0.0,WT,WI,MISO,65282,zero_fuel
+Sapphire Sky Wind Energy LLC WT,wind,259.8,0.0,0.0,WT,IL,MISO,65316,zero_fuel
+Meridian Wind Park WT,wind,225.0,0.0,0.0,WT,MI,MISO,65328,zero_fuel
+Macbeth Solar PV,solar,20.0,0.0,0.0,PV,MI,MISO,65346,zero_fuel
+Lyons Road PV,solar,20.0,0.0,0.0,PV,MI,MISO,65347,zero_fuel
+"Mulligan Solar, LLC PV",solar,70.0,0.0,0.0,PV,IL,MISO,65349,zero_fuel
+Ford County Wind Farm LLC WT,wind,121.3,0.0,0.0,WT,IL,MISO,65350,zero_fuel
+General Dynamics PV,solar,2.0,0.0,0.0,PV,AR,MISO,65351,zero_fuel
+Allie L.L.C. (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,65381,zero_fuel
+"Ledyard Windpower, LLC WT",wind,200.0,0.0,0.0,WT,IA,MISO,65390,zero_fuel
+Neal Energy Center Solar PV,solar,4.0,0.0,0.0,PV,IA,MISO,65393,zero_fuel
+Purdue CHP GT,gas,13.5,11.796370607443992,3.0,GT,IN,MISO,65400,eia923
+"Flint Hills Resources Pine Bend, LLC CC",gas,49.900000000000006,10.256444734333451,3.0,CC,MN,MISO,65405,eia923
+"Flint Hills Resources Pine Bend, LLC PV",solar,45.0,0.0,0.0,PV,MN,MISO,65405,zero_fuel
+"Northern Cardinal Solar SCS IL 1, LLC PV",solar,10.0,0.0,0.0,PV,IL,MISO,65412,zero_fuel
+"SCS West Fairchild 011958 Danville, LLC PV",solar,1.6,0.0,0.0,PV,IL,MISO,65413,zero_fuel
+"SCS Galena 012589 Peoria, LLC PV",solar,2.0,0.0,0.0,PV,IL,MISO,65415,zero_fuel
+"SCS COUNTY 012631 Champaign, LLC PV",solar,2.0,0.0,0.0,PV,IL,MISO,65417,zero_fuel
+USS Franklin Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65439,zero_fuel
+USS Catfish Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65440,zero_fuel
+USS Itasca Clean Energy Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65441,zero_fuel
+USS Mesa Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65442,zero_fuel
+USS Wells Creek Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65443,zero_fuel
+USS Verbena Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65444,zero_fuel
+SolarClub 10 LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65448,zero_fuel
+SolarClub 15 LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65449,zero_fuel
+SolarClub 20 LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65451,zero_fuel
+SolarClub 23 LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65452,zero_fuel
+SolarClub 28 LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65453,zero_fuel
+SolarClub 35 LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65455,zero_fuel
+West Memphis Solar Station PV,solar,180.0,0.0,0.0,PV,AR,MISO,65482,zero_fuel
+"Big Cypress Solar, LLC PV",solar,180.0,0.0,0.0,PV,AR,MISO,65483,zero_fuel
+Herrema Dairy IC,gas,0.8,11.777777777777779,3.0,IC,IN,MISO,65494,eia923
+Garden 1 Solar Park PV,solar,0.9,0.0,0.0,PV,MI,MISO,65497,zero_fuel
+Garden 2 Solar Park PV,solar,1.4,0.0,0.0,PV,MI,MISO,65498,zero_fuel
+Bear Grove Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,65514,zero_fuel
+Dodge Renewables 1 PV,solar,1.0,0.0,0.0,PV,MN,MISO,65515,zero_fuel
+Dodge Renewables 2 PV,solar,0.8,0.0,0.0,PV,MN,MISO,65516,zero_fuel
+Waverly Municipal Electric North Plant IC,gas,10.9,10.176651305683563,3.0,IC,IA,MISO,6554,eia923
+Waverly Municipal Electric North Plant IC,oil,14.2,10.184605757196495,6.0,IC,IA,MISO,6554,eia923
+D G Hunter IC,gas,60.199999999999996,9.0,3.0,IC,LA,MISO,6558,default
+Hormel CSG Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,65595,zero_fuel
+MN CSG 2019-38 DE LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65632,zero_fuel
+ENGIE 2020 ProjectCo-WI1 LLC PV,solar,1.0,0.0,0.0,PV,WI,MISO,65659,zero_fuel
+Cattail (CSG) PV,solar,2.0,0.0,0.0,PV,IL,MISO,65671,zero_fuel
+City of Sheboygan Solar PV,solar,1.0,0.0,0.0,PV,WI,MISO,65680,zero_fuel
+Kohler Solar PV,solar,2.3,0.0,0.0,PV,WI,MISO,65681,zero_fuel
+Indiana Crossroads Solar Park PV,solar,200.0,0.0,0.0,PV,IN,MISO,65702,zero_fuel
+Rock Aetna Power Partners WT,wind,20.0,0.0,0.0,WT,MN,MISO,65713,zero_fuel
+Northern Wind WT,wind,91.5,0.0,0.0,WT,MN,MISO,65714,zero_fuel
+Great Pathfinder Wind WT,wind,224.4,0.0,0.0,WT,IA,MISO,65715,zero_fuel
+Kossuth County Wind WT,wind,70.0,0.0,0.0,WT,IA,MISO,65725,zero_fuel
+Montgomery County Community Solar Center PV,solar,5.7,0.0,0.0,PV,MO,MISO,65726,zero_fuel
+Rockford CS 1 PV,solar,2.0,0.0,0.0,PV,IL,MISO,65731,zero_fuel
+Rockford CS 2 PV,solar,2.0,0.0,0.0,PV,IL,MISO,65732,zero_fuel
+Driver Solar PV,solar,150.0,0.0,0.0,PV,AR,MISO,65736,zero_fuel
+Deerfield Wind Energy 2 WT,wind,112.1,0.0,0.0,WT,MI,MISO,65742,zero_fuel
+Buffalo Ridge Wind WT,wind,101.9,0.0,0.0,WT,MN,MISO,65761,zero_fuel
+Walleye Wind WT,wind,110.0,0.0,0.0,WT,MN,MISO,65764,zero_fuel
+Alden Road Harvard Solar 1 PV,solar,2.0,0.0,0.0,PV,IL,MISO,65774,zero_fuel
+Elba Solar LLC PV,solar,2.0,0.0,0.0,PV,IL,MISO,65797,zero_fuel
+SV CSG Barrass Farms II LL PV,solar,1.7,0.0,0.0,PV,IL,MISO,65803,zero_fuel
+Grand Casino Hinckley Solar PV,solar,3.0,0.0,0.0,PV,MN,MISO,65942,zero_fuel
+Toledo Bend HY,hydro,80.0,0.0,0.0,HY,TX,MISO,6595,zero_fuel
+Paris Solar PV,solar,200.0,0.0,0.0,PV,WI,MISO,65967,zero_fuel
+Hodag Solar PV,solar,7.5,0.0,0.0,PV,WI,MISO,65968,zero_fuel
+Kankakee 2 PV,solar,1.5,0.0,0.0,PV,IL,MISO,65969,zero_fuel
+Timmerman (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,65974,zero_fuel
+Prairie Ronde Solar Farm PV,solar,135.0,0.0,0.0,PV,LA,MISO,65976,zero_fuel
+USS Golly Gee Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65986,zero_fuel
+South Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,65989,zero_fuel
+USS Dressen Family Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65991,zero_fuel
+USS Wolf Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65992,zero_fuel
+USS Wonder Solar LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,65993,zero_fuel
+Delta Wind Farm (MS) WT,wind,184.5,0.0,0.0,WT,MS,MISO,66000,zero_fuel
+MP CSG 1 LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,66003,zero_fuel
+Titlow Garden LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,66004,zero_fuel
+Platt Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,66015,zero_fuel
+Skalbeck Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,66016,zero_fuel
+Andresen Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,66017,zero_fuel
+Amazon MDW7 Solar Project PV,solar,1.9,0.0,0.0,PV,IL,MISO,66022,zero_fuel
+Courtland CSG LLC PV,solar,1.0,0.0,0.0,PV,MN,MISO,66029,zero_fuel
+Johnson CSG 2 PV,solar,1.0,0.0,0.0,PV,MN,MISO,66030,zero_fuel
+IL Sidney Project1 PV,solar,2.0,0.0,0.0,PV,IL,MISO,66031,zero_fuel
+Clay FC PV,solar,2.0,0.0,0.0,PV,IL,MISO,66032,zero_fuel
+IL West Hallock Project1 PV,solar,2.0,0.0,0.0,PV,IL,MISO,66033,zero_fuel
+"Middleton Biogas Solar, LLC PV",solar,1.9,0.0,0.0,PV,WI,MISO,66048,zero_fuel
+Weston RICE IC,gas,131.6,8.488083677504651,3.0,IC,WI,MISO,66059,eia923
+Solar Star Urbana Landfill East PV,solar,1.9,0.0,0.0,PV,IL,MISO,66078,zero_fuel
+Solar Star Urbana Landfill Central PV,solar,1.9,0.0,0.0,PV,IL,MISO,66079,zero_fuel
+OE IL Solar 3 PV,solar,2.0,0.0,0.0,PV,IL,MISO,66082,zero_fuel
+French Road Solar II PV,solar,2.0,0.0,0.0,PV,IL,MISO,66083,zero_fuel
+Rafterville Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,66084,zero_fuel
+Rockford Solar PV,solar,2.0,0.0,0.0,PV,IL,MISO,66085,zero_fuel
+Moraine Sands Wind Power WT,wind,165.0,0.0,0.0,WT,IL,MISO,66093,zero_fuel
+"Blue Elk IV Solar, LLC PV",solar,20.0,0.0,0.0,PV,MI,MISO,66102,zero_fuel
+"Blue Elk III Solar, LLC PV",solar,20.0,0.0,0.0,PV,MI,MISO,66103,zero_fuel
+"Blue Elk VII Solar, LLC PV",solar,12.5,0.0,0.0,PV,MI,MISO,66104,zero_fuel
+"Blue Elk II Solar, LLC PV",solar,20.0,0.0,0.0,PV,MI,MISO,66105,zero_fuel
+"Midcontinent Solar, LLC PV",solar,20.0,0.0,0.0,PV,MI,MISO,66108,zero_fuel
+"Greenstone Solar, LLC PV",solar,20.0,0.0,0.0,PV,MI,MISO,66109,zero_fuel
+Elizabeth Solar Plant PV,solar,125.0,0.0,0.0,PV,LA,MISO,66111,zero_fuel
+Newport Solar Project PV,solar,180.0,0.0,0.0,PV,AR,MISO,66112,zero_fuel
+Cape Girardeau Renewable Energy Center PV,solar,1.2,0.0,0.0,PV,MO,MISO,66159,zero_fuel
+Ivanhoe Generation Facility ST,gas,26.9,10.5,3.0,ST,LA,MISO,66175,default
+"Crooked Lake Solar, LLC PV",solar,175.0,0.0,0.0,PV,AR,MISO,66185,zero_fuel
+Maple Flats PV,solar,250.0,0.0,0.0,PV,IL,MISO,66191,zero_fuel
+Heartland Farms WT,wind,200.0,0.0,0.0,WT,MI,MISO,66192,zero_fuel
+Oak Ridge Solar PV,solar,200.0,0.0,0.0,PV,LA,MISO,66193,zero_fuel
+Pearl River Solar Park LLC PV,solar,175.0,0.0,0.0,PV,MS,MISO,66239,zero_fuel
+Ragsdale Solar LLC PV,solar,100.0,0.0,0.0,PV,MS,MISO,66240,zero_fuel
+Woodruff County Solar PV,solar,122.0,0.0,0.0,PV,AR,MISO,66282,zero_fuel
+Brainerd Airport PV,solar,5.8,0.0,0.0,PV,MN,MISO,66339,zero_fuel
+IMPA Middletown Solar Park PV,solar,1.4,0.0,0.0,PV,IN,MISO,66366,zero_fuel
+"Wildflower Solar, LLC (MS) PV",solar,100.0,0.0,0.0,PV,MS,MISO,66369,zero_fuel
+"Cereal City Solar, LLC PV",solar,100.0,0.0,0.0,PV,MI,MISO,66389,zero_fuel
+R D Green ST,gas,454.0,12.92794379219211,3.0,ST,KY,MISO,6639,eia923
+Independence Steam Electric Station ST,coal,1662.0,10.688162494740226,4.5,ST,AR,MISO,6641,eia923
+IMPA Knightstown Solar Park PV,solar,1.4,0.0,0.0,PV,IN,MISO,66415,zero_fuel
+IMPA Washington Solar Park 2 PV,solar,9.9,0.0,0.0,PV,IN,MISO,66416,zero_fuel
+Dane County Solar LLC PV,solar,17.3,0.0,0.0,PV,WI,MISO,66419,zero_fuel
+Westside Solar PV,solar,9.8,0.0,0.0,PV,MN,MISO,66422,zero_fuel
+USS Fair Park Solar LLC (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,66433,zero_fuel
+USS Cosmo Solar LLC (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,66435,zero_fuel
+USS Martha Solar (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,66477,zero_fuel
+Pivot Energy Minnesota Solar 10 PV,solar,1.0,0.0,0.0,PV,MN,MISO,66479,zero_fuel
+Pivot Energy Minnesota Solar 1 PV,solar,1.0,0.0,0.0,PV,MN,MISO,66480,zero_fuel
+Mexico GT,oil,54.0,10.925684485006519,6.0,GT,MO,MISO,6650,eia923
+Briscoe 1A PV,solar,2.0,0.0,0.0,PV,IL,MISO,66507,zero_fuel
+Briscoe 2A PV,solar,2.0,0.0,0.0,PV,IL,MISO,66508,zero_fuel
+Moberly GT,oil,54.0,13.0,6.0,GT,MO,MISO,6651,default
+Moreau GT,oil,54.0,14.374379344587885,6.0,GT,MO,MISO,6652,eia923
+Wolverine Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,66554,zero_fuel
+Crane Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,66573,zero_fuel
+Fox Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,66576,zero_fuel
+Pepin Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,66577,zero_fuel
+Pickerel Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,66578,zero_fuel
+Sturgeon Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,66579,zero_fuel
+Winona Garden PV,solar,1.0,0.0,0.0,PV,MN,MISO,66580,zero_fuel
+Ashley-Chicot Solar PV,solar,1.0,0.0,0.0,PV,AR,MISO,66588,zero_fuel
+Berryville School District Solar PV,solar,1.0,0.0,0.0,PV,AR,MISO,66589,zero_fuel
+C&L PV,solar,1.0,0.0,0.0,PV,AR,MISO,66590,zero_fuel
+ERDC IC,gas,3.2,9.0,3.0,IC,MS,MISO,66592,default
+Clay County Electrical Cooperative PV,solar,1.0,0.0,0.0,PV,AR,MISO,66607,zero_fuel
+Craighead Electric Solar One PV,solar,1.0,0.0,0.0,PV,AR,MISO,66608,zero_fuel
+Farmers Electric Cooperative PV,solar,1.0,0.0,0.0,PV,AR,MISO,66610,zero_fuel
+Eunice LA Plant ST,gas,4.2,10.5,3.0,ST,LA,MISO,66615,default
+Harvest Gold Solar PV,solar,99.0,0.0,0.0,PV,MS,MISO,66623,zero_fuel
+Double Back Diamond PV,solar,592.8,0.0,0.0,PV,IL,MISO,66624,zero_fuel
+Prairie Mist Solar PV,solar,100.0,0.0,0.0,PV,AR,MISO,66625,zero_fuel
+"Altona Solar, LLC PV",solar,30.0,0.0,0.0,PV,MO,MISO,66628,zero_fuel
+"Earp Solar, LLC PV",solar,35.0,0.0,0.0,PV,IL,MISO,66631,zero_fuel
+"Kimmel Road Solar, LLC PV",solar,50.0,0.0,0.0,PV,IL,MISO,66632,zero_fuel
+Louisa ST,coal,745.6,10.894740907488961,4.5,ST,IA,MISO,6664,eia923
+Dunns Bridge I Solar PV,solar,265.0,0.0,0.0,PV,IN,MISO,66643,zero_fuel
+Chickasaw Wind Farm WT,wind,200.0,0.0,0.0,WT,IA,MISO,66668,zero_fuel
+Sylvan Solar PV,solar,15.2,0.0,0.0,PV,MN,MISO,66683,zero_fuel
+Laskin Solar PV,solar,5.6,0.0,0.0,PV,MN,MISO,66742,zero_fuel
+Jean Duluth Solar PV,solar,1.6,0.0,0.0,PV,MN,MISO,66743,zero_fuel
+"Blue Bird Solar, LLC PV",solar,139.0,0.0,0.0,PV,MO,MISO,66747,zero_fuel
+IMPA Richmond 8 Solar Park PV,solar,6.1,0.0,0.0,PV,IN,MISO,66748,zero_fuel
+Webster Creek (Oak 2) PV,solar,1.5,0.0,0.0,PV,WI,MISO,66753,zero_fuel
+Delta's Edge Solar PV,solar,100.0,0.0,0.0,PV,MS,MISO,66759,zero_fuel
+Lemonweir (Oak 1) PV,solar,3.0,0.0,0.0,PV,WI,MISO,66760,zero_fuel
+Prairie Creek Solar PV,solar,30.0,0.0,0.0,PV,IL,MISO,66826,zero_fuel
+Indiana Crossroads Wind Farm II WT,wind,200.0,0.0,0.0,WT,IN,MISO,66861,zero_fuel
+Prescott Wind Farm WT,wind,38.7,0.0,0.0,WT,IA,MISO,66952,zero_fuel
+Umbriel Solar PV,solar,150.0,0.0,0.0,PV,TX,MISO,66954,zero_fuel
+USS Jayhawk Solar LLC (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,66969,zero_fuel
+USS Maverick Solar LLC (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,66970,zero_fuel
+USS Riley Solar LLC (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,66971,zero_fuel
+Spring Prairie Solar LLC CSG PV,solar,1.0,0.0,0.0,PV,MN,MISO,66972,zero_fuel
+MN East Regal LLC (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,66973,zero_fuel
+MN Buffalo Lake 212-1 LLC (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,66974,zero_fuel
+MN Buffalo Lake 212-2 LLC (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,66975,zero_fuel
+MN CSG 2019-24 LLC PV,solar,0.9,0.0,0.0,PV,MN,MISO,66977,zero_fuel
+Georgetown (Polk Burnett) PV,solar,2.0,0.0,0.0,PV,WI,MISO,66985,zero_fuel
+Bluff Prairie (Vernon) PV,solar,1.5,0.0,0.0,PV,WI,MISO,66987,zero_fuel
+Hay River (Dunn 1) PV,solar,1.5,0.0,0.0,PV,WI,MISO,66993,zero_fuel
+Walleye (Dunn 2) PV,solar,1.5,0.0,0.0,PV,WI,MISO,66994,zero_fuel
+Popple Creek (Clark 1) PV,solar,2.0,0.0,0.0,PV,WI,MISO,66995,zero_fuel
+"River Fork Solar, LLC PV",solar,149.0,0.0,0.0,PV,MI,MISO,67008,zero_fuel
+Preston Garden (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,67009,zero_fuel
+Warrick ST,coal,594.5,10.88294111838673,4.5,ST,IN,MISO,6705,eia923
+Trimbelle (Pierce Pepin) PV,solar,2.0,0.0,0.0,PV,WI,MISO,67054,zero_fuel
+Ogema PV,solar,1.4,0.0,0.0,PV,WI,MISO,67055,zero_fuel
+Ledgeview PV,solar,5.0,0.0,0.0,PV,WI,MISO,67056,zero_fuel
+Wolf River (Chipewa 1) PV,solar,1.5,0.0,0.0,PV,WI,MISO,67057,zero_fuel
+Sunlight Road Solar PV,solar,50.0,0.0,0.0,PV,LA,MISO,67071,zero_fuel
+Cedar Rapids Community Solar PV,solar,4.5,0.0,0.0,PV,IA,MISO,67089,zero_fuel
+Fareway Customer Hosted 1 MW Solar PV,solar,1.0,0.0,0.0,PV,IA,MISO,67096,zero_fuel
+Hy-Vee Customer Hosted 2.25MW Solar PV,solar,2.3,0.0,0.0,PV,IA,MISO,67097,zero_fuel
+ISU Customer Hosted 1MW Solar Project PV,solar,1.4,0.0,0.0,PV,IA,MISO,67098,zero_fuel
+Perry Customer Hosted 1MW Solar Project PV,solar,1.0,0.0,0.0,PV,IA,MISO,67099,zero_fuel
+"Byrne Solar, LLC PV",solar,5.0,0.0,0.0,PV,MI,MISO,67100,zero_fuel
+"Lightfoot Solar, LLC PV",solar,10.0,0.0,0.0,PV,MI,MISO,67101,zero_fuel
+"Shipsterns Solar, LLC PV",solar,20.0,0.0,0.0,PV,MI,MISO,67102,zero_fuel
+"Willford Solar, LLC PV",solar,20.0,0.0,0.0,PV,MI,MISO,67103,zero_fuel
+Bayou Galion Solar Project PV,solar,98.1,0.0,0.0,PV,LA,MISO,67104,zero_fuel
+Pleasant Creek Unit 1 PV,solar,50.0,0.0,0.0,PV,IA,MISO,67140,zero_fuel
+Liberty County Solar Project PV,solar,100.0,0.0,0.0,PV,TX,MISO,67159,zero_fuel
+Louise Solar PV,solar,50.0,0.0,0.0,PV,MN,MISO,67167,zero_fuel
+Fillmore County Solar Project PV,solar,45.0,0.0,0.0,PV,MN,MISO,67168,zero_fuel
+Tyto Solar PV,solar,6.0,0.0,0.0,PV,WI,MISO,67196,zero_fuel
+Morey Road PV,solar,2.0,0.0,0.0,PV,MI,MISO,67199,zero_fuel
+Lobelia 1 PV,solar,2.0,0.0,0.0,PV,IL,MISO,67256,zero_fuel
+"Surbrook Solar, LLC PV",solar,10.0,0.0,0.0,PV,MI,MISO,67267,zero_fuel
+SolarClub 03 PV,solar,1.0,0.0,0.0,PV,MN,MISO,67331,zero_fuel
+SolarClub 30 (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,67332,zero_fuel
+Harley-Davison Powertrain Operations PV,solar,2.2,0.0,0.0,PV,WI,MISO,67382,zero_fuel
+City of Milwaukee Landfill PV,solar,2.3,0.0,0.0,PV,WI,MISO,67383,zero_fuel
+ATI PV,solar,2.3,0.0,0.0,PV,WI,MISO,67384,zero_fuel
+CREE PV,solar,1.5,0.0,0.0,PV,WI,MISO,67385,zero_fuel
+Jones Dairy PV,solar,2.3,0.0,0.0,PV,WI,MISO,67386,zero_fuel
+Regal Ware PV,solar,1.9,0.0,0.0,PV,WI,MISO,67387,zero_fuel
+Washington County PV,solar,2.3,0.0,0.0,PV,WI,MISO,67394,zero_fuel
+UW Parkside PV,solar,2.3,0.0,0.0,PV,WI,MISO,67395,zero_fuel
+Rock Lake CT GT,oil,21.4,15.537037037037036,6.0,GT,MN,MISO,6741,eia923
+Lannon Stone PV,solar,2.3,0.0,0.0,PV,WI,MISO,67430,zero_fuel
+Jonesboro CWL Solar Park PV,solar,10.0,0.0,0.0,PV,AR,MISO,67487,zero_fuel
+Cavalry Solar Hybrid PV,solar,200.0,0.0,0.0,PV,IN,MISO,67489,zero_fuel
+Walnut Bend Solar Station PV PV,solar,100.0,0.0,0.0,PV,AR,MISO,67504,zero_fuel
+ACC PV,solar,2.0,0.0,0.0,PV,AR,MISO,67507,zero_fuel
+ADC Varner PV,solar,4.9,0.0,0.0,PV,AR,MISO,67513,zero_fuel
+Crossett SD PV,solar,1.0,0.0,0.0,PV,AR,MISO,67515,zero_fuel
+El Dorado AR PV,solar,1.8,0.0,0.0,PV,AR,MISO,67517,zero_fuel
+Fayetteville Public Schools (SWEPCO) PV,solar,4.0,0.0,0.0,PV,AR,MISO,67519,zero_fuel
+LRWRA PV,solar,4.0,0.0,0.0,PV,AR,MISO,67520,zero_fuel
+Rivercrest SD PV,solar,1.0,0.0,0.0,PV,AR,MISO,67521,zero_fuel
+Searcy Water I PV,solar,1.0,0.0,0.0,PV,AR,MISO,67522,zero_fuel
+Searcy Water II PV,solar,2.8,0.0,0.0,PV,AR,MISO,67523,zero_fuel
+Southside SD PV,solar,1.0,0.0,0.0,PV,AR,MISO,67524,zero_fuel
+White River Medical Center PV,solar,2.9,0.0,0.0,PV,AR,MISO,67527,zero_fuel
+Creston Solar (50 MW) PV,solar,50.0,0.0,0.0,PV,IA,MISO,67536,zero_fuel
+Pleasant Creek Unit 2 PV,solar,150.0,0.0,0.0,PV,IA,MISO,67537,zero_fuel
+Wever Solar (150MW) PV,solar,150.0,0.0,0.0,PV,IA,MISO,67538,zero_fuel
+Marshall Solar Plus LLC PV,solar,10.0,0.0,0.0,PV,MN,MISO,67545,zero_fuel
+USS Rosewood Solar LLC (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,67547,zero_fuel
+USS Slayton Solar LLC (CSG) PV,solar,1.0,0.0,0.0,PV,MN,MISO,67548,zero_fuel
+Cedarville (IL) PV,solar,2.0,0.0,0.0,PV,IL,MISO,67554,zero_fuel
+SV CSG AFTON I PV,solar,1.0,0.0,0.0,PV,MN,MISO,67587,zero_fuel
+DSI Don Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,67588,zero_fuel
+Adams PV Plant PV,solar,7.1,0.0,0.0,PV,WI,MISO,67596,zero_fuel
+Portage Solar Plant PV,solar,10.0,0.0,0.0,PV,WI,MISO,67597,zero_fuel
+Breezewood PV,solar,2.0,0.0,0.0,PV,IL,MISO,67633,zero_fuel
+Skyline PV,solar,5.0,0.0,0.0,PV,IL,MISO,67642,zero_fuel
+Schmidt CSG 1 PV,solar,2.0,0.0,0.0,PV,IL,MISO,67685,zero_fuel
+SV CSG Wagner A LLC PV,solar,2.0,0.0,0.0,PV,IL,MISO,67688,zero_fuel
+SV CSG Wagner B LLC PV,solar,2.0,0.0,0.0,PV,IL,MISO,67689,zero_fuel
+Twin Lakes Solar LLC PV,solar,150.0,0.0,0.0,PV,IN,MISO,67696,zero_fuel
+Antigo-Forrest Street Solar Project PV,solar,6.0,0.0,0.0,PV,WI,MISO,67724,zero_fuel
+"Auburn Solar WI, LLC PV",solar,5.0,0.0,0.0,PV,WI,MISO,67725,zero_fuel
+"Bonduel Solar WI, LLC PV",solar,7.5,0.0,0.0,PV,WI,MISO,67726,zero_fuel
+"Hackbarth Solar WI, LLC PV",solar,5.0,0.0,0.0,PV,WI,MISO,67728,zero_fuel
+"Jackson Solar WI, LLC PV",solar,7.5,0.0,0.0,PV,WI,MISO,67729,zero_fuel
+"LaFayette Solar WI, LLC PV",solar,6.0,0.0,0.0,PV,WI,MISO,67730,zero_fuel
+"Silver Lake Solar WI, LLC PV",solar,7.5,0.0,0.0,PV,WI,MISO,67732,zero_fuel
+"Spring Prairie Solar WI, LLC PV",solar,7.5,0.0,0.0,PV,WI,MISO,67733,zero_fuel
+Hickory Solar PV,solar,110.0,0.0,0.0,PV,IL,MISO,67786,zero_fuel
+Abel Solar PV,solar,2.0,0.0,0.0,PV,IL,MISO,67790,zero_fuel
+Bunker Hill Solar PV,solar,2.0,0.0,0.0,PV,IL,MISO,67792,zero_fuel
+DPC Madison PV,solar,1.5,0.0,0.0,PV,IA,MISO,67795,zero_fuel
+DPC York PV,solar,1.5,0.0,0.0,PV,IL,MISO,67796,zero_fuel
+GRE Cambridge Solar PV,solar,2.0,0.0,0.0,PV,MN,MISO,67803,zero_fuel
+Illinois PV Knox 1B PV,solar,2.0,0.0,0.0,PV,IL,MISO,67805,zero_fuel
+Macomb 2A PV,solar,2.0,0.0,0.0,PV,IL,MISO,67806,zero_fuel
+Rockford Plant PV,solar,2.0,0.0,0.0,PV,IL,MISO,67812,zero_fuel
+Round Grove 1 PV,solar,2.0,0.0,0.0,PV,IL,MISO,67813,zero_fuel
+Round Grove 2 PV,solar,2.0,0.0,0.0,PV,IL,MISO,67814,zero_fuel
+Fond du Lac Community Solar PV,solar,1.0,0.0,0.0,PV,WI,MISO,67815,zero_fuel
+Illinois PV Knox 1A PV,solar,2.0,0.0,0.0,PV,IL,MISO,67816,zero_fuel
+Yorktown 1 Solar PV,solar,2.0,0.0,0.0,PV,IL,MISO,67832,zero_fuel
+Yorktown 2 Solar PV,solar,2.0,0.0,0.0,PV,IL,MISO,67833,zero_fuel
+Hardy Hills Solar Energy LLC PV,solar,195.0,0.0,0.0,PV,IN,MISO,67852,zero_fuel
+NLMU Diesel IC,oil,8.0,10.5,6.0,IC,IA,MISO,67856,default
+Sherco Solar I PV,solar,222.9,0.0,0.0,PV,MN,MISO,67909,zero_fuel
+Crossett Solar PV,solar,100.0,0.0,0.0,PV,AR,MISO,67915,zero_fuel
+"Sherburne Solar Holdings, LLC PV",solar,3.0,0.0,0.0,PV,MN,MISO,67943,zero_fuel
+DSI Julie Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,67958,zero_fuel
+Lake Wilson Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,68046,zero_fuel
+Lake Lilian Solar PV,solar,1.0,0.0,0.0,PV,MN,MISO,68047,zero_fuel
+Marion Solar 4b LLC PV,solar,2.0,0.0,0.0,PV,IL,MISO,68049,zero_fuel
+Putnam Solar 1 PV,solar,2.0,0.0,0.0,PV,IL,MISO,68050,zero_fuel
+Putnam Solar 1B PV,solar,2.0,0.0,0.0,PV,IL,MISO,68051,zero_fuel
+Wolf Run Solar PV,solar,140.0,0.0,0.0,PV,IL,MISO,68056,zero_fuel
+Kankakee Solar 1 PV,solar,2.0,0.0,0.0,PV,IL,MISO,68059,zero_fuel
+Poet Bioprocessing Emmetsburg ST,gas,2.7,11.725096401563755,3.0,ST,IA,MISO,68066,eia923
+Coffeen Solar BESS PV,solar,44.2,0.0,0.0,PV,IL,MISO,68147,zero_fuel
+Baldwin Solar BESS PV,solar,68.4,0.0,0.0,PV,IL,MISO,68148,zero_fuel
+MN CSG 2019-82 PV,solar,1.0,0.0,0.0,PV,MN,MISO,68156,zero_fuel
+MN CSG 2019-60 PV,solar,1.0,0.0,0.0,PV,MN,MISO,68157,zero_fuel
+D B Wilson ST,coal,417.0,10.956965962808518,4.5,ST,KY,MISO,6823,eia923
+St. Clair Solar 3 PV,solar,2.0,0.0,0.0,PV,IL,MISO,68232,zero_fuel
+Kankakee Solar 3 PV,solar,2.0,0.0,0.0,PV,IL,MISO,68233,zero_fuel
+St Bonifacius GT,oil,66.3,17.353546291283163,6.0,GT,MN,MISO,6824,eia923
+Dakota Range Wind WT,wind,297.6,0.0,0.0,WT,SD,MISO,68318,zero_fuel
+Lake Hallie PV,solar,5.0,0.0,0.0,PV,WI,MISO,68398,zero_fuel
+Armstrong 1 PV,solar,2.0,0.0,0.0,PV,IL,MISO,68415,zero_fuel
+Huck Finn Renewable Energy Center PV,solar,200.0,0.0,0.0,PV,MO,MISO,68644,zero_fuel
+NLRED 2MW PV,solar,2.0,0.0,0.0,PV,AR,MISO,68701,zero_fuel
+North Arkansas Electric Cooperative PV,solar,1.0,0.0,0.0,PV,AR,MISO,68709,zero_fuel
+Petit Jean PV,solar,1.0,0.0,0.0,PV,AR,MISO,68712,zero_fuel
+SAU Tech PV,solar,1.0,0.0,0.0,PV,AR,MISO,68715,zero_fuel
+South Central Electric Cooperative PV,solar,1.0,0.0,0.0,PV,AR,MISO,68717,zero_fuel
+Star City School District PV,solar,1.0,0.0,0.0,PV,AR,MISO,68722,zero_fuel
+Veolia (Gum Springs) PV,solar,5.0,0.0,0.0,PV,AR,MISO,68727,zero_fuel
+Woodruff Electric Cooperative PV,solar,1.0,0.0,0.0,PV,AR,MISO,68728,zero_fuel
+Zeuber PV,solar,4.6,0.0,0.0,PV,AR,MISO,68740,zero_fuel
+City of Peru Hydro-Electric Generating S HY,hydro,6.8,0.0,0.0,HY,IL,MISO,68750,zero_fuel
+City of Peru Rail Generating Station IC,oil,5.4,10.5,6.0,IC,IL,MISO,68751,default
+City of Peru Water Street Generating Sta GT,oil,8.6,13.0,6.0,GT,IL,MISO,68752,default
+City of Peru Water Street Generating Sta IC,oil,5.5,10.5,6.0,IC,IL,MISO,68752,default
+Boomtown Renewable Energy Center PV,solar,150.0,0.0,0.0,PV,IL,MISO,68770,zero_fuel
+Cass County Renewable Energy Center PV,solar,150.0,0.0,0.0,PV,IL,MISO,68771,zero_fuel
+NL IL - Kendall PV,solar,2.0,0.0,0.0,PV,IL,MISO,68881,zero_fuel
+Illinois PV Knox 3A PV,solar,2.0,0.0,0.0,PV,IL,MISO,68951,zero_fuel
+Illinois PV Knox 3B PV,solar,2.0,0.0,0.0,PV,IL,MISO,68952,zero_fuel
+Clinton Solar 2b PV,solar,2.0,0.0,0.0,PV,IL,MISO,68963,zero_fuel
+Windshare LLC WT,wind,5.4,0.0,0.0,WT,MN,MISO,69003,zero_fuel
+Solon Diesel IC,oil,6.4,10.5,6.0,IC,WI,MISO,7058,default
+Sibley No Two IC,oil,1.0,9.290474323794589,6.0,IC,IA,MISO,7060,eia923
+Hoist HY,hydro,2.0,0.0,0.0,HY,MI,MISO,7115,zero_fuel
+McClure Dam HY,hydro,5.8,0.0,0.0,HY,MI,MISO,7116,zero_fuel
+Cataract (MI) HY,hydro,0.6,0.0,0.0,HY,MI,MISO,7118,zero_fuel
+Gladstone GT,oil,17.0,13.0,6.0,GT,MI,MISO,7119,default
+Whillock HY,hydro,17.0,0.0,0.0,HY,AR,MISO,7135,zero_fuel
+Pleasant Hill GT,gas,153.6,14.061517226521385,3.0,GT,IA,MISO,7145,eia923
+Lime Creek GT,oil,72.3,15.869565217391305,6.0,GT,IA,MISO,7155,eia923
+Concord GT,gas,367.2,13.200137289726499,3.0,GT,WI,MISO,7159,eia923
+Murray HY,hydro,42.4,0.0,0.0,HY,AR,MISO,7166,zero_fuel
+South Fond Du Lac GT,gas,327.8,11.0,3.0,GT,WI,MISO,7203,default
+Angus Anson GT,gas,343.0,12.252270050116959,3.0,GT,SD,MISO,7237,eia923
+Dam 2 HY,hydro,35.0,0.0,0.0,HY,AR,MISO,7246,zero_fuel
+491 E 48th Street GT,gas,145.0,10.76547534298889,3.0,GT,MI,MISO,7268,eia923
+Paris (WI) GT,gas,359.8,13.039035517474888,3.0,GT,WI,MISO,7270,eia923
+George Neal South ST,coal,647.1,10.469929455746195,4.5,ST,IA,MISO,7343,eia923
+Water Street Station IC,gas,12.2,10.326822664861728,3.0,IC,MI,MISO,7398,eia923
+Henry Station IC,gas,15.0,9.618528169356013,3.0,IC,MI,MISO,7399,eia923
+Lakefield Utilities IC,oil,2.9,10.5,6.0,IC,MN,MISO,7415,default
+Interstate GT,gas,108.4,14.86306525959443,3.0,GT,IL,MISO,7425,eia923
+Marceline IC,oil,8.0,10.5,6.0,IC,MO,MISO,7470,default
+Upper Sterling HY,hydro,2.0,0.0,0.0,HY,IL,MISO,7474,zero_fuel
+Croswell IC,oil,5.1,10.5,6.0,IC,MI,MISO,7497,default
+State Farm IC,oil,5.1,10.5,6.0,IC,IL,MISO,7556,default
+Panora IC,oil,4.5,12.0,6.0,IC,IA,MISO,7584,eia923
+South Plant (IA) IC,oil,11.399999999999999,9.529411764705882,6.0,IC,IA,MISO,7758,eia923
+Georgetown GT,gas,316.4,13.168279359957433,3.0,GT,IN,MISO,7759,eia923
+Tilton GT,gas,182.0,11.526767552907572,3.0,GT,IL,MISO,7760,eia923
+Henry County GT,gas,126.0,10.774098194212778,3.0,GT,IN,MISO,7763,eia923
+Custer Energy Center GT,gas,22.0,14.623015873015873,3.0,GT,WI,MISO,7795,eia923
+West Marinette 34 GT,gas,70.6,13.045639921184073,3.0,GT,WI,MISO,7799,eia923
+Pine Street IC,gas,7.7,9.06388034665921,3.0,IC,MI,MISO,7806,eia923
+Argyle HY,hydro,0.1,0.0,0.0,HY,WI,MISO,7810,zero_fuel
+Argyle IC,oil,2.0,11.666666666666666,6.0,IC,WI,MISO,7810,eia923
+Alsey GT,gas,164.3,11.7555359996199,3.0,GT,IL,MISO,7818,eia923
+Big Quinnesec 92 HY,hydro,16.0,0.0,0.0,HY,MI,MISO,7820,zero_fuel
+Big Quinnesec 61 HY,hydro,4.4,0.0,0.0,HY,MI,MISO,7821,zero_fuel
+Kaukauna City Hydro HY,hydro,4.8,0.0,0.0,HY,WI,MISO,7822,zero_fuel
+Beaver Island IC,oil,2.8,10.5,6.0,IC,MI,MISO,7831,default
+Pleasant Valley (MN) GT,gas,426.3,11.554930155519399,3.0,GT,MN,MISO,7843,eia923
+Minnesota River GT,gas,39.0,10.433791485082132,3.0,GT,MN,MISO,7844,eia923
+Knoxville Industrial IC,oil,16.0,10.153846153846153,6.0,IC,IA,MISO,7849,eia923
+Shenandoah IC,oil,20.0,10.363636363636363,6.0,IC,IA,MISO,7850,eia923
+Waterloo Lundquist IC,oil,18.0,10.131578947368421,6.0,IC,IA,MISO,7851,eia923
+Avenue A Generator Sets IC,oil,3.6,10.080745341614907,6.0,IC,IL,MISO,7854,eia923
+North Generation Plant IC,oil,8.0,12.8,6.0,IC,IA,MISO,7856,eia923
+Gilliam South IC,oil,4.0,10.5,6.0,IC,IA,MISO,7857,default
+Elk Mound GT,gas,64.6,13.010828582103406,3.0,GT,WI,MISO,7863,eia923
+Earlville IC,oil,1.8,10.5,6.0,IC,IA,MISO,7865,default
+Dakota Magic IC,oil,1.5,10.5,6.0,IC,ND,MISO,7884,default
+Wind Turbine WT,wind,11.0,0.0,0.0,WT,WI,MISO,7886,zero_fuel
+Traer South IC,oil,1.8,10.5,6.0,IC,IA,MISO,7920,default
+Maquoketa 2 IC,oil,5.1,10.5,6.0,IC,IA,MISO,7921,default
+Brooklyn City North Plant IC,oil,2.0,11.857142857142858,6.0,IC,IA,MISO,7922,eia923
+Lakefield Junction GT,gas,495.6,13.20042227087895,3.0,GT,MN,MISO,7925,eia923
+Lakefield Junction IC,oil,2.0,10.5,6.0,IC,MN,MISO,7925,default
+South Strawberry IC,oil,3.6,9.461538461538462,6.0,IC,IA,MISO,7926,eia923
+Gaylord - Wolverine GT,gas,60.599999999999994,15.135161525021559,3.0,GT,MI,MISO,7932,eia923
+Industrial Park IC,oil,13.4,10.03089430894309,6.0,IC,IL,MISO,7934,eia923
+Solway CT GT,gas,42.3,9.91581758688313,3.0,GT,MN,MISO,7947,eia923
+Solway CT IC,oil,1.3,10.5,6.0,IC,MN,MISO,7947,default
+Lawrence County Station GT,gas,236.5,11.131656506855585,3.0,GT,IN,MISO,7948,eia923
+Peno Creek GT,gas,172.0,11.14816895569411,3.0,GT,MO,MISO,7964,eia923
+Pella Peaking IC,oil,25.2,10.73568281938326,6.0,IC,IA,MISO,7971,eia923
+Sumpter GT,gas,308.4,13.461976586412547,3.0,GT,MI,MISO,7972,eia923
+Granite Falls 2 IC,oil,6.0,10.5,6.0,IC,MN,MISO,7977,default
+South Generation IC,oil,6.2,9.242603550295858,6.0,IC,MN,MISO,7982,eia923
+Kalkaska CT #1 GT,gas,48.3,9.660744182153023,3.0,GT,MI,MISO,7984,eia923
+Greater Des Moines CC,gas,503.7,7.207157775870221,3.0,CC,IA,MISO,7985,eia923
+Silver Creek GT,gas,225.0,12.40140703470592,3.0,GT,MS,MISO,7988,eia923
+Sylvarena GT,gas,129.0,10.27522913954998,3.0,GT,MS,MISO,7989,eia923
+Altamont IC,oil,7.2,10.696428571428571,6.0,IC,IL,MISO,7990,eia923
+West Campus Cogeneration Facility CC,gas,129.1,9.084961783868584,3.0,CC,WI,MISO,7991,eia923
+Winter IC,oil,5.6,10.5,6.0,IC,WI,MISO,8013,default
+Factory GT,oil,14.7,15.636363636363637,6.0,GT,IL,MISO,8016,eia923
+Columbia (WI) ST,coal,1131.9,10.801191190169003,4.5,ST,WI,MISO,8023,eia923
+Blue Lake GT,gas,300.0,10.709240043406108,3.0,GT,MN,MISO,8027,eia923
+Blue Lake GT,oil,154.0,10.709001532570435,6.0,GT,MN,MISO,8027,eia923
+Sycamore (IA) GT,gas,140.6,16.248137656069666,3.0,GT,IA,MISO,8029,eia923
+Emery Station CC,gas,531.2,7.866845143684463,3.0,CC,IA,MISO,8031,eia923
+Gerald Andrus ST,gas,706.5,11.26320234453387,3.0,ST,MS,MISO,8054,eia923
+Arkansas Nuclear One ST,nuclear,1821.0,10.442601965388766,2.5,ST,AR,MISO,8055,eia923
+Waterford 1 & 2 ST,gas,418.1,10.980067252126076,3.0,ST,LA,MISO,8056,eia923
+Waterford 1 & 2 GT,oil,32.1,13.708959711365003,6.0,GT,LA,MISO,8056,eia923
+Halstad IC,oil,3.8,10.909090909090908,6.0,IC,MN,MISO,8105,eia923
+Tipton IC,oil,9.2,10.347826086956522,6.0,IC,IA,MISO,8106,eia923
+Hopkinton IC,oil,3.8000000000000003,10.818181818181818,6.0,IC,IA,MISO,8108,eia923
+Coyote ST,coal,426.4,12.149811215026148,4.5,ST,ND,MISO,8222,eia923
+Baldwin Energy Complex ST,coal,1157.0,10.789364614645708,4.5,ST,IL,MISO,889,eia923
+Moline GT,gas,60.0,11.0,3.0,GT,IL,MISO,899,default
+Moline HY,hydro,3.2,0.0,0.0,HY,IL,MISO,899,zero_fuel
+Rockton HY,hydro,1.1,0.0,0.0,HY,IL,MISO,903,zero_fuel
+Venice GT,gas,486.0,11.443003540152786,3.0,GT,IL,MISO,913,eia923
+Breese IC,oil,17.0,10.5,6.0,IC,IL,MISO,934,default
+Bushnell IC,oil,10.8,11.061224489795919,6.0,IC,IL,MISO,935,eia923
+Carlyle IC,oil,12.3,9.87012987012987,6.0,IC,IL,MISO,936,eia923
+Carmi IC,oil,13.0,10.08695652173913,6.0,IC,IL,MISO,937,eia923
+Farmer City IC,gas,4.1,9.0,3.0,IC,IL,MISO,941,default
+Farmer City IC,oil,5.6,10.04,6.0,IC,IL,MISO,941,eia923
+Freeburg IC,oil,10.8,10.01639344262295,6.0,IC,IL,MISO,943,eia923
+Geneseo IC,gas,19.5,9.0,3.0,IC,IL,MISO,944,default
+Geneseo IC,oil,3.8,10.5,6.0,IC,IL,MISO,944,default
+Geneseo PV,solar,0.9,0.0,0.0,PV,IL,MISO,944,zero_fuel
+Geneseo WT,wind,3.0,0.0,0.0,WT,IL,MISO,944,zero_fuel
+Highland IC,oil,12.8,10.053475935828876,6.0,IC,IL,MISO,946,eia923
+McLeansboro IC,oil,8.4,10.5,6.0,IC,IL,MISO,948,default
+Marshall (IL) IC,oil,16.9,9.46551724137931,6.0,IC,IL,MISO,949,eia923
+City of Peru Plank Road Generating Station IC,oil,13.5,10.085714285714285,6.0,IC,IL,MISO,955,eia923
+Princeton (IL) IC,gas,37.7,9.0,3.0,IC,IL,MISO,957,default
+Rantoul IC,oil,14.4,11.06474820143885,6.0,IC,IL,MISO,958,eia923
+Red Bud IC,oil,14.3,9.322314049586776,6.0,IC,IL,MISO,959,eia923
+Dallman ST,coal,204.7,12.36764788212639,4.5,ST,IL,MISO,963,eia923
+Lakeside IC,oil,5.1,10.5,6.0,IC,IL,MISO,964,default
+Reynolds GT,oil,12.8,13.0,6.0,GT,IL,MISO,965,default
+Nine Springs GT,gas,11.4,11.0,3.0,GT,WI,MISO,9674,default
+Sullivan (IL) IC,oil,24.099999999999998,9.556701030927835,6.0,IC,IL,MISO,969,eia923
+Waterloo GT,gas,13.2,12.735765387571691,3.0,GT,IL,MISO,971,eia923
+Waterloo IC,oil,15.1,9.546099290780141,6.0,IC,IL,MISO,971,eia923
+Marion ST,coal,120.0,10.6,4.5,ST,IL,MISO,976,default
+Marion GT,gas,140.0,12.627786301197471,3.0,GT,IL,MISO,976,eia923
+Harding Street GT,gas,288.0,13.56501710771084,3.0,GT,IN,MISO,990,eia923
+Harding Street ST,gas,618.0,11.967718533176598,3.0,ST,IN,MISO,990,eia923
+Harding Street GT,oil,37.0,13.279439599511772,6.0,GT,IN,MISO,990,eia923
+Harding Street IC,oil,3.0,11.49074074074074,6.0,IC,IN,MISO,990,eia923
+Eagle Valley (IN) CC,gas,673.0,6.684774708827091,3.0,CC,IN,MISO,991,eia923
+CC Perry K ST,gas,3.0,10.5,3.0,ST,IN,MISO,992,default
+AES Petersburg ST,coal,1057.2,11.789782449029465,4.5,ST,IN,MISO,994,eia923
+AES Petersburg IC,oil,9.0,10.25,6.0,IC,IN,MISO,994,eia923
+Michigan City ST,coal,455.0,11.238482132586944,4.5,ST,IN,MISO,997,eia923
+Norway (IN) HY,hydro,4.0,0.0,0.0,HY,IN,MISO,998,zero_fuel
+Oakdale HY,hydro,6.0,0.0,0.0,HY,IN,MISO,999,zero_fuel

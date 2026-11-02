@@ -26,14 +26,17 @@ BASE = "https://api.eia.gov/v2"
 # EIA energy source codes -> our fuel buckets
 FUEL_MAP = {
     "NG": "gas", "BIT": "coal", "SUB": "coal", "LIG": "coal", "RC": "coal",
-    "PC": "coal", "DFO": "oil", "RFO": "oil", "KER": "oil", "JF": "oil",
+    "PC": "coal", "SGC": "coal",  # SGC: coal syngas (Edwardsport IGCC)
+    # WH: waste heat, the steam half of a combined cycle; joins the gas CC unit
+    "WH": "gas", "DFO": "oil", "RFO": "oil", "KER": "oil", "JF": "oil",
     "WO": "oil", "NUC": "nuclear", "WND": "wind", "SUN": "solar", "WAT": "hydro",
     # Waste and byproduct fuels: run whenever available, treated as must-run
     # price takers (fuel price 0 in fleet.py). Blast furnace gas is steel-mill
     # byproduct; the rest are biomass or waste.
     "BFG": "waste", "WDS": "waste", "BLQ": "waste", "LFG": "waste",
     "MSW": "waste", "MSB": "waste", "MSN": "waste", "OBG": "waste",
-    "OBL": "waste", "SLW": "waste", "TDF": "waste",
+    "OBL": "waste", "SLW": "waste", "TDF": "waste", "OG": "waste",
+    "PUR": "waste", "AB": "waste",
 }
 VOM = {"gas": 3.0, "coal": 4.5, "oil": 6.0, "nuclear": 2.5,
        "wind": 0.0, "solar": 0.0, "hydro": 0.0, "waste": 5.0}
@@ -86,33 +89,48 @@ def api_key():
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--year", type=int, default=2024)
+    ap.add_argument("--region", choices=["MI", "MISO"], default="MI",
+                    help="MI: every plant in Michigan (data/mi_fleet.csv). "
+                         "MISO: every plant in the MISO balancing authority (data/miso_fleet.csv).")
     args = ap.parse_args()
     key = api_key()
+    y = args.year
+    # Operating plus standby (available when called, e.g. Midland Cogeneration
+    # ST2). Out of service (OA, OS) excluded: Palisades was OA through 2024.
+    cap_params = {"frequency": "monthly", "data[]": ["net-summer-capacity-mw"],
+                  "facets[status][]": ["OP", "SB"], "start": f"{y}-12", "end": f"{y}-12"}
+    fuel_params = {"frequency": "annual",
+                   "data[]": ["generation", "total-consumption-btu", "consumption-for-eg-btu"],
+                   "start": str(y), "end": str(y)}
 
-    cap = cached(f"capacity_{args.year}", lambda: get_all(
-        "electricity/operating-generator-capacity",
-        {"frequency": "monthly", "data[]": ["net-summer-capacity-mw"],
-         "facets[stateid][]": "MI",
-         # Operating plus standby (available when called, e.g. Midland
-         # Cogeneration ST2). Out of service (OA, OS) excluded: Palisades
-         # was OA through 2024.
-         "facets[status][]": ["OP", "SB"],
-         "start": f"{args.year}-12", "end": f"{args.year}-12"}, key))
-
-    fuel = cached(f"facility_fuel_{args.year}", lambda: get_all(
-        "electricity/facility-fuel",
-        {"frequency": "annual", "data[]": ["generation", "total-consumption-btu", "consumption-for-eg-btu"],
-         "facets[state][]": "MI", "start": str(args.year), "end": str(args.year)}, key))
+    if args.region == "MI":
+        cap = cached(f"capacity_{y}", lambda: get_all(
+            "electricity/operating-generator-capacity",
+            {**cap_params, "facets[stateid][]": "MI"}, key))
+        fuel = cached(f"facility_fuel_{y}", lambda: get_all(
+            "electricity/facility-fuel", {**fuel_params, "facets[state][]": "MI"}, key))
+    else:
+        cap = cached(f"capacity_miso_{y}", lambda: get_all(
+            "electricity/operating-generator-capacity",
+            {**cap_params, "facets[balancing_authority_code][]": "MISO"}, key))
+        states = sorted(cap["stateid"].unique())
+        fuel = cached(f"facility_fuel_miso_{y}", lambda: get_all(
+            "electricity/facility-fuel", {**fuel_params, "facets[state][]": states}, key))
 
     out = build_fleet(cap, fuel)
-    out.to_csv(ROOT / "data/mi_fleet.csv", index=False)
-    print(f"Wrote {len(out)} units, {out.capacity_mw.sum():,.0f} MW to data/mi_fleet.csv")
+    name = "mi_fleet.csv" if args.region == "MI" else "miso_fleet.csv"
+    out.to_csv(ROOT / "data" / name, index=False)
+    print(f"Wrote {len(out)} units, {out.capacity_mw.sum():,.0f} MW to data/{name}")
+    print(out.pivot_table(index="fuel", columns="ba", values="capacity_mw",
+                          aggfunc="sum", fill_value=0).round(0).to_string())
+    if args.region != "MI":
+        return
 
-    profile = cached(f"state_profile_{args.year}", lambda: get_all(
+    profile = cached(f"state_profile_{y}", lambda: get_all(
         "electricity/state-electricity-profiles/capability",
         {"frequency": "annual", "data[]": ["capability"],
          "facets[stateId][]": "MI", "facets[producertypeid][]": "TOT",
-         "start": str(args.year), "end": str(args.year)}, key))
+         "start": str(y), "end": str(y)}, key))
     check = cross_check(out, profile)
     check.to_csv(ROOT / "results/fleet_check.csv", index=False)
     print("\nCapacity by fuel vs EIA state profile (MW):")
@@ -171,7 +189,9 @@ def build_fleet(cap, fuel):
     hr = (hr["btu"] / hr["generation"]).rename("heat_rate").reset_index()
 
     cap["plantid"] = cap["plantid"].astype(str)
-    plants = (cap.groupby(["plantid", "plantName", "fuel", "tech"], as_index=False)
+    # ba matters: southwest Michigan (Cook, New Covert, Indeck Niles) is in PJM
+    cap = cap.rename(columns={"stateid": "state", "balancing_authority_code": "ba"})
+    plants = (cap.groupby(["plantid", "plantName", "state", "ba", "fuel", "tech"], as_index=False)
                  ["capacity_mw"].sum())
     plants = plants.merge(hr, on=["plantid", "fuel", "tech"], how="left")
 
@@ -199,7 +219,8 @@ def build_fleet(cap, fuel):
     plants.loc[bad, "heat_rate"] = typical[bad]
     plants["vom"] = plants["fuel"].map(VOM)
     plants["unit"] = plants["plantName"] + " " + plants["tech"]
-    out = plants[["unit", "fuel", "capacity_mw", "heat_rate", "vom", "tech", "plantid", "hr_source"]]
+    out = plants[["unit", "fuel", "capacity_mw", "heat_rate", "vom", "tech",
+                  "state", "ba", "plantid", "hr_source"]]
     return out[out["capacity_mw"] > 0].reset_index(drop=True)
 
 
