@@ -1,0 +1,319 @@
+\documentclass[11pt]{article}
+% Build: cd report && pdflatex report.tex && pdflatex report.tex && mv report.pdf meritorder_report.pdf
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,tabularx,array}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,urlcolor=blue!50!black,citecolor=blue!50!black]{hyperref}
+
+\graphicspath{{../results/}}
+\setlength{\parskip}{0.45em}
+\setlength{\parindent}{0pt}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\fig}[3]{\begin{figure}[H]\centering\includegraphics[width=#1\textwidth]{#2}\caption{#3}\end{figure}}
+
+\title{\textbf{MeritOrder}\\[0.3em]\large Can a cost-minimizing dispatch model built from public data\\reproduce Michigan's hourly electricity prices?}
+\author{Jonah Alsfasser\\Michigan State University, CMSE 382: Optimization Methods in Data Science}
+\date{November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+Wholesale electricity prices are Lagrange multipliers: the price at a location is the dual variable on the constraint that supply equals demand there. This project builds that idea out in five phases, from a single-region linear program to a full year of hourly two-region dispatch over the 181 GW MISO fleet, using only public EIA and MISO data. Each phase derives its optimality conditions by hand, implements solvers from scratch (a two-phase simplex, projected gradient, dual ascent, dual Newton, primal and dual decomposition), and checks them against reference solvers and the KKT conditions. Validated against every hour of 2024, the model gets the average Michigan Hub price within about \$4/MWh and the within-month timing of price movements (correlation 0.70), but its hourly swings are only about a seventh of the market's, because the 2024 supply stack is nearly flat until it hits a capacity cliff. Read through duals, scenarios show that retiring Michigan coal mostly moves emissions to other states and makes the Michigan transmission interface worth about \$8{,}500 per MW-year, and that a carbon price on today's fleet saturates at a 10 to 21\% emissions cut because fuel switching is the only lever.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+%=====================================================================
+\section{Question and approach}
+
+MISO, the grid operator for most of the Midwest including Michigan, sets prices every hour by solving a cost-minimizing dispatch problem and publishing its dual variables. The research question is whether a model built only from public plant data can reproduce Michigan's real hourly prices (the MISO Michigan Hub locational marginal price, LMP), and where it breaks.
+
+The project is organized around the course topics:
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}l X X@{}}
+\toprule
+Phase & Model & Optimization content \\
+\midrule
+1 & single region, linear costs & LP, KKT, Lagrangian dual, simplex, degeneracy \\
+2 & single region, quadratic costs & convex QP, projection onto a convex set, projected gradient, dual ascent, Newton, convergence vs.\ conditioning \\
+3 & two regions and a transmission line & KKT with a coupling constraint, congestion price as a multiplier, primal decomposition \\
+4 & full year, 8{,}784 hours & validation against market data \\
+5 & scenarios & sensitivity via duals, envelope theorem, dual decomposition of a coupling constraint \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The rule for every phase was the same: derive the optimality conditions by hand, implement the solvers from scratch, verify against a reference solver (scipy's HiGHS or trust-constr), and check KKT and the duality gap numerically on every solution. Code, data and derivations are at \url{https://github.com/JonahXA/meritorder}.
+
+%=====================================================================
+\section{Data}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\toprule
+Input & Source and handling \\
+\midrule
+Generators & EIA-860M (via EIA API v2): net summer capacity, operating or standby, December 2024. Grouped by plant, fuel and technology class (combined cycle parts together). \\
+Heat rates & EIA-923: electricity-only fuel / generation per plant, fuel and technology. Values outside $[0.8, 1.5]\times$ the technology's typical value replaced by that typical value (10 to 11\% of thermal capacity). \\
+Hub prices & MISO day-ahead ex-post LMP files: LMP, congestion (MCC) and loss (MLC) components for all 8 hubs, every hour of 2024. \\
+Load & MISO actual load by zone. Michigan (LRZ7) is only published combined with Wisconsin (LRZ2\_7), so Michigan $= 0.592 \times$ LRZ2\_7, its share of MI + WI retail sales. \\
+Wind, solar & EIA-930 hourly MISO output, shared across units by installed capacity. \\
+Fuel prices & EIA monthly delivered cost to power plants by state, falling back across sector cuts where EIA withholds a value. \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+Several decisions turned out to matter more than expected:
+\begin{itemize}
+\item \textbf{The first heat rate pull triple counted.} EIA-923 returns subtotal rows (fuel = ALL, prime mover = ALL) alongside the detail rows. Summing everything blended coal and gas into one heat rate per plant.
+\item \textbf{Ludington pumped storage} (2{,}180 MW) is coded as water, so it was initially mapped to zero-cost hydro, which made it the largest free resource in Michigan. It is storage, and is excluded.
+\item \textbf{4.9 GW of ``Michigan'' plants are in PJM, not MISO}: Cook nuclear, New Covert and Indeck Niles. They do not serve the Michigan Hub. From Phase 3 on, Michigan means Michigan plants inside MISO (24{,}260 MW).
+\item The 2024 Michigan fleet reconciles with EIA's state profile by fuel to within known out-of-service units (Palisades, 768 MW, was offline all year).
+\end{itemize}
+
+%=====================================================================
+\section{Phase 1: the price is a multiplier}
+
+\subsection{Problem and KKT}
+With $n$ units, marginal costs $c_i$, capacities $\bar g_i$ and demand $d$:
+\begin{equation}
+\min_{g}\ \sum_i c_i g_i \quad \text{s.t.}\quad \sum_i g_i = d \ \ (\lambda), \qquad 0 \le g_i \le \bar g_i \ \ (\mu_i^-, \mu_i^+ \ge 0).
+\end{equation}
+It is an LP, so KKT is necessary and sufficient. Stationarity is $c_i - \lambda + \mu_i^+ - \mu_i^- = 0$, and complementary slackness gives three cases per unit:
+\[
+c_i < \lambda \Rightarrow g_i = \bar g_i, \qquad c_i > \lambda \Rightarrow g_i = 0, \qquad 0 < g_i < \bar g_i \Rightarrow \lambda = c_i.
+\]
+So the price equals the cost of the partly loaded (marginal) unit, and $\mu_i^+ = \lambda - c_i$ is each running unit's margin. This is the merit order rule, derived rather than assumed. By the sensitivity interpretation of multipliers, $\lambda = \partial(\text{optimal cost})/\partial d$: the cost of one more MWh, which is exactly what a wholesale price is.
+
+\subsection{Dual}
+Minimizing the Lagrangian over the box separates by unit:
+\begin{equation}
+q(\lambda) = \lambda d + \sum_i \bar g_i \min(0,\ c_i - \lambda),
+\end{equation}
+concave and piecewise linear, with supergradient $d - \sum_{c_i < \lambda} \bar g_i$. Strong duality holds (LP), so $\max_\lambda q(\lambda)$ equals the optimal cost.
+
+\subsection{Solvers and verification}
+Four solvers: the KKT closed form (sort by cost), bisection on the dual's supergradient, a from-scratch two-phase tableau simplex with Bland's rule that reads prices from $B^\top y = c_B$, and HiGHS. On the real 2024 Michigan fleet (285 units) all four agree on cost to $4\times 10^{-10}$ and exactly on price at 49 demand levels, and every solution passes KKT with zero duality gap.
+
+\textbf{Degeneracy.} When demand lands exactly on a cumulative capacity breakpoint, no unit is marginal and any $\lambda$ between the adjacent costs satisfies KKT. On the test fleet at 15{,}600 MW the simplex returns \$35.50 and HiGHS \$39.00. Both are correct. This comes back in Phase 5, where it is the reason an emissions cap needs primal recovery.
+
+\fig{0.78}{phase1_mi_fleet_supply_curve.png}{Michigan's 2024 supply stack with the simplex dual (dots) at each demand level. The middle is nearly flat: 13.6 GW of combined cycle and coal within \$8/MWh.}
+
+%=====================================================================
+\section{Phase 2: quadratic costs and first-order methods}
+
+\subsection{Problem}
+Units get less efficient near full output, so let marginal cost rise: cost $a_i g_i + \tfrac{b_i}{2} g_i^2$ with $b_i > 0$, over the same feasible set. The Hessian $\operatorname{diag}(b)$ is positive definite, so the problem is strictly convex and $g^\star$ is unique. KKT now gives
+\begin{equation}
+g_i(\lambda) = \operatorname{clip}\!\left(\frac{\lambda - a_i}{b_i},\ 0,\ \bar g_i\right),
+\end{equation}
+and every partly loaded unit has marginal cost exactly $\lambda$. Many units can be marginal at once. Since no public heat rate curves exist, $b_i = \max(0.1\,c_i, \$1)/\bar g_i$: marginal cost rises 10\% (at least \$1) from zero to full output. This is an assumption.
+
+\subsection{Projection, and why it is bisection}
+Projected gradient needs $P(v) = \arg\min\{\tfrac12\|g - v\|^2 : \sum g = d,\ 0 \le g \le \bar g\}$. This is itself the QP above with $a = -v$, $b = 1$, so by the same KKT argument $P(v)_i = \operatorname{clip}(v_i - t, 0, \bar g_i)$ for a scalar $t$. The map $s(t) = \sum_i \operatorname{clip}(v_i - t, 0, \bar g_i)$ is continuous and nonincreasing, so $s(t) = d$ is found by bisection. At a fixed point of $g \leftarrow P(g - \nabla f(g)/L)$, every free unit satisfies $a_i + b_i g_i = -Lt$, so the price can be read off the projection as $\lambda = -Lt$.
+
+\subsection{Dual methods}
+The dual is now differentiable (Danskin), with
+\[
+q'(\lambda) = d - \sum_i g_i(\lambda), \qquad q''(\lambda) = -\sum_{i\ \text{free}} \frac{1}{b_i}.
+\]
+$q'$ is piecewise linear with Lipschitz constant $L_q = \sum_i 1/b_i$. That gives dual ascent with step $1/L_q$, bisection on the sign of $q'$, and a safeguarded Newton method. A Newton step that stays on one linear piece of $q'$ lands exactly on its root, so Newton terminates instead of converging asymptotically.
+
+\subsection{Convergence vs.\ theory}
+Projected gradient with step $1/L$, $L = \max b_i$, satisfies $\|g_k - g^\star\| \le (1 - 1/\kappa)^k \|g_0 - g^\star\|$ with $\kappa = \max b / \min b$. On synthetic instances with controlled $\kappa$:
+
+\begin{center}
+\begin{tabular}{@{}rcccc@{}}
+\toprule
+$\kappa$ & PG observed & PG bound $1-1/\kappa$ & dual ascent observed & dual ascent theory$^*$ \\
+\midrule
+10 & 0.759 & 0.900 & 0.8674 & 0.8694 \\
+100 & 0.951 & 0.990 & 0.8452 & 0.8452 \\
+1000 & 0.988 & 0.999 & 0.9538 & 0.9538 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+{\small $^*$Local rate $1 - \sum_{\text{free}} b_i^{-1} / \sum_{\text{all}} b_i^{-1}$: near $\lambda^\star$, $q'$ is linear with slope $-\sum_{\text{free}} 1/b_i$.}
+
+Projected gradient beats its bound because near the solution only free units move, so the local rate depends on their $b_i$, not the global $\kappa$. Dual ascent's local rate is predicted to four digits, and it depends on \emph{which} units are marginal, not on $\kappa$.
+
+\textbf{On the real fleet projected gradient fails.} Dividing each unit's cost rise by its capacity gives a 0.3 MW solar site $b = 3.3$ and Monroe (3{,}066 MW) $b = 0.00085$, so $\kappa = 35{,}594$. After 20{,}000 iterations projected gradient is still 39 MW off, while dual ascent converges in 593 and Newton in 9. The fix is instructive: precondition by the Hessian, i.e.\ take the step $g - \operatorname{diag}(b)^{-1}\nabla f = -a/b$ and project in the $b$-weighted norm. By the same KKT argument the projection is $g_i = \operatorname{clip}((t - a_i)/b_i, 0, \bar g_i)$, which is exactly $g_i(\lambda)$ with $\lambda = t$. \emph{Perfectly preconditioned projected gradient is the dual method}, and it converges in one step.
+
+\fig{0.98}{phase2_convergence.png}{Error vs.\ iteration for projected gradient (left, dashed: the $(1-1/\kappa)^k$ bound) and dual ascent (right) as conditioning varies.}
+
+%=====================================================================
+\section{Phase 3: two regions, one line}
+
+\subsection{Problem and KKT}
+Split MISO into Michigan (M) and the rest (R), with flow $f$ into Michigan limited to $|f| \le F$:
+\begin{equation}
+\min \sum_{i\in M} c_i g_i + \sum_{j\in R} c_j h_j \ \ \text{s.t.}\ \ \sum g + f = d_M\ (\lambda_M),\quad \sum h - f = d_R\ (\lambda_R),\quad -F \le f \le F\ (\nu^-, \nu^+).
+\end{equation}
+Stationarity in $f$ gives
+\begin{equation}
+\lambda_M - \lambda_R = \nu^+ - \nu^-,
+\end{equation}
+with $\nu^+(F - f) = 0$ and $\nu^-(F + f) = 0$. If the line is slack the two prices are equal: one market. If Michigan imports at the limit, $\lambda_M - \lambda_R = \nu^+ \ge 0$. \textbf{The price difference between regions is the shadow price of the line}, and $\partial(\text{cost})/\partial F = -|\lambda_M - \lambda_R|$ is the value of one more MW of transfer capacity. The dual is
+\begin{equation}
+q(\lambda_M, \lambda_R) = q_M(\lambda_M) + q_R(\lambda_R) - F\,|\lambda_M - \lambda_R|:
+\end{equation}
+two Phase 1 duals plus a penalty on disagreement proportional to the line limit. $F = 0$ decouples the markets, and $F \to \infty$ forces one price.
+
+\subsection{Solvers}
+Besides the simplex and HiGHS: a KKT closed form (solve the pooled merit order; if its implied flow fits within $F$ there is one price, otherwise fix $f = \pm F$ and solve each region), and primal decomposition. $V(f) = C_M(d_M - f) + C_R(d_R + f)$ is convex with $V'(f) = \lambda_R(d_R + f) - \lambda_M(d_M - f)$, so bisect on $f$. With step supply curves the optimal flow lands on a kink of one region's curve, where that region's price is an interval. The first version returned two different prices with a slack line in 72 of 267 random tests; the KKT check caught it, and the fix takes the price from the region not on a kink. All solvers then agree with HiGHS on cost and both prices on 267 random instances and 91 real 2024 hours (2{,}344 units).
+
+\subsection{Results: one line cannot make Michigan's congestion}
+Running every hour of 2024 for line limits from 1 to 8 GW: even at 1 GW, where the line binds 46\% of hours, the price gap averages \$0.50 when it binds, against actual Michigan congestion of \$2 to \$3.70 in absolute value. Both sides sit on the same flat \$21 to \$29 band of gas and coal, so cutting the line barely moves either price. Real congestion comes from many internal constraints the model does not have.
+
+What does drive Michigan congestion is MISO-wide wind, not Michigan load (correlation 0.29 vs.\ $-0.10$). When the wind blows in the west, the rest of MISO gets cheap and Michigan wants to import. The model reproduces the direction (imports rise from 0 to 2 GW across wind quintiles) at about a fifth of the size.
+
+\begin{center}
+\begin{tabular}{@{}rccc@{}}
+\toprule
+MISO wind & actual & model congestion & model imports \\
+(mean MW) & Michigan MCC & (1 GW line) & (4 GW line) \\
+\midrule
+3{,}694 & $-\$0.93$ & \$0.13 & $-43$ MW \\
+10{,}779 & \$0.47 & \$0.07 & 658 MW \\
+19{,}591 & \$1.82 & \$0.40 & 1{,}967 MW \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+%=====================================================================
+\section{Phase 4: validation against every hour of 2024}
+
+The Phase 3 model with monthly state fuel prices, hourly load and hourly wind and solar, solved for all 8{,}784 hours in about six seconds, and compared to the Michigan Hub day-ahead LMP.
+
+\begin{center}
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+Variant & corr & within-month corr & std ratio & MAE & bias & mean \\
+\midrule
+\textbf{main} & 0.53 & 0.70 & 0.14 & \$7.58 & $-\$4.43$ & \$25.50 \\
+flat fuel prices & 0.58 & 0.72 & 0.08 & \$8.25 & $-\$3.18$ & \$26.75 \\
+no line limit & 0.53 & 0.70 & 0.14 & \$7.58 & $-\$4.43$ & \$25.49 \\
+wind/solar at nameplate & 0.54 & 0.58 & 0.28 & \$10.95 & $-\$10.70$ & \$19.23 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\vspace{-0.3em}
+{\small Actual mean \$29.92. ``Std ratio'' is the model's within-month standard deviation over the market's.}
+
+\textbf{The model gets the timing right and the size wrong.} Within months it correlates 0.70 with the actual price (0.79 with the MISO-wide energy component), but its swings are about a seventh as large. The top 5\% of price hours average \$83 actual vs.\ \$31 modeled, and overnight hours come out too high. Hourly renewable output is the most important input; the line limit makes no difference to prices.
+
+\textbf{Why: a flat stack, then a cliff.} With 2024 fuel prices, MISO's dispatchable supply goes from \$18/MWh at 40 GW to \$35/MWh at 120 GW. Every realistic hour lands in that band, and a merit order can only move the price along this curve. The residual tracks the \emph{level} of net load (load minus wind and solar; correlation 0.46, $R^2 = 0.21$); adding hour-to-hour ramps lifts $R^2$ only to 0.23. The evening peak happens because net load is highest right after solar drops off.
+
+\fig{0.98}{phase4_profiles.png}{Mean price by hour of day and by month. The model follows the seasonal level but misses the daily shape.}
+
+\textbf{Availability.} Derating all dispatchable capacity by a factor $\alpha$, with a shortage unit at MISO's \$1{,}000/MWh offer cap, chosen on January to June and scored on July to December: the best fit ($\alpha = 0.9$) carries over (test correlation 0.63 to 0.68), but the swings stay at about 15\% of the market's until $\alpha = 0.8$, and then summer peaks hit the \$1{,}000 cap. A uniform derate either does nothing or causes shortages. What fills the gap in reality is non-convex or not public: unit commitment and startup costs, reserve scarcity pricing, offer premiums, seasonal maintenance.
+
+%=====================================================================
+\section{Phase 5: scenarios read through duals}
+
+\subsection{Two baselines}
+Pure economic dispatch burns too little coal: 15.5\% of MISO generation vs.\ 26.3\% actual, because 2024 combined cycles (\$18/MWh) undercut coal (\$29 to \$30). Real coal units self-commit and run through cheap hours. Offering 30\% of each coal unit at \$0 (costed at its true cost) brings coal to 25.0\%, and, without using any price data, removes Phase 4's overnight bias ($+\$2.10 \to -\$0.14$). Every scenario runs on both the \emph{economic} and the \emph{calibrated} baseline. Changes between scenarios are more trustworthy than levels.
+
+\subsection{Envelope theorem}
+For $\min_g c(p)^\top g$, $\partial(\text{optimal cost})/\partial p = (\partial c/\partial p)^\top g^\star$: the dispatch response drops out. Scaling gas fuel prices by $m$, the derivative at $m = 1$ should equal the year's spending on gas fuel. Finite differences give \$5.361 B against \$5.358 B (economic, 0.04\%) and \$4.139 B against \$4.139 B (calibrated).
+
+\subsection{An annual emissions cap, by dual decomposition}
+A cap on annual emissions $\sum_t \sum_i e_i g_{it} \le E$ couples all 8{,}784 hours: written out, 20.6 million variables. Relaxing only the cap with multiplier $\tau \ge 0$,
+\begin{equation}
+q(\tau) = -\tau E + \sum_t \min_{g_t} \Big\{ \sum_i (c_i + \tau e_i) g_{it} : \text{hour } t \text{ constraints} \Big\},
+\end{equation}
+separates by hour, and each hour is a merit order with costs $c + \tau e$. \textbf{The cap's multiplier is a carbon price.} Annual emissions $E(\tau)$ are nonincreasing and $q$'s supergradient is $E(\tau) - E$, so bisection on $\tau$ solves the dual.
+
+\textbf{Primal recovery.} $E(\tau)$ is a step function, so at $\tau^\star$ units tie on $c + \tau^\star e$ and no single Lagrangian minimizer meets the cap: just below $\tau^\star$ emissions are over, just above they are under. Returning the ``just above'' dispatch over-abated and cost up to 14\% more than optimal in tests. Both dispatches minimize the Lagrangian at $\tau^\star$, so their convex combination with emissions exactly $E$ also does, is feasible, and satisfies complementary slackness, so it is optimal. This is the Phase 1 degeneracy, now with economic consequences.
+
+\textbf{Verification.} On random instances the decomposition matches a single HiGHS LP on cost to $10^{-15}$ relative, and the dual bound $q(\tau)$ equals the optimal cost. On a real July week (2{,}344 units $\times$ 168 hours = 394k variables), $\tau$ agrees to $10^{-6}$ \$/t (\$5.8725 and \$13.8076/t at two caps), with identical cost and hourly prices within $5\times 10^{-6}$. For one week HiGHS is faster (0.6 s vs.\ 5 s); the decomposition matters at full-year scale.
+
+\subsection{Results}
+
+\begin{center}
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Scenario (economic baseline unless noted) & Michigan price & MISO CO$_2$ \\
+\midrule
+2024 baseline & \$25.50 & 224 Mt \\
+gas price $\times 2$ & \$36.85 (+45\%) & 343 Mt (+53\%) \\
+gas price $\times 0.75$ & \$21.68 & 195 Mt ($-13\%$) \\
+retire Michigan coal (5.8 GW), 4 GW line & \$26.55 & 223 Mt ($-0.3\%$) \\
+\quad same, calibrated baseline & $+\$1.41$ & $-2.7\%$ \\
+carbon \$15/t & \$35.69 & 195 Mt ($-13\%$) \\
+carbon \$100/t & \$86.63 & 177 Mt ($-21\%$) \\
+cap $-5\%$ / $-10\%$ / $-20\%$: shadow price & \$3.91 / \$9.60 / \$62.06 per t & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item \textbf{Retiring Michigan coal mostly moves emissions.} In-state CO$_2$ falls 13\% (economic) to 47\% (calibrated), but 55 to 77\% of those tonnes reappear in other MISO states. Imports rise by 0.4 to 1.6 GW and the line binds up to 10\% of hours. Summing the congestion dual over the year, each extra MW of import capacity is worth \$8{,}453 to \$9{,}031 per year. With an unlimited line the retirement costs Michigan almost nothing (+\$0.10 to +\$0.40/MWh). The binding constraint after retirement is transmission, not generation.
+\item \textbf{Carbon pricing saturates.} With no new clean capacity, the only lever is switching coal to gas. Abatement bottoms out at $-21\%$ (economic) or $-10\%$ (if self-commitment does not respond). Cap shadow prices trace a steep marginal abatement cost curve, and the cap points sit on the carbon price curve: a cap and a carbon price are dual descriptions of the same policy.
+\item \textbf{Prices rise with slope equal to the marginal unit's emission rate.} From KKT, $\lambda_t = c_m + \tau e_m$, so $d\lambda/d\tau = e_m$. The fitted slope is 0.61 t/MWh, between a combined cycle (0.38) and a gas turbine (0.62).
+\item \textbf{Consumers pay far more than the resource cost.} At \$15/t, MISO's production cost rises \$0.17 B for 29 Mt abated (about \$6/t), but Michigan load alone pays \$0.97 B more, because every MWh is priced at the marginal unit's carbon-inclusive cost.
+\end{itemize}
+
+\fig{0.98}{phase5_carbon.png}{MISO emissions and mean Michigan price vs.\ carbon price for both baselines. Stars: annual caps at their shadow prices from dual decomposition.}
+
+%=====================================================================
+\section{Conclusions}
+
+A cost-minimizing dispatch built from public data gets the average Michigan price within about \$4/MWh and the timing of price movements within months right, and it reproduces the mechanisms in direction: fuel prices set the level, wind sets the overnight floor and drives Michigan congestion, and net load moves the price. It breaks on amplitude. It predicts a \$22 to \$30 band where the market spans \$13 to \$150, a direct consequence of convex dispatch on a flat 2024 supply stack. What makes real peaks expensive (commitment costs, reserve scarcity, outages, offer premiums) is non-convex or not public.
+
+The duals were the most useful output. They gave prices, the congestion value of the Michigan interface, a carbon price equivalent to an emissions cap, and a check (the envelope theorem) that the model's sensitivities are internally consistent. Three algorithmic lessons came from the data rather than the textbook: degeneracy is not a curiosity (it forced primal recovery for the emissions cap); conditioning depends on how a real fleet is parameterized ($\kappa = 35{,}594$ broke projected gradient, and preconditioning turned it into the dual method); and KKT checks catch bugs that agreement on cost does not (two-region price recovery, and the over-abating cap dispatch).
+
+\textbf{Limitations and next steps.} The fleet is fixed at 2024. Michigan load is estimated from a combined zone. The 4 GW Michigan line limit is a placeholder, to be calibrated against MISO's published Zone 7 import limit. Ludington pumped storage is excluded. The natural next model is unit commitment with startup costs, which would replace the fixed self-commitment block and address the peak amplitude gap, at the price of leaving convex optimization.
+
+%=====================================================================
+\appendix
+\section{Verification summary}
+
+\begin{center}
+\begin{tabularx}{\textwidth}{@{}l X X@{}}
+\toprule
+Phase & Solvers & Check \\
+\midrule
+1 & merit order, dual bisection, own simplex, HiGHS & 285-unit Michigan fleet, 49 demand levels: cost agreement $4\times 10^{-10}$, prices exact, KKT and zero gap everywhere \\
+2 & projected gradient, dual ascent, dual bisection, dual Newton, scipy trust-constr + crossover & agreement and KKT at 49 levels on both fleets (projected gradient fails to converge on the real fleet, as reported) \\
+3 & KKT closed form, flow bisection, own simplex, HiGHS, QP flow bisection & 267 random instances ($F = 0$, finite, $\infty$) and 91 real hours: cost and both prices vs.\ HiGHS, KKT, duality gap; $\partial \text{cost}/\partial F = -(\lambda_M - \lambda_R)$ \\
+5 & cap by dual decomposition with primal recovery, HiGHS multi-hour LP & random instances: cost $10^{-15}$, $\tau$, prices, $q(\tau) = $ optimum; real week, 394k variables: $\tau$ to $10^{-6}$; envelope theorem to 0.04\% \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+The test suite (45 tests) runs all of these on random instances: \texttt{python -m pytest}.
+
+\section{Reproduce}
+\begin{verbatim}
+pip install -r requirements.txt
+export EIA_API_KEY=...                 # free key from eia.gov
+python scripts/fetch_eia.py --region MI
+python scripts/fetch_eia.py --region MISO
+python scripts/fetch_miso.py --year 2024
+python scripts/fetch_fuel_prices.py --year 2024
+python scripts/run_phase1.py data/mi_fleet.csv
+python scripts/run_phase2.py data/mi_fleet.csv
+python scripts/run_phase3.py
+python scripts/run_phase4.py
+python scripts/run_phase5.py
+\end{verbatim}
+Detailed derivations for each phase are in \texttt{docs/phase1.md} to \texttt{docs/phase5.md}, and data decisions in \texttt{docs/data.md}.
+
+\begin{thebibliography}{9}
+\bibitem{beck} A. Beck. \emph{Introduction to Nonlinear Optimization: Theory, Algorithms, and Applications with MATLAB}. SIAM, 2014.
+\bibitem{eia} U.S. Energy Information Administration. Open Data API v2: EIA-860M, EIA-923, EIA-930, electric power operational data. \url{https://www.eia.gov/opendata/}
+\bibitem{miso} MISO. Market reports: day-ahead ex-post LMPs, forecast and actual load. \url{https://www.misoenergy.org/markets-and-operations/real-time--market-data/market-reports/}
+\end{thebibliography}
+
+\end{document}

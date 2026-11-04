@@ -4,3 +4,7 @@ __pycache__/
 .env
 data/raw/
 .ipynb_checkpoints/
+report/*.aux
+report/*.log
+report/*.toc
+report/*.out

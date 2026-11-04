@@ -68,6 +68,6 @@ Can a cost-minimizing dispatch model built only from public plant data reproduce
 
 ## Immediate todo
 
-1. Report PDF (all five phases: derivations from docs/, key figures, findings) and the portfolio page on jonahx-dev.vercel.app/research.
+1. Portfolio page on jonahx-dev.vercel.app/research (report done: report/meritorder_report.pdf, built from report/report.tex with TinyTeX pdflatex; only base packages available, no microtype/caption/enumitem).
 2. Look up the MISO PRA Zone 7 Capacity Import Limit to set the line limit (affects Phase 3 and the Phase 5 retirement line value).
 3. Optional model upgrades: unit commitment with startup costs (would replace the fixed must-run block and fix peak amplitude), seasonal availability, reserves, Ludington pumped storage.

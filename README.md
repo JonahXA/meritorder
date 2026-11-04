@@ -4,6 +4,8 @@ Can a cost-minimizing optimization model built only from public plant data repro
 
 Research project applying CMSE 382 (Optimization Methods in Data Science, MSU): LP, KKT, duality, convex QP, gradient and Newton methods.
 
+**Report:** [report/meritorder_report.pdf](report/meritorder_report.pdf) (12 pages: derivations, verification, findings for all five phases)
+
 ## Status
 
 - [x] Phase 1: single-region dispatch LP, KKT derivation, four solvers including a from-scratch simplex ([docs/phase1.md](docs/phase1.md))
@@ -34,6 +36,7 @@ Research project applying CMSE 382 (Optimization Methods in Data Science, MSU): 
     scripts/      data pulls and phase runners
     tests/        solver agreement, KKT, duality, degeneracy
     docs/         derivations per phase
+    report/       LaTeX source and PDF of the full report
     results/      figures and CSVs
 
 ## Data note
