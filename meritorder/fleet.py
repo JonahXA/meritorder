@@ -30,3 +30,18 @@ def load_fleet(path, fuel_prices=None):
         raise ValueError(f"no fuel price for: {bad}")
     df["marginal_cost"] = df["heat_rate"] * df["fuel_price"] + df["vom"]
     return df
+
+
+def monthly_marginal_costs(df, fuel_prices):
+    """Marginal cost per unit per month from a state x fuel x month price table.
+
+    fuel_prices: DataFrame with month, state, fuel, price (scripts/fetch_fuel_prices.py).
+    Fuels without a series there (nuclear, renewables, waste) keep the
+    defaults. Returns {month: array aligned with df rows}.
+    """
+    out = {}
+    for month, p in fuel_prices.groupby("month"):
+        price = df.merge(p[["state", "fuel", "price"]], on=["state", "fuel"], how="left")["price"]
+        price = price.fillna(df["fuel"].map(DEFAULT_FUEL_PRICES)).values
+        out[month] = df["heat_rate"].values * price + df["vom"].values
+    return out
