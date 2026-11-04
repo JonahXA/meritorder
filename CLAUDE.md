@@ -20,7 +20,7 @@ Can a cost-minimizing dispatch model built only from public plant data reproduce
 2. DONE (sample and real fleet). Quadratic costs a_i g + (b_i/2) g^2 in meritorder/qp.py: projected_gradient (projection by bisection on scalar t, lambda = -L t at the fixed point), dual_ascent, dual_bisection, dual_newton (safeguarded), scipy (trust-constr + active-set crossover, since trust-constr alone sits ~1e-4 MW off bounds). b_i = max(10% c_i, $1) / cap_i, documented as an assumption to calibrate in Phase 4. KKT in kkt.py:qp_kkt_report. Derivation and findings in docs/phase2.md, runner scripts/run_phase2.py.
 3. DONE. Two regions (Michigan in MISO vs rest of MISO) in meritorder/network.py: merit_two_region (KKT closed form: pooled merit order, else line at limit and separate merit orders), flow_bisection (primal decomposition on f), simplex, highs, flow_bisection_qp. KKT/duality in kkt.py:two_region_kkt_report, dual q = q_M + q_R - F|lam_M - lam_R|. Runner scripts/run_phase3.py runs all 8,784 hours of 2024 for a sweep of line limits. Derivation and findings in docs/phase3.md.
 4. DONE. scripts/run_phase4.py: Phase 3 model, 8,784 hours of 2024, monthly state fuel prices (scripts/fetch_fuel_prices.py -> data/fuel_prices_2024.csv, fleet.py:monthly_marginal_costs), ablations (flat fuel, no line limit, nameplate renewables), availability sweep fit Jan-Jun / test Jul-Dec with a $1,000 shortage unit, error breakdown, residual regression. Findings in docs/phase4.md.
-5. Scenarios using duals: gas price shock, coal retirement, carbon price.
+5. DONE. meritorder/emissions.py (CO2 rates; annual cap by dual decomposition across hours with primal recovery; HiGHS multi-hour reference), meritorder/hourly.py (Year: full-year two-region runs, emissions, Michigan payment, congestion rent, cap bisection, optional coal must-run). scripts/run_phase5.py runs gas x0.75/1.5/2, Michigan coal retirement at 4 GW and unlimited line, worst-half MISO coal retirement, carbon $15 to $100 (+$500 floor), caps -5/-10/-20%, on two baselines (economic; calibrated = 30% coal must-run, matches 2024 coal share 25.0% vs 26.3% actual). Findings in docs/phase5.md.
 
 ## Data
 
@@ -42,6 +42,8 @@ Can a cost-minimizing dispatch model built only from public plant data reproduce
 
 - Phase 4: model gets level (bias -$4.4, MAE $7.58) and within-month timing (corr 0.70 vs Michigan Hub, 0.79 vs MEC) but swings are ~1/7 the market's (std ratio 0.14). Top 5% price hours $83 actual vs $31 model. Cause: 2024 stack goes $18 to $35 over 40 to 120 GW (flat), then a cliff. Residual tracks net load level (corr 0.46, R2 0.21), ramps add little (R2 0.23). Uniform availability derate: best 0.9 on Jan-Jun, modest gain on Jul-Dec; below 0.8 summer hits shortage pricing. Hourly renewables are the most important input (nameplate: bias -$10.7). Line limit irrelevant to prices. Missing: unit commitment, reserve scarcity pricing, offer premiums, seasonal outages.
 
+- Phase 5: economic dispatch burns too little coal (15.5% vs 26.3% actual); a 30% coal must-run block fixes the mix and Phase 4's overnight bias. Envelope theorem check: d cost/d gas multiplier = gas fuel spend to 0.04%. Cap dual decomposition matches a 394k-variable HiGHS week LP to 1e-6 $/t. Gas x2: Michigan price +45%, CO2 +53%. Michigan coal retirement: in-state CO2 -13 to -47% but 55 to 77% leaks to other states; line then binds up to 10% of hours, worth ~$8.5k to $9k/MW-yr. Carbon: abatement saturates at -21% (economic) or -10% (calibrated) since only fuel switching is possible; d lambda/d tau ~ 0.61 t/MWh = marginal unit's emission rate; at $15/t Michigan load pays +$0.97 B vs +$0.17 B MISO resource cost. Cap shadow prices: -5% $3.91, -10% $9.60, -20% $62.06 per t (economic).
+
 ## Commands
 
     pip install -r requirements.txt
@@ -53,6 +55,7 @@ Can a cost-minimizing dispatch model built only from public plant data reproduce
     python scripts/run_phase3.py [--base-limit 4000]
     python scripts/fetch_fuel_prices.py --year 2024
     python scripts/run_phase4.py [--limit 4000]
+    python scripts/run_phase5.py [--plots-only]
     python scripts/fetch_eia.py --year 2024
 
 ## Conventions
@@ -65,7 +68,6 @@ Can a cost-minimizing dispatch model built only from public plant data reproduce
 
 ## Immediate todo
 
-1. Phase 5 scenarios with the Phase 4 setup: gas price shock, coal retirement, carbon price. Report price, cost, and emissions changes (needs emission factors by fuel), and use duals: price = d cost/d demand, congestion rent, and the shadow price of an emissions cap as an implied carbon price.
-2. Look up the MISO PRA Zone 7 Capacity Import Limit to set the line limit.
-3. Optional model upgrades suggested by Phase 4: seasonal availability, a simple reserve requirement (adds a second dual price), Ludington pumped storage as an intertemporal LP.
-4. Report PDF and the portfolio page.
+1. Report PDF (all five phases: derivations from docs/, key figures, findings) and the portfolio page on jonahx-dev.vercel.app/research.
+2. Look up the MISO PRA Zone 7 Capacity Import Limit to set the line limit (affects Phase 3 and the Phase 5 retirement line value).
+3. Optional model upgrades: unit commitment with startup costs (would replace the fixed must-run block and fix peak amplitude), seasonal availability, reserves, Ludington pumped storage.

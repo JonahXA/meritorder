@@ -10,7 +10,7 @@ Research project applying CMSE 382 (Optimization Methods in Data Science, MSU): 
 - [x] Phase 2: quadratic costs, projected gradient, dual ascent, dual Newton, convergence vs conditioning ([docs/phase2.md](docs/phase2.md))
 - [x] Phase 3: Michigan vs rest of MISO with a transmission limit, hourly over 2024, vs MISO congestion ([docs/phase3.md](docs/phase3.md))
 - [x] Phase 4: hourly validation against MISO Michigan Hub LMPs over 2024, error breakdown, availability sweep ([docs/phase4.md](docs/phase4.md))
-- [ ] Phase 5: scenarios (gas prices, retirements, carbon price)
+- [x] Phase 5: gas price, coal retirement, carbon price and annual CO2 cap scenarios, read through duals ([docs/phase5.md](docs/phase5.md))
 
 ## Quickstart
 
@@ -26,6 +26,7 @@ Research project applying CMSE 382 (Optimization Methods in Data Science, MSU): 
     python scripts/run_phase3.py
     python scripts/fetch_fuel_prices.py --year 2024
     python scripts/run_phase4.py
+    python scripts/run_phase5.py                  # ~10 min
 
 ## Layout
 
