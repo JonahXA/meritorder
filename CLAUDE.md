@@ -19,7 +19,7 @@ Can a cost-minimizing dispatch model built only from public plant data reproduce
 1. DONE. Single-region dispatch LP. Four solvers in meritorder/dispatch.py: merit_order (KKT closed form), dual_bisection (maximize concave dual q(lambda)), simplex (own two-phase tableau, Bland's rule, duals via B^T y = c_B, in meritorder/simplex.py), highs (scipy reference). KKT + duality checks in meritorder/kkt.py. Derivation in docs/phase1.md.
 2. DONE (sample and real fleet). Quadratic costs a_i g + (b_i/2) g^2 in meritorder/qp.py: projected_gradient (projection by bisection on scalar t, lambda = -L t at the fixed point), dual_ascent, dual_bisection, dual_newton (safeguarded), scipy (trust-constr + active-set crossover, since trust-constr alone sits ~1e-4 MW off bounds). b_i = max(10% c_i, $1) / cap_i, documented as an assumption to calibrate in Phase 4. KKT in kkt.py:qp_kkt_report. Derivation and findings in docs/phase2.md, runner scripts/run_phase2.py.
 3. DONE. Two regions (Michigan in MISO vs rest of MISO) in meritorder/network.py: merit_two_region (KKT closed form: pooled merit order, else line at limit and separate merit orders), flow_bisection (primal decomposition on f), simplex, highs, flow_bisection_qp. KKT/duality in kkt.py:two_region_kkt_report, dual q = q_M + q_R - F|lam_M - lam_R|. Runner scripts/run_phase3.py runs all 8,784 hours of 2024 for a sweep of line limits. Derivation and findings in docs/phase3.md.
-4. Hourly validation over a full year (8,760 solves) against actual Michigan Hub LMPs: correlation, MAE, error breakdown by hour/season/load. Expect underprediction at peaks (no startup costs, ramp limits, unit commitment). Treat that gap as a finding.
+4. DONE. scripts/run_phase4.py: Phase 3 model, 8,784 hours of 2024, monthly state fuel prices (scripts/fetch_fuel_prices.py -> data/fuel_prices_2024.csv, fleet.py:monthly_marginal_costs), ablations (flat fuel, no line limit, nameplate renewables), availability sweep fit Jan-Jun / test Jul-Dec with a $1,000 shortage unit, error breakdown, residual regression. Findings in docs/phase4.md.
 5. Scenarios using duals: gas price shock, coal retirement, carbon price.
 
 ## Data
@@ -40,6 +40,8 @@ Can a cost-minimizing dispatch model built only from public plant data reproduce
 
 - Phase 3: a single Michigan line cannot produce Michigan congestion. Even at a 1 GW limit (binds 46% of hours) model congestion averages $0.50 when binding vs actual |MCC| ~$2 to $3.7, because both sides sit on the same flat gas/coal band. MISO wind output drives MCC_MI (corr 0.29) more than Michigan load (-0.10); the model reproduces that direction (imports 0 to 2 GW across wind quintiles) at ~1/5 the size. Model Michigan price mean $26.75 vs actual LMP $29.92, hourly corr 0.58, before fuel price calibration. No public hourly Michigan transfer limit; runner sweeps 1 to 8 GW, base 4 GW. TODO: look up the MISO PRA Zone 7 Capacity Import Limit to calibrate.
 
+- Phase 4: model gets level (bias -$4.4, MAE $7.58) and within-month timing (corr 0.70 vs Michigan Hub, 0.79 vs MEC) but swings are ~1/7 the market's (std ratio 0.14). Top 5% price hours $83 actual vs $31 model. Cause: 2024 stack goes $18 to $35 over 40 to 120 GW (flat), then a cliff. Residual tracks net load level (corr 0.46, R2 0.21), ramps add little (R2 0.23). Uniform availability derate: best 0.9 on Jan-Jun, modest gain on Jul-Dec; below 0.8 summer hits shortage pricing. Hourly renewables are the most important input (nameplate: bias -$10.7). Line limit irrelevant to prices. Missing: unit commitment, reserve scarcity pricing, offer premiums, seasonal outages.
+
 ## Commands
 
     pip install -r requirements.txt
@@ -49,6 +51,8 @@ Can a cost-minimizing dispatch model built only from public plant data reproduce
     python scripts/fetch_eia.py --region MISO
     python scripts/fetch_miso.py --year 2024
     python scripts/run_phase3.py [--base-limit 4000]
+    python scripts/fetch_fuel_prices.py --year 2024
+    python scripts/run_phase4.py [--limit 4000]
     python scripts/fetch_eia.py --year 2024
 
 ## Conventions
@@ -61,6 +65,7 @@ Can a cost-minimizing dispatch model built only from public plant data reproduce
 
 ## Immediate todo
 
-1. Phase 4: monthly delivered fuel prices (EIA-923 fuel receipts or EIA natural gas/coal price routes) instead of flat defaults, then hourly validation of model Michigan price vs MICHIGAN.HUB LMP (correlation, MAE, by hour/season/load). Error breakdown, especially peaks.
-2. Look up the MISO PRA Zone 7 Capacity Import Limit to set the Phase 3 base limit.
-3. Consider Ludington pumped storage (2,180 MW) as a simple peak-shaving rule or an intertemporal LP.
+1. Phase 5 scenarios with the Phase 4 setup: gas price shock, coal retirement, carbon price. Report price, cost, and emissions changes (needs emission factors by fuel), and use duals: price = d cost/d demand, congestion rent, and the shadow price of an emissions cap as an implied carbon price.
+2. Look up the MISO PRA Zone 7 Capacity Import Limit to set the line limit.
+3. Optional model upgrades suggested by Phase 4: seasonal availability, a simple reserve requirement (adds a second dual price), Ludington pumped storage as an intertemporal LP.
+4. Report PDF and the portfolio page.
