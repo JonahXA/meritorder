@@ -20,9 +20,9 @@ results/phase4_metrics.csv. "Within-month corr" is the average correlation insid
 
 | Variant | corr | within-month corr | std ratio | MAE | bias | model mean |
 |---|---|---|---|---|---|---|
-| **main** (monthly fuel, 4 GW line) | 0.53 | 0.70 | 0.14 | $7.58 | -$4.43 | $25.50 |
+| **main** (monthly fuel, 4 GW line) | 0.53 | 0.69 | 0.14 | $7.58 | -$4.43 | $25.50 |
 | flat_fuel (Phase 1 defaults) | 0.58 | 0.72 | 0.08 | $8.25 | -$3.18 | $26.75 |
-| pooled (no line limit) | 0.53 | 0.70 | 0.14 | $7.58 | -$4.43 | $25.49 |
+| pooled (no line limit) | 0.53 | 0.69 | 0.14 | $7.58 | -$4.43 | $25.49 |
 | nameplate_renew (wind/solar always at full output) | 0.54 | 0.58 | 0.28 | $10.95 | -$10.70 | $19.23 |
 
 Actual mean: $29.92. Against the MISO-wide energy price (MEC, mean $28.63) the main model does better: corr 0.58, within-month corr 0.79.
@@ -31,11 +31,11 @@ What the ablations say:
 
 - **Monthly fuel prices fix the level, not the shape.** MAE drops 8%, January's mean goes from $27.08 to $34.89 (actual $46.38), and the model's swings double (std ratio 0.08 to 0.14). Overall correlation dips slightly (0.58 to 0.53). Within-month correlation is nearly unchanged, so the dip comes from how the months line up against each other, not from hourly behavior.
 - **The line limit doesn't matter for prices.** Pooled and main are identical to the cent, consistent with Phase 3: Michigan congestion isn't an interface problem.
-- **Hourly wind and solar matter most.** At nameplate the model is $10.70 too low on average and within-month correlation falls from 0.70 to 0.58. Getting renewables' real output right is the single biggest input.
+- **Hourly wind and solar matter most.** At nameplate the model is $10.70 too low on average and within-month correlation falls from 0.69 to 0.58. Getting renewables' real output right is the single biggest input.
 
 ## Where it breaks
 
-The model gets the **timing** right and the **size** wrong. Within each month it correlates 0.70 with the actual price, but its hourly swings are about a seventh as large.
+The model gets the **timing** right and the **size** wrong. Within each month it correlates 0.69 with the actual price, but its hourly swings are about a seventh as large.
 
 By Michigan load decile (results/phase4_breakdown.csv):
 
@@ -97,7 +97,7 @@ The fitted derate (90%) carries over to the second half: test MAE improves 3% an
 
 ## Answer to the research question
 
-A cost-minimizing dispatch built from public data gets the **average level** within about $4/MWh and the **timing** of price movements right within months (correlation 0.70 with Michigan Hub, 0.79 with the MISO energy price). It reproduces the **mechanisms** in direction: fuel prices set the level, wind sets the overnight floor, and net load moves the price. It **breaks on amplitude**: it predicts a stable $22 to $30 band while the market spans $13 to $150. The underprediction at peaks is a direct consequence of convex dispatch on a flat 2024 supply stack. Everything that makes peaks expensive (commitment costs, reserve scarcity, outages, offer premiums) is either non-convex or missing from public data.
+A cost-minimizing dispatch built from public data gets the **average level** within about $4/MWh and the **timing** of price movements right within months (correlation 0.69 with Michigan Hub, 0.79 with the MISO energy price). It reproduces the **mechanisms** in direction: fuel prices set the level, wind sets the overnight floor, and net load moves the price. It **breaks on amplitude**: it predicts a stable $22 to $30 band while the market spans $13 to $150. The underprediction at peaks is a direct consequence of convex dispatch on a flat 2024 supply stack. Everything that makes peaks expensive (commitment costs, reserve scarcity, outages, offer premiums) is either non-convex or missing from public data.
 
 ## Reproduce
 

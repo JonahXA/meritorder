@@ -25,7 +25,7 @@
 
 \begin{abstract}
 \noindent
-Wholesale electricity prices are Lagrange multipliers: the price at a location is the dual variable on the constraint that supply equals demand there. This project builds that idea out in five phases, from a single-region linear program to a full year of hourly two-region dispatch over the 181 GW MISO fleet, using only public EIA and MISO data. Each phase derives its optimality conditions by hand, implements solvers from scratch (a two-phase simplex, projected gradient, dual ascent, dual Newton, primal and dual decomposition), and checks them against reference solvers and the KKT conditions. Validated against every hour of 2024, the model gets the average Michigan Hub price within about \$4/MWh and the within-month timing of price movements (correlation 0.70), but its hourly swings are only about a seventh of the market's, because the 2024 supply stack is nearly flat until it hits a capacity cliff. Read through duals, scenarios show that retiring Michigan coal mostly moves emissions to other states and makes the Michigan transmission interface worth about \$8{,}500 per MW-year, and that a carbon price on today's fleet saturates at a 10 to 21\% emissions cut because fuel switching is the only lever.
+Wholesale electricity prices are Lagrange multipliers: the price at a location is the dual variable on the constraint that supply equals demand there. This project builds that idea out in five phases, from a single-region linear program to a full year of hourly two-region dispatch over the 181 GW MISO fleet, using only public EIA and MISO data. Each phase derives its optimality conditions by hand, implements solvers from scratch (a two-phase simplex, projected gradient, dual ascent, dual Newton, primal and dual decomposition), and checks them against reference solvers and the KKT conditions. Validated against every hour of 2024, the model gets the average Michigan Hub price within about \$4/MWh and the within-month timing of price movements (correlation 0.69), but its hourly swings are only about a seventh of the market's, because the 2024 supply stack is nearly flat until it hits a capacity cliff. Read through duals, scenarios show that retiring Michigan coal mostly moves emissions to other states and makes the Michigan transmission interface worth about \$8{,}500 per MW-year, and that a carbon price on today's fleet saturates at a 10 to 21\% emissions cut because fuel switching is the only lever.
 \end{abstract}
 
 \tableofcontents
@@ -200,9 +200,9 @@ The Phase 3 model with monthly state fuel prices, hourly load and hourly wind an
 \toprule
 Variant & corr & within-month corr & std ratio & MAE & bias & mean \\
 \midrule
-\textbf{main} & 0.53 & 0.70 & 0.14 & \$7.58 & $-\$4.43$ & \$25.50 \\
+\textbf{main} & 0.53 & 0.69 & 0.14 & \$7.58 & $-\$4.43$ & \$25.50 \\
 flat fuel prices & 0.58 & 0.72 & 0.08 & \$8.25 & $-\$3.18$ & \$26.75 \\
-no line limit & 0.53 & 0.70 & 0.14 & \$7.58 & $-\$4.43$ & \$25.49 \\
+no line limit & 0.53 & 0.69 & 0.14 & \$7.58 & $-\$4.43$ & \$25.49 \\
 wind/solar at nameplate & 0.54 & 0.58 & 0.28 & \$10.95 & $-\$10.70$ & \$19.23 \\
 \bottomrule
 \end{tabular}
@@ -210,7 +210,7 @@ wind/solar at nameplate & 0.54 & 0.58 & 0.28 & \$10.95 & $-\$10.70$ & \$19.23 \\
 \vspace{-0.3em}
 {\small Actual mean \$29.92. ``Std ratio'' is the model's within-month standard deviation over the market's.}
 
-\textbf{The model gets the timing right and the size wrong.} Within months it correlates 0.70 with the actual price (0.79 with the MISO-wide energy component), but its swings are about a seventh as large. The top 5\% of price hours average \$83 actual vs.\ \$31 modeled, and overnight hours come out too high. Hourly renewable output is the most important input; the line limit makes no difference to prices.
+\textbf{The model gets the timing right and the size wrong.} Within months it correlates 0.69 with the actual price (0.79 with the MISO-wide energy component), but its swings are about a seventh as large. The top 5\% of price hours average \$83 actual vs.\ \$31 modeled, and overnight hours come out too high. Hourly renewable output is the most important input; the line limit makes no difference to prices.
 
 \textbf{Why: a flat stack, then a cliff.} With 2024 fuel prices, MISO's dispatchable supply goes from \$18/MWh at 40 GW to \$35/MWh at 120 GW. Every realistic hour lands in that band, and a merit order can only move the price along this curve. The residual tracks the \emph{level} of net load (load minus wind and solar; correlation 0.46, $R^2 = 0.21$); adding hour-to-hour ramps lifts $R^2$ only to 0.23. The evening peak happens because net load is highest right after solar drops off.
 
